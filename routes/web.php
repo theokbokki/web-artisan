@@ -24,5 +24,5 @@ Route::get('/{locale}', function ($locale) {
 
     App::setLocale($locale);
 
-    return view('welcome');
+    return view('home');
 });
