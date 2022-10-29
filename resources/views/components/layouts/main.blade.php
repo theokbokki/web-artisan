@@ -13,7 +13,7 @@
   @vite('resources/css/app.css')
 </head>
 
-<body>
+<body class="w-[90%] mx-auto max-w-screen-2xl">
   {{ $slot }}
 </body>
 
