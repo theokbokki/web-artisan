@@ -26,5 +26,9 @@
 	@apply bg-slate-100 text-slate-600 rounded-md py-2 px-4 outline-2 border-2 border-transparent outline-none transition hover:border-slate-200 focus:border-slate-300;
 }
 
+.link{
+	@apply text-indigo-600 underline hover:text-indigo-500 active:text-indigo-700 visited:text-indigo-800;
+}
+
 @tailwind components;
 @tailwind utilities;
