@@ -10,15 +10,18 @@ class Search extends Component
 
     public $button;
 
+    public $input;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($label, $button)
+    public function __construct($label, $button, $input)
     {
         $this->label = $label;
         $this->button = $button;
+        $this->input = $input;
     }
 
     /**
