@@ -7,7 +7,7 @@
       </svg>
     </div>
     <figcaption
-      class="text-[0] min-[500px]:text-xs min-[500px]:leading-[.8rem] main-nav:text-base main-nav:leading-4 text-indigo-600 font-title font-bold max-w-[5.5rem] ml-3">
+      class="text-[0] min-[500px]:text-xs min-[500px]:leading-[.8rem] main-nav:text-base main-nav:leading-4 text-indigo-600 font-title font-bold max-w-[4rem] main-nav:max-w-[5.5rem] ml-3">
       {{ __('logo.tagline') }}
     </figcaption>
   </figure>
