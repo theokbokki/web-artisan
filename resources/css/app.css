@@ -30,5 +30,9 @@
 	@apply text-indigo-600 underline hover:text-indigo-500 active:text-indigo-700 visited:text-indigo-800;
 }
 
+.menu-link{
+	@apply text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block;
+}
+
 @tailwind components;
 @tailwind utilities;
