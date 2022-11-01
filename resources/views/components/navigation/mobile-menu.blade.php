@@ -34,68 +34,57 @@
     <ul
       class="flex flex-wrap bg-white rounded-md p-4 items-center gap-y-4 odd:gap-x-4 max-w-[32rem] max-h-[85vh] drop-shadow-md overflow-scroll">
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" aria-current="page"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" aria-current="page" class="menu-link">
           Accueil
         </a>
       </li>
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" class="menu-link">
           Projets étudiants
         </a>
       </li>
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" class="menu-link">
           Grille des cours
         </a>
       </li>
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" class="menu-link">
           Professeurs
         </a>
       </li>
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" class="menu-link">
           Anciens
         </a>
       </li>
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" class="menu-link">
           Blog
         </a>
       </li>
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" class="menu-link">
           Forum
         </a>
       </li>
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" class="menu-link">
           Stages
         </a>
       </li>
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" class="menu-link">
           Traductions
         </a>
       </li>
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" class="menu-link">
           S'inscrire à l'école
         </a>
       </li>
       <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#"
-          class="text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block">
+        <a href="#" class="menu-link">
           Contact
         </a>
       </li>
