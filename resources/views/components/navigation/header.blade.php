@@ -8,8 +8,8 @@
   <h2 class="sr-only">
     {{ __('navigation.header_title') }}
   </h2>
-  <x-logo class="w-8 main-nav:w-14" />
-  <x-search :$label :$button :$input class="flex-1 min-w-[12.9375rem] sm:max-w-[25rem]" />
+  <x-logo class="w-8 md:w-14" />
+  <x-search :$label :$button :$input class="flex-1 min-w-[13.75rem] sm:min-w-max md:max-w-[25rem] md:min-w-0" />
   <x-login-signup-buttons />
   <x-navigation.mobile-menu />
 </nav>

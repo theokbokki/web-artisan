@@ -1,6 +1,6 @@
-<aside class="flex-1 hidden sticky top-6 sm:flex mt-24 w-52">
+<aside class="hidden sticky top-6 md:flex mt-24 min-w-max self-start">
   <h2 class="sr-only">Menu</h2>
-  <ul class="grid gap-y-4 max-h-[90vh] overflow-scroll w-full">
+  <ul class="space-y-6 gap-y-4 max-h-[90vh] overflow-scroll w-full">
     <li class=" w-full">
       <a href="#" aria-current="page" class="menu-link">
         Accueil

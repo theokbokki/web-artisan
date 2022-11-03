@@ -21,7 +21,7 @@
   </ul>
 </nav> --}}
 
-<nav class="flex-1 flex sm:hidden">
+<nav class="flex-1 flex md:hidden">
   <h2 class="sr-only">Menu</h2>
   <input type="checkbox" name="menu" id="menu" class="sr-only peer">
   <label for="menu" class="ml-auto mr-2 cursor-pointer text-slate-600 space-y-1.5 group">
