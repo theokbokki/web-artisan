@@ -34,5 +34,8 @@
 	@apply text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block;
 }
 
+.perspective-r{ transform: perspective(1500px) rotateY(-11deg) rotateX(6deg);}
+.perspective-l{ transform: perspective(1500px) rotateY(-11deg) rotateX(-6deg);}
+
 @tailwind components;
 @tailwind utilities;
