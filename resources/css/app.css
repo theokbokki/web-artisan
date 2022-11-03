@@ -35,7 +35,7 @@
 }
 
 .perspective-r{ transform: perspective(1500px) rotateY(-11deg) rotateX(6deg);}
-.perspective-l{ transform: perspective(1500px) rotateY(-11deg) rotateX(-6deg);}
+.perspective-l{ transform: perspective(1500px) rotateY(11deg) rotateX(6deg);}
 
 @tailwind components;
 @tailwind utilities;
