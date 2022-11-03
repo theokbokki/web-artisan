@@ -1,4 +1,4 @@
-<li class="group/item" {{ $attributes }}>
+<li class="group/item inline-block" {{ $attributes }}>
   <div
     class="xl:ml-[32rem] 2xl:ml-[42rem] group-hover/item:bg-slate-100 group-focus/item:bg-slate-100 cursor-pointer rounded-xl inline-block w-full max-w-[28rem] px-5 group-hover/item:py-5 group-focus/item:py-5 transition-all ease duration-300">
     <p class="text-xl font-bold">{{ $title }}</p>
