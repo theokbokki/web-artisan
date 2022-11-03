@@ -8,4 +8,5 @@ return [
     'intro_p1' => 'Notre bachelier te permettra de te lancer dans tous les domaines du web, du développement au design.',
     'teachings_title' => 'Un apprentissage diversifié et complet',
     'teachings_subtitle' => 'Au terme du bachelier, vous possèderez de nombreuses compétences, importantes au métier de développeur web.',
+    'teachings_cta' => 'Voir la grille des cours',
 ];

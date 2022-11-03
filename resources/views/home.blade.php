@@ -71,6 +71,8 @@
             <x-accordion-item tabindex="0" :title="$accordionItem['title']" :content="$accordionItem['content']" :img-src="$accordionItem['imgSrc']" :img-alt="$accordionItem['imgAlt']" />
           @endforeach
         </ul>
+        <a href="#"
+          class="button inline-block xl:ml-[33rem] 2xl:ml-[43rem] mt-6">{{ __('home.teachings_cta') }}</a>
       </section>
     </main>
   </div>
