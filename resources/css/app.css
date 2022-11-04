@@ -16,7 +16,7 @@
 }
 
 .title {
-	@apply text-slate-900 font-bold font-title text-4xl;
+	@apply text-slate-900 font-bold font-title text-3xl;
 }
 
 .label {
