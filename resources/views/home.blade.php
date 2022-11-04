@@ -62,4 +62,28 @@
     </div>
     <a class="button inline-block max-w-[80%]" href="#">{{ __('home.philosophy_cta') }}</a>
   </section>
+  <section class="mt-16 space-y-6 grid items-center">
+    <div class="space-y-4">
+      <h2 class="title">{{ __('home.projects_title') }}</h2>
+      <div class="space-y-2">
+        <p>{{ __('home.projects_p1') }}</p>
+        <p>{{ __('home.projects_p2') }}</p>
+      </div>
+      <ul class="grid space-y-4 relative">
+        <x-student-project />
+        <x-student-project />
+        <x-student-project />
+        <x-student-project />
+        <div class="w-full h-40 absolute bottom-0 from-white to-white/10 opacity-80 z-10 bg-gradient-to-t rounded-md">
+        </div>
+      </ul>
+    </div>
+    <a href="" class="button inline-block mx-auto">{{ __('home.projects_cta') }}</a>
+  </section>
+  <section class="space-y-4 grid items-center mt-16">
+    <h2 class="title">{{ __('home.teachers_title') }}</h2>
+    <p>{{ __('home.teachers_subtitle') }}</p>
+    <img src="images/teachers.jpg" alt="">
+    <a href="#" class="button inline-block mx-auto ">{{ __('home.teachers_cta') }}</a>
+  </section>
 </x-layouts.main>

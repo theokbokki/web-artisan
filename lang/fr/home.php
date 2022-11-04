@@ -14,4 +14,11 @@ return [
     'philosophy_p1' => 'Dans notre section, nous croyons fermement en l’importance de réaliser des sites de qualité, qui respectent les différentes normes actuelles du web.',
     'philosophy_p2' => 'Nous pensons que les sites devraient être éthiques et respecter l’environnement ainsi que les personnes qui les utilisent.',
     'philosophy_cta' => 'En apprendre plus sur la qualité web',
+    'projects_title' => 'Toi aussi tu peux le faire',
+    'projects_p1' => 'Chaque année, nos étudiants doivent réaliser des projets ambitieux, que ce soit pour un client ou pour leur PFE.',
+    'projects_p2' => 'En voici quelques exemples.',
+    'projects_cta' => 'Voir tous les projets',
+    'teachers_title' => 'Rencontre tes futurs profs',
+    'teachers_subtitle' => 'Nous avons la chance d’avoir une super équipe composée de professeurs permanents, de professionnels invités, et d’anciens étudiants..',
+    'teachers_cta' => 'Voir tous les professeurs',
 ];
