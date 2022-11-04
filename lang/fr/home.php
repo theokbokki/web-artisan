@@ -10,4 +10,8 @@ return [
     'teachings_title' => 'Un apprentissage diversifié et complet',
     'teachings_subtitle' => 'Au terme du bachelier, vous possèderez de nombreuses compétences, importantes au métier de développeur web.',
     'teachings_cta' => 'Voir la grille des cours',
+    'philosophy_title' => 'Un web de qualité, pour tous',
+    'philosophy_p1' => 'Dans notre section, nous croyons fermement en l’importance de réaliser des sites de qualité, qui respectent les différentes normes actuelles du web.',
+    'philosophy_p2' => 'Nous pensons que les sites devraient être éthiques et respecter l’environnement ainsi que les personnes qui les utilisent.',
+    'philosophy_cta' => 'En apprendre plus sur la qualité web',
 ];

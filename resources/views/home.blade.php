@@ -54,4 +54,12 @@
     </ul>
     <a href="#" class="button inline-block">{{ __('home.teachings_cta') }}</a>
   </section>
+  <section class="space-y-4 mt-16">
+    <h2 class="title">{{ __('home.philosophy_title') }}</h2>
+    <div class="space-y-2">
+      <p>{{ __('home.philosophy_p1') }}</p>
+      <p>{{ __('home.philosophy_p2') }}</p>
+    </div>
+    <a class="button inline-block max-w-[80%]" href="#">{{ __('home.philosophy_cta') }}</a>
+  </section>
 </x-layouts.main>

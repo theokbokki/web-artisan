@@ -24,7 +24,7 @@
 }
 
 .button {
-	@apply text-center bg-indigo-600 text-lg text-slate-50 rounded-md py-2 px-4 transition hover:bg-indigo-500 active:bg-indigo-700 border-transparent border-2;
+	@apply bg-indigo-600 text-lg text-slate-50 rounded-md py-2 px-4 transition hover:bg-indigo-500 active:bg-indigo-700 border-transparent border-2;
 }
 
 .input {
