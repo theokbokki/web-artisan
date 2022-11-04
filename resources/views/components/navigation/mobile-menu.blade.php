@@ -21,6 +21,12 @@
   </ul>
 </nav> --}}
 
+@props([
+    'label' => __('navigation.search_label'),
+    'input' => __('navigation.search_input'),
+    'button' => __('navigation.search_button'),
+])
+
 <nav class="flex-1 flex md:hidden">
   <h2 class="sr-only">Menu</h2>
   <input type="checkbox" name="menu" id="menu" class="sr-only peer">
@@ -32,7 +38,9 @@
   <label for="menu"
     class="fixed inset-0 z-10 grid bg-slate-900 px-4 py-6 backdrop-blur-sm bg-opacity-20 invisible peer-checked:visible items-start justify-items-center">
     <ul
-      class="flex flex-wrap bg-white rounded-md p-4 items-center gap-y-4 odd:gap-x-4 max-w-[32rem] max-h-[85vh] drop-shadow-md overflow-scroll">
+      class="flex flex-wrap bg-white rounded-md p-4 items-center gap-y-4 odd:gap-x-4 max-w-[32rem] max-h-[80vh] overflow-scroll">
+      <x-search :$label :$button :$input class="flex-1 min-w-[13.75rem] sm:min-w-max md:max-w-[25rem] md:min-w-0" />
+      <x-login-signup-buttons class="flex w-full gap-2 justify-between items-center" />
       <li class=" w-full min-[400px]:w-[47%]">
         <a href="#" aria-current="page" class="menu-link">
           Accueil

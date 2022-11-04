@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Sora";
-  src: url("fonts/Sora-Bold.woff2");
+  src: url("../../public/fonts/Sora-Bold.woff2");
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -19,7 +19,7 @@
 }
 
 .button {
-	@apply bg-indigo-600 text-slate-50 rounded-md py-2 px-4 transition hover:bg-indigo-500 active:bg-indigo-700 border-transparent border-2;
+	@apply text-center bg-indigo-600 text-lg text-slate-50 rounded-md py-2 px-4 transition hover:bg-indigo-500 active:bg-indigo-700 border-transparent border-2;
 }
 
 .input {
@@ -27,7 +27,7 @@
 }
 
 .link{
-	@apply text-indigo-600 underline hover:text-indigo-500 active:text-indigo-700 visited:text-indigo-800;
+	@apply text-lg text-indigo-600 underline hover:text-indigo-500 active:text-indigo-700 visited:text-indigo-800;
 }
 
 .menu-link{
