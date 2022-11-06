@@ -21,11 +21,6 @@
   </ul>
 </nav> --}}
 
-@props([
-    'label' => __('navigation.search_label'),
-    'input' => __('navigation.search_input'),
-    'button' => __('navigation.search_button'),
-])
 
 <nav class="flex-1 flex">
   <h2 class="sr-only">Menu</h2>
@@ -39,8 +34,6 @@
     class="fixed inset-0 z-10 grid bg-slate-900 px-4 py-6 backdrop-blur-sm bg-opacity-20 invisible peer-checked:visible items-start justify-items-center">
     <ul
       class="flex flex-wrap bg-white rounded-md p-4 items-center gap-y-4 odd:gap-x-4 max-w-[32rem] max-h-[80vh] overflow-scroll">
-      <x-search :$label :$button :$input class="flex-1" />
-      <x-login-signup-buttons class="flex w-full gap-2 justify-between items-center" />
       <li class=" w-full min-[400px]:w-[47%]">
         <a href="#" aria-current="page" class="menu-link">
           Accueil

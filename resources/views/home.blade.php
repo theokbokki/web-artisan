@@ -137,7 +137,7 @@
     <p>{{ __('home.register_subtitle') }}</p>
     <a class="button inline-block" href="">{{ __('home.register_cta') }}</a>
   </section>
-  <section class="space-y-4 mt-16 mx-auto w-[90%]">
+  <section class="space-y-4 mt-16 mx-auto w-[90%] mb-10">
     <h2 class="title">{{ __('home.newsletter_title') }}</h2>
     <div class="space-y-2">
       <p>{{ __('home.newsletter_p1') }}</p>
@@ -152,4 +152,12 @@
       <button class="button mt-3" type="submit">{{ __('home.newsletter_cta') }}</button>
     </form>
   </section>
+  <footer class="w-[90%] mx-auto mt-16">
+    <ul class="flex flex-wrap gap-6 justify-between max-w-screen items-center text-sm">
+      <li class="text-center flex-1"><a href="#">Mentions légales</a></li>
+      <li class="text-center flex-1"><a href="#">Conditions générales</a></li>
+      <li class="text-center flex-1"><a href="#">Le site de la HEPL</a></li>
+      <li class=""><a href="https://theoleonet.be" class="text-xl">❋</a></li>
+    </ul>
+  </footer>
 </x-layouts.main>
