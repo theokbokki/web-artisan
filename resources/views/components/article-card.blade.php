@@ -1,5 +1,5 @@
 <li>
-  <article class="p-3 flex gap-4 drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] bg-white rounded-md">
+  <article class="p-3 flex gap-4 drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] bg-white rounded-md relative">
     <div class="grid gap-2 flex-1">
       <h3 class="font-bold text-sm order-2">Les étudiants de 3ème nous parlent de leurs PFE</h3>
       <div class="flex order-1 gap-2 items-center">

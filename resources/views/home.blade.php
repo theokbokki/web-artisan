@@ -132,4 +132,9 @@
       </a>
     </div>
   </section>
+  <section class="space-y-4 mt-16 mx-auto w-[90%]">
+    <h2 class="title">{{ __('home.register_title') }}</h2>
+    <p>{{ __('home.register_subtitle') }}</p>
+    <a class="button inline-block" href="">{{ __('home.register_cta') }}</a>
+  </section>
 </x-layouts.main>
