@@ -36,4 +36,10 @@ return [
     'register_title' => 'Construis ton futur avec nous',
     'register_subtitle' => 'Notre site t’as convaincu? Alors inscris toi à la HEPL et deviens un grand développeur et designer web.',
     'register_cta' => 'S’inscrire au bachelier',
+    'newsletter_title' => 'Abonnes toi à notre newsletter',
+    'newsletter_p1' => 'Tu recevras un article chaque semaine reprenant les actualités de la section ou des faits sur ce qui s’est passé dans le monde du web dernièrement. ',
+    'newsletter_p2' => 'Bien sur tu pourras annuler ton abonnement à tout moment.',
+    'newsletter_label' => 'Ton email',
+    'newsletter_input' => 'Ex: FuturEtudiant@student.hepl.be',
+    'newsletter_cta' => 'S’abonner à la newsletter',
 ];

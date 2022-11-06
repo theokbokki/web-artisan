@@ -122,11 +122,11 @@
   <section class="w-[90%] mx-auto mt-16 space-y-4">
     <h2 class="title">{{ __('home.contact_title') }}</h2>
     <div class="space-y-2">
-      <p>{{ __('home.contact_forum') }}</p>
+      <p class="font-bold">{{ __('home.contact_forum') }}</p>
       <x-search :$label :$button :$input class="" />
     </div>
     <div class="space-y-2">
-      <p>{{ __('home.contact_email') }}</p>
+      <p class="font-bold">{{ __('home.contact_email') }}</p>
       <a href="" class="button inline-block">
         {{ __('home.contact_cta') }}
       </a>
@@ -136,5 +136,20 @@
     <h2 class="title">{{ __('home.register_title') }}</h2>
     <p>{{ __('home.register_subtitle') }}</p>
     <a class="button inline-block" href="">{{ __('home.register_cta') }}</a>
+  </section>
+  <section class="space-y-4 mt-16 mx-auto w-[90%]">
+    <h2 class="title">{{ __('home.newsletter_title') }}</h2>
+    <div class="space-y-2">
+      <p>{{ __('home.newsletter_p1') }}</p>
+      <p>{{ __('home.newsletter_p2') }}</p>
+    </div>
+    <form action="/{{ app()->getLocale() }}" class="space-y-4">
+      <div class="space-y-2">
+        <label class="label" for="email">{{ __('home.newsletter_label') }}</label>
+        <input class="input" type="email" id="email" name="email"
+          placeholder="{{ __('home.newsletter_input') }}">
+      </div>
+      <button class="button mt-3" type="submit">{{ __('home.newsletter_cta') }}</button>
+    </form>
   </section>
 </x-layouts.main>
