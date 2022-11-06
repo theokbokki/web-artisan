@@ -25,4 +25,8 @@ return [
     'alumni_subtitle' => 'Nos alumnis sont la preuve la plus évidente de la légitimité du bachelier.
 	Voici quelques success story de nos anciens.',
     'alumni_cta' => 'Voir tous nos anciens',
+    'blog_title' => 'Les actus du bachelier',
+    'blog_p1' => 'Nos professeurs postent régulièrement des articles à propos du bachelier ou même du web en général.',
+    'blog_p2' => 'Nous accueillons aussi parfois des invités dont nous pensons qu’il peuvent écrire des choses interessantes.',
+    'blog_cta' => 'Voir tous nos articles',
 ];

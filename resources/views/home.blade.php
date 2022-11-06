@@ -99,4 +99,21 @@
     </div>
     <a href="#" class="button inline-block mx-auto">{{ __('home.alumni_cta') }}</a>
   </section>
+  <section class="max-w-[90%] mx-auto mt-16 space-y-4">
+    <h2 class="title">{{ __('home.blog_title') }}</h2>
+    <div class="space-y-2">
+      <p>
+        {{ __('home.blog_p1') }}
+      </p>
+      <p>
+        {{ __('home.blog_p2') }}
+      </p>
+    </div>
+    <ul class="space-y-4">
+      <x-article-card />
+      <x-article-card />
+      <x-article-card />
+    </ul>
+    <a href="" class="button inline-block">{{ __('home.blog_cta') }}</a>
+  </section>
 </x-layouts.main>

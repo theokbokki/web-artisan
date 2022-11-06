@@ -8,7 +8,7 @@
               </div>
               <p class="font-bold text-slate-700 leading-4">Jules Platot</p>
             </div>
-            <p class="bg-slate-600 text-slate-50 px-2 py-1 rounded-md">Etudiant</p>
+            <p class="tag">Etudiant</p>
           </div>
           <div class="flex gap-2">
             <p class="font-bold text-slate-700">Banann</p>

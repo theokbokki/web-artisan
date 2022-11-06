@@ -42,5 +42,9 @@
 .perspective-r{ transform: perspective(1500px) rotateY(-11deg) rotateX(6deg);}
 .perspective-l{ transform: perspective(1500px) rotateY(11deg) rotateX(6deg);}
 
+.tag{
+	@apply bg-slate-600 text-slate-50 px-2 py-1 rounded-md;
+}
+
 @tailwind components;
 @tailwind utilities;
