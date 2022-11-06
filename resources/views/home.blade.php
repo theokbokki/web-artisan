@@ -31,6 +31,9 @@
             'imgAlt' => '',
         ],
     ],
+    'label' => 'Chercher sur notre forum',
+    'input' => 'Une question ? C\'est par ici !',
+    'button' => 'Chercher',
 ])
 
 <x-layouts.main>
@@ -115,5 +118,18 @@
       <x-article-card />
     </ul>
     <a href="" class="button inline-block">{{ __('home.blog_cta') }}</a>
+  </section>
+  <section class="w-[90%] mx-auto mt-16 space-y-4">
+    <h2 class="title">{{ __('home.contact_title') }}</h2>
+    <div class="space-y-2">
+      <p>{{ __('home.contact_forum') }}</p>
+      <x-search :$label :$button :$input class="" />
+    </div>
+    <div class="space-y-2">
+      <p>{{ __('home.contact_email') }}</p>
+      <a href="" class="button inline-block">
+        {{ __('home.contact_cta') }}
+      </a>
+    </div>
   </section>
 </x-layouts.main>

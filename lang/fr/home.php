@@ -29,4 +29,8 @@ return [
     'blog_p1' => 'Nos professeurs postent régulièrement des articles à propos du bachelier ou même du web en général.',
     'blog_p2' => 'Nous accueillons aussi parfois des invités dont nous pensons qu’il peuvent écrire des choses interessantes.',
     'blog_cta' => 'Voir tous nos articles',
+    'contact_title' => 'Ne sois pas timide, viens nous parler',
+    'contact_forum' => 'Sur notre forum',
+    'contact_email' => 'Directement par email',
+    'contact_cta' => 'Accéder au formulaire de contact',
 ];
