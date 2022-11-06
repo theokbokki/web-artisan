@@ -21,4 +21,8 @@ return [
     'teachers_title' => 'Rencontre tes futurs profs',
     'teachers_subtitle' => 'Nous avons la chance d’avoir une super équipe composée de professeurs permanents, de professionnels invités, et d’anciens étudiants..',
     'teachers_cta' => 'Voir tous les professeurs',
+    'alumni_title' => 'Un travail garanti, en voici la preuve',
+    'alumni_subtitle' => 'Nos alumnis sont la preuve la plus évidente de la légitimité du bachelier.
+	Voici quelques success story de nos anciens.',
+    'alumni_cta' => 'Voir tous nos anciens',
 ];
