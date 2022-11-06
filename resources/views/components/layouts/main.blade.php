@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-clip max-w-screen">
+<html lang="en" class="overflow-x-hidden max-w-screen">
 
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
   @vite('resources/css/app.css')
 </head>
 
-<body class="w-[90%] mx-auto max-w-screen-2xl relative">
+<body class="max-w-screen-2xl overflow-x-hidden">
   {{ $slot }}
 </body>
 

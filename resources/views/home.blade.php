@@ -35,7 +35,7 @@
 
 <x-layouts.main>
   <x-navigation.header />
-  <section class="mt-16 space-y-4">
+  <section class="mt-16 space-y-4 max-w-[90%] mx-auto">
     <h2 class="title">{{ __('home.intro_title') }}</h2>
     <div class="space-y-2">
       <p>{{ __('home.intro_p1') }}</p>
@@ -44,7 +44,7 @@
     </div>
     <a class="button inline-block" href="#">{{ __('home.intro_cta') }}</a>
   </section>
-  <section class="mt-16 space-y-4">
+  <section class="mt-16 space-y-4 max-w-[90%] mx-auto">
     <h2 class="title">{{ __('home.teachings_title') }}</h2>
     <p>{{ __('home.teachings_subtitle') }}</p>
     <ul class="relative mt-8 space-y-4">
@@ -54,7 +54,7 @@
     </ul>
     <a href="#" class="button inline-block">{{ __('home.teachings_cta') }}</a>
   </section>
-  <section class="space-y-4 mt-16">
+  <section class="space-y-4 mt-16 max-w-[90%] mx-auto">
     <h2 class="title">{{ __('home.philosophy_title') }}</h2>
     <div class="space-y-2">
       <p>{{ __('home.philosophy_p1') }}</p>
@@ -62,7 +62,7 @@
     </div>
     <a class="button inline-block max-w-[80%]" href="#">{{ __('home.philosophy_cta') }}</a>
   </section>
-  <section class="mt-16 space-y-6 grid items-center">
+  <section class="mt-16 space-y-6 grid items-center max-w-[90%] mx-auto">
     <div class="space-y-4">
       <h2 class="title">{{ __('home.projects_title') }}</h2>
       <div class="space-y-2">
@@ -80,10 +80,64 @@
     </div>
     <a href="" class="button inline-block mx-auto">{{ __('home.projects_cta') }}</a>
   </section>
-  <section class="space-y-4 grid items-center mt-16">
+  <section class="space-y-4 grid items-center mt-16 max-w-[90%] mx-auto">
     <h2 class="title">{{ __('home.teachers_title') }}</h2>
     <p>{{ __('home.teachers_subtitle') }}</p>
     <img src="images/teachers.jpg" alt="">
     <a href="#" class="button inline-block mx-auto ">{{ __('home.teachers_cta') }}</a>
+  </section>
+  <section class="mt-16 relative items-center grid gap-2">
+    <h2 class="title">
+    </h2>
+    <p></p>
+    <div class="flex gap-x-4 overflow-x-scroll scroll-smooth snap-x snap-mandatory p-5" role="region"
+      aria-label="Image carousel" tabindex="0">
+      <article
+        class="grid min-w-[90%] max-w-[90%] relative snap-center rounded-md drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] bg-white "
+        role="group" aria-label="slide 1 of 3">
+        <div class="w-full">
+          <img src="images/man.jpg" alt="" class="w-full h-full rounded-t-md">
+        </div>
+        <div class="p-5 space-y-2">
+          <p class="font-bold text-slate-700">Luc savapokis</p>
+          <p class="text-sm">Directeur de l’agence web4all</p>
+          <p>Luc est un homme de 30 ans qui à crée sa propre entreprise dès la sortie de l’école.
+            Leur produit phare est une application de monitoring pour les grosses entreprises du milieu de la viande.
+          </p>
+        </div>
+        <a href="#" class="absolute inset-0 "><span class="sr-only">En apprendre plus sur Luc</span></a>
+      </article>
+      <article
+        class="grid min-w-[90%] max-w-[90%] relative snap-center rounded-md drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] bg-white "
+        role="group" aria-label="slide 1 of 3">
+        <div class="w-full">
+          <img src="images/man.jpg" alt="" class="w-full h-full rounded-t-md">
+        </div>
+        <div class="p-5 space-y-2">
+          <p class="font-bold text-slate-700">Luc savapokis</p>
+          <p class="text-sm">Directeur de l’agence web4all</p>
+          <p>Luc est un homme de 30 ans qui à crée sa propre entreprise dès la sortie de l’école.
+            Leur produit phare est une application de monitoring pour les grosses entreprises du milieu de la viande.
+          </p>
+        </div>
+        <a href="#" class="absolute inset-0 "><span class="sr-only">En apprendre plus sur Luc</span></a>
+      </article>
+      <article
+        class="grid min-w-[90%] max-w-[90%] relative snap-end rounded-md drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] bg-white"
+        role="group" aria-label="slide 1 of 3">
+        <div class="w-full">
+          <img src="images/man.jpg" alt="" class="w-full h-full rounded-t-md">
+        </div>
+        <div class="p-5 space-y-2">
+          <p class="font-bold text-slate-700">Luc savapokis</p>
+          <p class="text-sm">Directeur de l’agence web4all</p>
+          <p>Luc est un homme de 30 ans qui à crée sa propre entreprise dès la sortie de l’école.
+            Leur produit phare est une application de monitoring pour les grosses entreprises du milieu de la viande.
+          </p>
+        </div>
+        <a href="#" class="absolute inset-0 "><span class="sr-only">En apprendre plus sur Luc</span></a>
+      </article>
+    </div>
+    <a href="#" class="button inline-block mx-auto">Voir tous nos anciens</a>
   </section>
 </x-layouts.main>
