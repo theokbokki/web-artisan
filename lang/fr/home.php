@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'title' => 'Le site web du bachelier en web de la hepl',
     'hero_image_alt' => 'Image du code de ce site',
     'intro_title' => 'N’attends pas le chômage, deviens développeur web',
     'intro_cta' => 'Viens verifier par toi même',

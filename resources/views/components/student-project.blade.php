@@ -1,5 +1,5 @@
       <li
-        class="bg-white drop-shadow-[0_0_20px_rgba(0,0,0,0.15)] p-5 rounded-lg hover:drop-shadow-[0_0_20px_rgba(0,0,0,0.3)] transition-all duration-300 active:drop-shadow-none relative">
+        class="bg-white drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] p-5 rounded-lg hover:drop-shadow-[0_0_20px_rgba(0,0,0,0.2)] transition-all duration-300 active:drop-shadow-none relative">
         <div class="space-y-2">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">

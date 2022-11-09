@@ -26,3 +26,13 @@ Route::get('/{locale}', function ($locale) {
 
     return view('home');
 });
+
+Route::get('/{locale}/blog', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('blog');
+});

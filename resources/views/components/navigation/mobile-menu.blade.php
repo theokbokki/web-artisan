@@ -22,73 +22,51 @@
 </nav> --}}
 
 
-<nav class="flex-1 flex">
+<nav class="flex items-center nav-2:hidden">
   <h2 class="sr-only">Menu</h2>
   <input type="checkbox" name="menu" id="menu" class="sr-only peer">
-  <label for="menu" class="ml-auto mr-2 cursor-pointer text-slate-600 space-y-1.5 group">
+  <label for="menu" class="cursor-pointer text-slate-600 space-y-1.5 groupkk">
     <span class="block w-7 h-0.5 bg-slate-600 group-hover:w-5 transition-all"></span>
     <span class="block w-7 h-0.5 bg-slate-600"></span>
     <span class="block w-5 h-0.5 bg-slate-600 group-hover:w-7 transition-all"></span>
   </label>
   <label for="menu"
-    class="fixed inset-0 z-10 grid bg-slate-900 px-4 py-6 backdrop-blur-sm bg-opacity-20 invisible peer-checked:visible items-start justify-items-center">
-    <ul
-      class="flex flex-wrap bg-white rounded-md p-4 items-center gap-y-4 odd:gap-x-4 max-w-[32rem] max-h-[80vh] overflow-scroll">
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" aria-current="page" class="menu-link">
-          Accueil
-        </a>
-      </li>
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" class="menu-link">
-          Projets étudiants
-        </a>
-      </li>
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" class="menu-link">
-          Grille des cours
-        </a>
-      </li>
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" class="menu-link">
-          Professeurs
-        </a>
-      </li>
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" class="menu-link">
-          Anciens
-        </a>
-      </li>
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" class="menu-link">
-          Blog
-        </a>
-      </li>
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" class="menu-link">
-          Forum
-        </a>
-      </li>
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" class="menu-link">
-          Stages
-        </a>
-      </li>
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" class="menu-link">
-          Traductions
-        </a>
-      </li>
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" class="menu-link">
-          S'inscrire à l'école
-        </a>
-      </li>
-      <li class=" w-full min-[400px]:w-[47%]">
-        <a href="#" class="menu-link">
-          Contact
-        </a>
-      </li>
-    </ul>
+    class="fixed inset-0 bg-slate-900 backdrop-blur-sm bg-opacity-20 invisible peer-checked:visible">
   </label>
+  <div
+    class="fixed right-[5vw] top-5 w-[90%] invisible peer-checked:visible z-20 flex flex-wrap bg-white rounded-md p-4 items-center gap-y-4 odd:gap-x-4 max-w-[32rem] max-h-[80vh] overflow-scroll">
+    <a href="#" aria-current="page" class="menu-link  w-full min-[400px]:w-[47%]">
+      Accueil
+    </a>
+    <a href="#" class="menu-link  w-full min-[400px]:w-[47%]">
+      Projets étudiants
+    </a>
+    <a href="#" class="menu-link  w-full min-[400px]:w-[47%]">
+      Grille des cours
+    </a>
+    <a href="#" class="menu-link  w-full min-[400px]:w-[47%]">
+      Professeurs
+    </a>
+    <a href="#" class="menu-link  w-full min-[400px]:w-[47%]">
+      Anciens
+    </a>
+    <a href="#" class="menu-link  w-full min-[400px]:w-[47%]">
+      Blog
+    </a>
+    <a href="#" class="menu-link w-full min-[400px]:w-[47%]">
+      Forum
+    </a>
+    <a href="#" class="menu-link w-full min-[400px]:w-[47%]">
+      Stages
+    </a>
+    <a href="#" class="menu-link w-full min-[400px]:w-[47%]">
+      Traductions
+    </a>
+    <a href="#" class="menu-link w-full min-[400px]:w-[47%]">
+      S'inscrire à l'école
+    </a>
+    <a href="#" class="menu-link w-full min-[400px]:w-[47%]">
+      Contact
+    </a>
+  </div>
 </nav>

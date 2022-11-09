@@ -10,13 +10,21 @@
 @font-face {
   font-family: "Sora";
   src: url("../../public/fonts/Sora-Bold.woff2");
-  font-weight: bold;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("../../public/fonts/Sora-ExtraBold.woff2");
+  font-weight: 900;
   font-style: normal;
   font-stretch: normal;
 }
 
 .title {
-	@apply text-slate-900 font-bold font-title text-3xl;
+	@apply text-slate-900 font-extrabold font-title text-3xl;
 }
 
 .label {
@@ -24,7 +32,7 @@
 }
 
 .button {
-	@apply bg-indigo-600 text-lg text-slate-50 rounded-md py-2 px-4 transition hover:bg-indigo-500 active:bg-indigo-700 border-transparent border-2;
+	@apply bg-indigo-600 text-slate-50 rounded-md py-2 px-4 transition hover:bg-indigo-500 active:bg-indigo-700 border-transparent border-2;
 }
 
 .input {
@@ -32,11 +40,11 @@
 }
 
 .link{
-	@apply text-lg text-indigo-600 underline hover:text-indigo-500 active:text-indigo-700 visited:text-indigo-800;
+	@apply text-indigo-600 underline hover:text-indigo-500 active:text-indigo-700 visited:text-indigo-800;
 }
 
 .menu-link{
-	@apply text-slate-500 w-full hover:underline aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block;
+	@apply text-slate-500 w-full hover:pl-3 hover:text-indigo-600 aria-[current=page]:hover:pl-5 transition-all duration-300  aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block;
 }
 
 .perspective-r{ transform: perspective(1500px) rotateY(-11deg) rotateX(6deg);}
@@ -44,6 +52,10 @@
 
 .tag{
 	@apply bg-slate-600 text-slate-50 px-2 py-1 rounded-md;
+}
+
+.card-shadow{
+	@apply drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] hover:drop-shadow-[0_0_10px_rgba(0,0,0,0.3)] transition-all duration-300 active:drop-shadow-none;
 }
 
 @tailwind components;

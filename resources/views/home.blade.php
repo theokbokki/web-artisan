@@ -37,127 +37,124 @@
 ])
 
 <x-layouts.main>
-  <x-navigation.header />
-  <section class="mt-16 space-y-4 max-w-[90%] mx-auto">
-    <h2 class="title">{{ __('home.intro_title') }}</h2>
-    <div class="space-y-2">
-      <p>{{ __('home.intro_p1') }}</p>
-      <p>{{ __('home.intro_p2') }}</p>
-      <p>{{ __('home.intro_p3') }}</p>
-    </div>
-    <a class="button inline-block" href="#">{{ __('home.intro_cta') }}</a>
-  </section>
-  <section class="mt-16 space-y-4 max-w-[90%] mx-auto">
-    <h2 class="title">{{ __('home.teachings_title') }}</h2>
-    <p>{{ __('home.teachings_subtitle') }}</p>
-    <ul class="relative mt-8 space-y-4">
-      @foreach ($accordionItems as $accordionItem)
-        <x-accordion-item tabindex="0" :title="$accordionItem['title']" :content="$accordionItem['content']" :img-src="$accordionItem['imgSrc']" :img-alt="$accordionItem['imgAlt']" />
-      @endforeach
-    </ul>
-    <a href="#" class="button inline-block">{{ __('home.teachings_cta') }}</a>
-  </section>
-  <section class="space-y-4 mt-16 max-w-[90%] mx-auto">
-    <h2 class="title">{{ __('home.philosophy_title') }}</h2>
-    <div class="space-y-2">
-      <p>{{ __('home.philosophy_p1') }}</p>
-      <p>{{ __('home.philosophy_p2') }}</p>
-    </div>
-    <a class="button inline-block max-w-[80%]" href="#">{{ __('home.philosophy_cta') }}</a>
-  </section>
-  <section class="mt-16 space-y-6 grid items-center max-w-[90%] mx-auto">
-    <div class="space-y-4">
-      <h2 class="title">{{ __('home.projects_title') }}</h2>
-      <div class="space-y-2">
-        <p>{{ __('home.projects_p1') }}</p>
-        <p>{{ __('home.projects_p2') }}</p>
-      </div>
-      <ul class="grid space-y-4 relative">
-        <x-student-project />
-        <x-student-project />
-        <x-student-project />
-        <x-student-project />
-        <div class="w-full h-40 absolute bottom-0 from-white to-white/10 opacity-80 z-10 bg-gradient-to-t rounded-md">
+  <div class=" flex gap-x-12 ">
+    <x-navigation.menu />
+    <main class="mt-16 nav-2:mt-24 space-y-24">
+      <section class="space-y-4 w-[90%] max-w-[33rem] ml-[5vw]">
+        <h2 class="title">{{ __('home.intro_title') }}</h2>
+        <div class="space-y-2">
+          <p>{{ __('home.intro_p1') }}</p>
+          <p>{{ __('home.intro_p2') }}</p>
+          <p>{{ __('home.intro_p3') }}</p>
         </div>
-      </ul>
-    </div>
-    <a href="" class="button inline-block mx-auto">{{ __('home.projects_cta') }}</a>
-  </section>
-  <section class="space-y-4 grid items-center mt-16 max-w-[90%] mx-auto">
-    <h2 class="title">{{ __('home.teachers_title') }}</h2>
-    <p>{{ __('home.teachers_subtitle') }}</p>
-    <img src="images/teachers.jpg" alt="">
-    <a href="#" class="button inline-block mx-auto ">{{ __('home.teachers_cta') }}</a>
-  </section>
-  <section class="mt-16 relative items-center grid gap-2">
-    <div class="space-y-4 max-w-[90%] mx-auto">
-      <h2 class="title">{{ __('home.alumni_title') }}</h2>
-      <p>{{ __('home.alumni_subtitle') }}</p>
-    </div>
-    <div class="flex gap-x-4 overflow-x-scroll scroll-smooth snap-x snap-mandatory p-5" role="region"
-      aria-label="Image carousel" tabindex="0">
-      <x-alumni-card />
-      <x-alumni-card />
-      <x-alumni-card />
-    </div>
-    <a href="#" class="button inline-block mx-auto">{{ __('home.alumni_cta') }}</a>
-  </section>
-  <section class="max-w-[90%] mx-auto mt-16 space-y-4">
-    <h2 class="title">{{ __('home.blog_title') }}</h2>
-    <div class="space-y-2">
-      <p>
-        {{ __('home.blog_p1') }}
-      </p>
-      <p>
-        {{ __('home.blog_p2') }}
-      </p>
-    </div>
-    <ul class="space-y-4">
-      <x-article-card />
-      <x-article-card />
-      <x-article-card />
-    </ul>
-    <a href="" class="button inline-block">{{ __('home.blog_cta') }}</a>
-  </section>
-  <section class="w-[90%] mx-auto mt-16 space-y-4">
-    <h2 class="title">{{ __('home.contact_title') }}</h2>
-    <div class="space-y-2">
-      <p class="font-bold">{{ __('home.contact_forum') }}</p>
-      <x-search :$label :$button :$input class="" />
-    </div>
-    <div class="space-y-2">
-      <p class="font-bold">{{ __('home.contact_email') }}</p>
-      <a href="" class="button inline-block">
-        {{ __('home.contact_cta') }}
-      </a>
-    </div>
-  </section>
-  <section class="space-y-4 mt-16 mx-auto w-[90%]">
-    <h2 class="title">{{ __('home.register_title') }}</h2>
-    <p>{{ __('home.register_subtitle') }}</p>
-    <a class="button inline-block" href="">{{ __('home.register_cta') }}</a>
-  </section>
-  <section class="space-y-4 mt-16 mx-auto w-[90%] mb-10">
-    <h2 class="title">{{ __('home.newsletter_title') }}</h2>
-    <div class="space-y-2">
-      <p>{{ __('home.newsletter_p1') }}</p>
-      <p>{{ __('home.newsletter_p2') }}</p>
-    </div>
-    <form action="/{{ app()->getLocale() }}" class="space-y-4">
-      <div class="space-y-2">
-        <label class="label" for="email">{{ __('home.newsletter_label') }}</label>
-        <input class="input" type="email" id="email" name="email"
-          placeholder="{{ __('home.newsletter_input') }}">
-      </div>
-      <button class="button mt-3" type="submit">{{ __('home.newsletter_cta') }}</button>
-    </form>
-  </section>
-  <footer class="w-[90%] mx-auto mt-16">
-    <ul class="flex flex-wrap gap-6 justify-between max-w-screen items-center text-sm">
-      <li class="text-center flex-1"><a href="#">Mentions légales</a></li>
-      <li class="text-center flex-1"><a href="#">Conditions générales</a></li>
-      <li class="text-center flex-1"><a href="#">Le site de la HEPL</a></li>
-      <li class=""><a href="https://theoleonet.be" class="text-xl">❋</a></li>
-    </ul>
-  </footer>
+        <a class="button inline-block" href="#">{{ __('home.intro_cta') }}</a>
+      </section>
+      <section class="mt-16 space-y-4 w-[90%] ml-[5vw]">
+        <h2 class="title">{{ __('home.teachings_title') }}</h2>
+        <p class="max-w-[33rem]">{{ __('home.teachings_subtitle') }}</p>
+        <ul class="relative mt-8 space-y-4">
+          @foreach ($accordionItems as $accordionItem)
+            <x-accordion-item tabindex="0" :title="$accordionItem['title']" :content="$accordionItem['content']" :img-src="$accordionItem['imgSrc']" :img-alt="$accordionItem['imgAlt']" />
+          @endforeach
+        </ul>
+        <a href="#" class="button inline-block">{{ __('home.teachings_cta') }}</a>
+      </section>
+      <section class="space-y-4 mt-16 w-[90%] max-w-[33rem] ml-[5vw]">
+        <h2 class="title">{{ __('home.philosophy_title') }}</h2>
+        <div class="space-y-2">
+          <p>{{ __('home.philosophy_p1') }}</p>
+          <p>{{ __('home.philosophy_p2') }}</p>
+        </div>
+        <a class="button inline-block max-w-[80%]" href="#">{{ __('home.philosophy_cta') }}</a>
+      </section>
+      <section class="mt-16 space-y-6 w-[90%] ml-[5vw]">
+        <div class="space-y-4">
+          <h2 class="title">{{ __('home.projects_title') }}</h2>
+          <div class="space-y-2 max-w-[33rem]">
+            <p>{{ __('home.projects_p1') }}</p>
+            <p>{{ __('home.projects_p2') }}</p>
+          </div>
+          <ul class="grid grid-cols-1 sm:max-nav-2:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 relative">
+            <x-student-project />
+            <x-student-project />
+            <x-student-project />
+            <x-student-project />
+            <div
+              class="w-full h-40 absolute bottom-0 from-white to-white/10 opacity-80 z-10 bg-gradient-to-t rounded-md">
+            </div>
+          </ul>
+        </div>
+        <a href="" class="button inline-block">{{ __('home.projects_cta') }}</a>
+      </section>
+      <section class="space-y-4 grid items-center mt-16 max-w-[90%] mx-auto main-nav:mx-0">
+        <h2 class="title">{{ __('home.teachers_title') }}</h2>
+        <p>{{ __('home.teachers_subtitle') }}</p>
+        <img src="images/teachers.jpg" alt="">
+        <a href="#" class="button inline-block mx-auto ">{{ __('home.teachers_cta') }}</a>
+      </section>
+      <section class="mt-16 relative gap-2 ml-[5vw]">
+        <div class="space-y-4 max-w-[33rem]">
+          <h2 class="title">{{ __('home.alumni_title') }}</h2>
+          <p>{{ __('home.alumni_subtitle') }}</p>
+        </div>
+        <div class="flex gap-x-4 overflow-x-scroll scroll-smooth snap-x snap-mandatory p-5 -ml-5 min-w-full"
+          role="region" aria-label="Image carousel" tabindex="0">
+          <x-alumni-card />
+          <x-alumni-card />
+          <x-alumni-card />
+        </div>
+        <a href="#" class="button inline-block">{{ __('home.alumni_cta') }}</a>
+      </section>
+      <section class="max-w-[90%] mt-16 space-y-4 mx-auto main-nav:mx-0">
+        <h2 class="title max-w-[33rem]">{{ __('home.blog_title') }}</h2>
+        <div class="space-y-2 max-w-[33rem]">
+          <p>
+            {{ __('home.blog_p1') }}
+          </p>
+          <p>
+            {{ __('home.blog_p2') }}
+          </p>
+        </div>
+        <ul class="space-y-4">
+          <x-article-card />
+          <x-article-card />
+          <x-article-card />
+        </ul>
+        <a href="" class="button inline-block">{{ __('home.blog_cta') }}</a>
+      </section>
+      <section class="w-[90%] mt-16 space-y-4 mx-auto main-nav:mx-0 ">
+        <h2 class="title max-w-[33rem]">{{ __('home.contact_title') }}</h2>
+        <div class="space-y-2">
+          <p class="font-bold">{{ __('home.contact_forum') }}</p>
+          <x-search :$label :$button :$input class="max-w-[25rem]" />
+        </div>
+        <div class="space-y-2">
+          <p class="font-bold">{{ __('home.contact_email') }}</p>
+          <a href="" class="button inline-block">
+            {{ __('home.contact_cta') }}
+          </a>
+        </div>
+      </section>
+      <section class="space-y-4 mt-16  w-[90%] mx-auto main-nav:mx-0">
+        <h2 class="title max-w-[33rem]">{{ __('home.register_title') }}</h2>
+        <p class="max-w-[33rem]">{{ __('home.register_subtitle') }}</p>
+        <a class="button inline-block" href="">{{ __('home.register_cta') }}</a>
+      </section>
+      <section class="space-y-4 mt-16  w-[90%] mb-10 mx-auto main-nav:mx-0">
+        <h2 class="title max-w-[33rem]">{{ __('home.newsletter_title') }}</h2>
+        <div class="space-y-2 max-w-[33rem]">
+          <p>{{ __('home.newsletter_p1') }}</p>
+          <p>{{ __('home.newsletter_p2') }}</p>
+        </div>
+        <form action="/{{ app()->getLocale() }}" class="space-y-4" method="post">
+          <div class="space-y-2 grid">
+            <label class="label" for="email">{{ __('home.newsletter_label') }}</label>
+            <input class="input max-w-[400px]" type="email" id="email" name="email"
+              placeholder="{{ __('home.newsletter_input') }}">
+          </div>
+          <button class="button mt-3" type="submit">{{ __('home.newsletter_cta') }}</button>
+        </form>
+      </section>
+    </main>
+  </div>
 </x-layouts.main>

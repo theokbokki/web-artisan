@@ -1,5 +1,5 @@
 <li
-  class="group inline-block hover:bg-slate-100 focus:bg-slate-100 hover:p-5 focus:p-5 transition-all ease-in-out duration-300 rounded-md focus:space-y-2"
+  class="group inline-block hover:bg-slate-100 focus:bg-slate-100 hover:p-5 focus:p-5 transition-all ease-in-out duration-300 rounded-md focus:space-y-2 min-w-full"
   {{ $attributes }}>
   <div class="flex justify-between text-slate-700">
     <p class="title text-xl">{{ $title }}</p>
