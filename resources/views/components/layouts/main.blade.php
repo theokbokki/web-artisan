@@ -18,7 +18,12 @@
     {{ __('home.title') }}
   </h1>
   <x-navigation.header />
-  {{ $slot }}
+  <div class=" flex gap-x-12 ">
+    <x-navigation.menu />
+    <main class="mt-16 nav-2:mt-24 space-y-24">
+      {{ $slot }}
+    </main>
+  </div>
   <x-footer />
 </body>
 
