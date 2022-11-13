@@ -1,4 +1,4 @@
-<aside class="ml-[5%] flex-1 hidden sticky top-6 nav-2:flex mt-24 min-w-max max-w-52 self-start">
+<aside class="ml-[5%] flex-1 hidden sticky top-6 nav-2:flex mt-24 max-w-max self-start">
   <h2 class="sr-only">Menu</h2>
   <ul class="space-y-6 gap-y-4 max-h-[90vh] overflow-scroll w-40">
     <li class=" w-full">

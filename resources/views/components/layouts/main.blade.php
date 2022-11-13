@@ -18,10 +18,11 @@
     {{ __('home.title') }}
   </h1>
   <x-navigation.header />
-  <div class=" flex gap-x-12 ">
+  <div class="flex gap-x-12 ">
     <x-navigation.menu />
-    <main class="mt-16 nav-2:mt-24 space-y-24">
+    <main class="mt-16 nav-2:mt-24 space-y-24 w-full">
       {{ $slot }}
+      <x-newsletter />
     </main>
   </div>
   <x-footer />

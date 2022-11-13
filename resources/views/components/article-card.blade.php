@@ -3,7 +3,7 @@
     <div class="grid gap-2 lg:max-w-[70%]">
       <h3 class="font-bold text-lg order-2">Les étudiants de 3ème nous parlent de leurs PFE</h3>
       <div class="flex order-1 gap-2 items-center">
-        <img src="images/man.jpg" alt="" class="w-10 h-10 object-cover rounded-md">
+        <img src="../images/man.jpg" alt="" class="w-10 h-10 object-cover rounded-md">
         <p class="text-base flex-1">Par <a href="#" class="link text-base">Julien Fabuleux</a> le <time
             datetime="2022-05-28"> 28 mai
             2022</time></p>

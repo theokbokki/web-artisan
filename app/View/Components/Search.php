@@ -12,16 +12,19 @@ class Search extends Component
 
     public $input;
 
+    public $labelHidden;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($label, $button, $input)
+    public function __construct($label, $button, $input, $labelHidden)
     {
         $this->label = $label;
         $this->button = $button;
         $this->input = $input;
+        $this->labelHidden = $labelHidden;
     }
 
     /**
