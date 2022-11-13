@@ -31,7 +31,7 @@
     <span class="block w-5 h-0.5 bg-slate-600 group-hover:w-7 transition-all"></span>
   </label>
   <label for="menu"
-    class="fixed inset-0 bg-slate-900 backdrop-blur-sm bg-opacity-20 invisible peer-checked:visible">
+    class="fixed inset-0 bg-slate-900 backdrop-blur-sm bg-opacity-20 invisible peer-checked:visible z-10">
   </label>
   <div
     class="fixed right-[5vw] top-5 w-[90%] invisible peer-checked:visible z-20 flex flex-wrap bg-white rounded-md p-4 items-center gap-y-4 odd:gap-x-4 max-w-[32rem] max-h-[80vh] overflow-scroll">

@@ -13,7 +13,7 @@
   @vite('resources/css/app.css')
 </head>
 
-<body class="max-w-screen-2xl {{-- overflow-x-hidden --}}">
+<body class="max-w-screen-2xl {{-- overflow-x-hidden --}} mx-auto">
   <h1 class="sr-only">
     {{ __('home.title') }}
   </h1>

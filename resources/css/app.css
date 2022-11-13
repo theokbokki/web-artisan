@@ -44,7 +44,7 @@
 }
 
 .menu-link{
-	@apply text-slate-500 w-full hover:pl-3 hover:text-indigo-600 aria-[current=page]:hover:pl-5 transition-all duration-300  aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block;
+	@apply text-slate-500 w-full hover:pl-3 hover:text-indigo-600 aria-[current=page]:hover:pl-5 transition-spacing duration-300  aria-[current=page]:text-indigo-600 aria-[current=page]:bg-indigo-50 aria-[current=page]:py-2 aria-[current=page]:pl-3 aria-[current=page]:pr-6 aria-[current=page]:border-l-indigo-600 aria-[current=page]:border-l-2 inline-block;
 }
 
 .perspective-r{ transform: perspective(1500px) rotateY(-11deg) rotateX(6deg);}
@@ -56,6 +56,10 @@
 
 .card-shadow{
 	@apply drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] hover:drop-shadow-[0_0_10px_rgba(0,0,0,0.3)] transition-all duration-300 active:drop-shadow-none;
+}
+
+.base-shadow{
+	@apply drop-shadow-[0_0_10px_rgba(0,0,0,0.15)] ;
 }
 
 @tailwind components;

@@ -40,14 +40,19 @@
   <div class=" flex gap-x-12 ">
     <x-navigation.menu />
     <main class="mt-16 nav-2:mt-24 space-y-24">
-      <section class="space-y-4 w-[90%] max-w-[33rem] ml-[5vw]">
-        <h2 class="title">{{ __('home.intro_title') }}</h2>
-        <div class="space-y-2">
-          <p>{{ __('home.intro_p1') }}</p>
-          <p>{{ __('home.intro_p2') }}</p>
-          <p>{{ __('home.intro_p3') }}</p>
+      <section class="space-y-4  w-[90%] ml-[5vw] gap-4 xl:flex">
+        <div class="order-2 md:max-w-[70%] xl:max-w-[40%]">
+          <img src="images/hero-image.png" alt="" class="base-shadow">
         </div>
-        <a class="button inline-block" href="#">{{ __('home.intro_cta') }}</a>
+        <div class="max-w-[33rem] xl:max-w-none space-y-4">
+          <h2 class="title max-w-[33rem]">{{ __('home.intro_title') }}</h2>
+          <div class="space-y-2 max-w-[33rem]">
+            <p>{{ __('home.intro_p1') }}</p>
+            <p>{{ __('home.intro_p2') }}</p>
+            <p>{{ __('home.intro_p3') }}</p>
+          </div>
+          <a class="button inline-block" href="#">{{ __('home.intro_cta') }}</a>
+        </div>
       </section>
       <section class="mt-16 space-y-4 w-[90%] ml-[5vw]">
         <h2 class="title">{{ __('home.teachings_title') }}</h2>
@@ -80,7 +85,7 @@
             <x-student-project />
             <x-student-project />
             <div
-              class="w-full h-40 absolute bottom-0 from-white to-white/10 opacity-80 z-10 bg-gradient-to-t rounded-md">
+              class="w-full h-40 absolute bottom-0 from-white to-white/0 opacity-80 z-10 bg-gradient-to-t rounded-md">
             </div>
           </ul>
         </div>
@@ -102,6 +107,9 @@
           <x-alumni-card />
           <x-alumni-card />
           <x-alumni-card />
+          <div
+            class="w-40 h-full bottom-0 absolute right-0 from-white to-white/0 opacity-80 z-10 bg-gradient-to-l rounded-md">
+          </div>
         </div>
         <a href="#" class="button inline-block">{{ __('home.alumni_cta') }}</a>
       </section>

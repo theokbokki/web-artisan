@@ -20,6 +20,10 @@ module.exports = {
 			minWidth: {
 				'clamp': 'clamp(280px, 90%, 440px)',
 				'clamp-lg': 'clamp(440px, 90%, 800px)',
+			},
+			transitionProperty: {
+				'height': 'height',
+				'spacing': 'margin, padding',
 			}
 		},
 	},
