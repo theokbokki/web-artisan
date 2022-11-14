@@ -56,3 +56,13 @@ Route::get('/{locale}/alumnis', function ($locale) {
 
     return view('old_students');
 });
+
+Route::get('/{locale}/teachers', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('teachers');
+});

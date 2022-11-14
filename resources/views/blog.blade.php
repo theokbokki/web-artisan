@@ -36,6 +36,7 @@
       <x-article-card />
       <x-article-card />
     </ul>
+    <x-fake-pagination class="max-w-max mx-auto" />
     {{-- {{ $articles->paginate('tailwind') }} --}}
   </section>
 </x-layouts.main>

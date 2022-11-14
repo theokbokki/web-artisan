@@ -2,7 +2,7 @@
         <div class="flex gap-x-2">
           <div class="w-10 h-10 rounded-md"><img class="w-full h-full object-cover rounded-md" src="../images/man.jpg"
               alt=""></div>
-          <a class="link">Janny P.</a>
+          <a href="#" class="link">Janny P.</a>
         </div>
         <div class="flex gap-x-2">
           <p>12k</p>

@@ -25,17 +25,17 @@
     <div class="space-y-8 flex flex-col">
       <x-search :label="$search_label" :$input :$button :label-hidden="$searchLabelHidden" class="max-w-[33rem]" />
       <form action="/" method="post" class="flex flex-wrap gap-4">
-        <x-select :options="['all' => 'Tous les auteurs']" :for="$authors_for" :label="$authors_label" />
-        <x-select :options="['time' => 'Les plus récents d\'abord']" :for="$time_for" :label="$time_label" />
-        <x-select :options="['solved and not solved' => 'Résolu et non résolu']" :for="$solved_for" :label="$solved_label" />
-        <x-select :options="['most popular first' => 'Les plus populaires d\'abord']" :for="$popularity_for" :label="$popularity_label" />
+        <x-select class="test" :options="['all' => 'Tous les auteurs']" :for="$authors_for" :label="$authors_label" />
+        <x-select class="test" :options="['time' => 'Les plus récents d\'abord']" :for="$time_for" :label="$time_label" />
+        <x-select class="test" :options="['solved and not solved' => 'Résolu et non résolu']" :for="$solved_for" :label="$solved_label" />
+        <x-select class="test" :options="['most popular first' => 'Les plus populaires d\'abord']" :for="$popularity_for" :label="$popularity_label" />
         <button type="submit" class="button self-end">Trier</button>
       </form>
     </div>
     <a class="button inline-block">Poser une question</a>
   </section>
-  <div class="grid gap-8 xl:grid-cols-[70%_30%] w-[90%] ml-[5vw] max-w-[700px] xl:max-w-none">
-    <section class="">
+  <div class="grid gap-x-8 gap-y-12 xl:grid-cols-[70%_30%] w-[90%] ml-[5vw] max-w-[700px] xl:max-w-none">
+    <section class="space-y-6">
       <h2 class="sr-only">
         Liste des questions
       </h2>
@@ -45,6 +45,7 @@
         <x-forum-card />
         <x-forum-card />
       </div>
+      <x-fake-pagination class="max-w-max mx-auto" />
     </section>
     <aside class="w-full xl:w-[90%] p-5 bg-white base-shadow rounded-md space-y-6 self-start sticky top-6">
       <h2 class="font-title text-bold text-slate-700 text-xl">

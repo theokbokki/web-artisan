@@ -68,5 +68,9 @@
 	background-position:90%;
 }
 
+.pagination-links{
+ @apply bg-slate-100 text-slate-500 p-2 inline-block rounded-md hover:bg-slate-50 hover:text-slate-400 active:bg-slate-200 active:text-slate-600 transition-all;
+}
+
 @tailwind components;
 @tailwind utilities;

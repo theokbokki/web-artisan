@@ -6,24 +6,22 @@ use Illuminate\View\Component;
 
 class Select extends Component
 {
-    public $options;
-
     public $for;
 
     public $label;
+
+    public array $options;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($options, $for, $label)
+    public function __construct($for, $label, array $options)
     {
-        $this->options = $options;
         $this->for = $for;
         $this->label = $label;
-
-        //
+        $this->options = $options;
     }
 
     /**
