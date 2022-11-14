@@ -16,10 +16,10 @@
   <section class="space-y-8 w-[90%] ml-[5vw]">
     <div class="space-y-4 max-w-[33rem]">
       <h2 class="title">
-        {{ __('blog.title') }}
+        {{ __('forum.title') }}
       </h2>
       <p>
-        {{ __('blog.subtitle') }}
+        {{ __('forum.subtitle') }}
       </p>
     </div>
     <div class="space-y-8 flex flex-col">

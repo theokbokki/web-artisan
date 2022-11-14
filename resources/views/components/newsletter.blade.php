@@ -1,4 +1,4 @@
-  <section class="space-y-4 mt-16  w-[90%] mb-10 mx-auto main-nav:mx-0">
+  <section class="space-y-4 mt-16  w-[90%] mb-10 ml-[5vw]">
     <h2 class="title max-w-[33rem]">{{ __('home.newsletter_title') }}</h2>
     <div class="space-y-2 max-w-[33rem]">
       <p>{{ __('home.newsletter_p1') }}</p>

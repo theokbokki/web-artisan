@@ -46,3 +46,13 @@ Route::get('/{locale}/forum', function ($locale) {
 
     return view('forum');
 });
+
+Route::get('/{locale}/alumnis', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('old_students');
+});
