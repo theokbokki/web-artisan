@@ -36,3 +36,13 @@ Route::get('/{locale}/blog', function ($locale) {
 
     return view('blog');
 });
+
+Route::get('/{locale}/forum', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('forum');
+});

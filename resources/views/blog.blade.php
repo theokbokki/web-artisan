@@ -19,8 +19,8 @@
       </p>
     </div>
     <div class="space-y-8 flex flex-col">
-      <x-search :label="$search_label" :$input :$button :label-hidden="$searchLabelHidden" class="flex-1" />
-      <form action="/" method="post" class="flex flex-wrap gap-6">
+      <x-search :label="$search_label" :$input :$button :label-hidden="$searchLabelHidden" class="max-w-[33rem]" />
+      <form action="/" method="post" class="flex flex-wrap gap-4">
         <x-select :options="['all' => 'Tous les auteurs']" :for="$authors_for" :label="$authors_label" />
         <x-select :options="['time' => 'Les plus récents d\'abord']" :for="$time_for" :label="$time_label" />
         <button type="submit" class="button self-end">Trier</button>

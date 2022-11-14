@@ -1,5 +1,5 @@
-  <fieldset {{ $attributes->merge(['class' => 'grid gap-2']) }}>
-    <label for="{{ $for }}">
+  <fieldset {{ $attributes->merge(['class' => 'grid']) }}>
+    <label for="{{ $for }}" class="label">
       {{ $label }}
     </label>
     <select class="input select-bg appearance-none min-w-max pr-14">
