@@ -76,3 +76,13 @@ Route::get('/{locale}/works', function ($locale) {
 
     return view('works');
 });
+
+Route::get('/{locale}/internships', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('internships');
+});
