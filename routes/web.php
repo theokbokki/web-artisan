@@ -66,3 +66,13 @@ Route::get('/{locale}/teachers', function ($locale) {
 
     return view('teachers');
 });
+
+Route::get('/{locale}/works', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('works');
+});

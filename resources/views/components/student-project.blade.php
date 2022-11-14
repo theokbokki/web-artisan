@@ -4,7 +4,7 @@
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <div class="w-10 h-10">
-                <img src="images/man.jpg" alt="" class="object-cover w-full h-full rounded-md">
+                <img src="../images/man.jpg" alt="" class="object-cover w-full h-full rounded-md">
               </div>
               <p class="font-bold text-slate-700 leading-4">Jules Platot</p>
             </div>
