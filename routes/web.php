@@ -86,3 +86,23 @@ Route::get('/{locale}/internships', function ($locale) {
 
     return view('internships');
 });
+
+Route::get('/{locale}/translations', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('translations');
+});
+
+Route::get('/{locale}/course-grid', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('course_grid');
+});
