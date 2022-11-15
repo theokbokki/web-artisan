@@ -106,3 +106,13 @@ Route::get('/{locale}/course-grid', function ($locale) {
 
     return view('course_grid');
 });
+
+Route::get('/{locale}/contact', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('contact');
+});
