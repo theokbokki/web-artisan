@@ -19,7 +19,7 @@
         <p>EX: trounoirdistortiondutemps</p>
         <input class="input w-full" type="text" id="password">
       </fieldset>
-      <button class="button w-max" type="submit">S'inscrire</button>
+      <button class="button w-max" type="submit">Se conecter</button>
     </form>
   </section>
 </x-layouts.main>

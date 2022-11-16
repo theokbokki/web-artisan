@@ -35,37 +35,38 @@
   </label>
   <div
     class="fixed right-[5vw] top-5 w-[90%] invisible peer-checked:visible z-20 flex flex-wrap bg-white rounded-md p-4 items-center gap-y-4 odd:gap-x-4 max-w-[32rem] max-h-[80vh] overflow-scroll">
-    <a href="#" aria-current="page" class="menu-link  w-full min-[400px]:w-[47%]">
+    <a href="/" aria-current="page" class="menu-link  w-full min-[400px]:w-[47%]">
       Accueil
     </a>
-    <a href="#" class="menu-link  w-full min-[400px]:w-[47%]">
+    <a href="/{{ app()->getLocale() }}/works" class="menu-link  w-full min-[400px]:w-[47%]">
       Projets étudiants
     </a>
-    <a href="#" class="menu-link  w-full min-[400px]:w-[47%]">
+    <a href="/{{ app()->getLocale() }}/course-grid" class="menu-link  w-full min-[400px]:w-[47%]">
       Grille des cours
     </a>
-    <a href="#" class="menu-link  w-full min-[400px]:w-[47%]">
+    <a href="/{{ app()->getLocale() }}/teachers" class="menu-link  w-full min-[400px]:w-[47%]">
       Professeurs
     </a>
-    <a href="#" class="menu-link  w-full min-[400px]:w-[47%]">
+    <a href="/{{ app()->getLocale() }}/alumnis" class="menu-link  w-full min-[400px]:w-[47%]">
       Anciens
     </a>
-    <a href="#" class="menu-link  w-full min-[400px]:w-[47%]">
+    <a href="/{{ app()->getLocale() }}/blog" class="menu-link  w-full min-[400px]:w-[47%]">
       Blog
     </a>
-    <a href="#" class="menu-link w-full min-[400px]:w-[47%]">
+    <a href="/{{ app()->getLocale() }}/forum" class="menu-link w-full min-[400px]:w-[47%]">
       Forum
     </a>
-    <a href="#" class="menu-link w-full min-[400px]:w-[47%]">
+    <a href="/{{ app()->getLocale() }}/internships" class="menu-link w-full min-[400px]:w-[47%]">
       Stages
     </a>
-    <a href="#" class="menu-link w-full min-[400px]:w-[47%]">
+    <a href="/{{ app()->getLocale() }}/translations" class="menu-link w-full min-[400px]:w-[47%]">
       Traductions
     </a>
-    <a href="#" class="menu-link w-full min-[400px]:w-[47%]">
+    <a href="https://ecolevirtuelle.provincedeliege.be/asp/Admissions/Admissions/Accueil"
+      class="menu-link w-full min-[400px]:w-[47%]">
       S'inscrire à l'école
     </a>
-    <a href="#" class="menu-link w-full min-[400px]:w-[47%]">
+    <a href="/{{ app()->getLocale() }}/contact" class="menu-link w-full min-[400px]:w-[47%]">
       Contact
     </a>
   </div>
