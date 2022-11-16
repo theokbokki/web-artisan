@@ -136,3 +136,13 @@ Route::get('/{locale}/login', function ($locale) {
 
     return view('login');
 });
+
+Route::get('/{locale}/works/{work}', function ($locale, $work) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('single.work');
+});

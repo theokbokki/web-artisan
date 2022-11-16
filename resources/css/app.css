@@ -78,3 +78,7 @@
 .transparent-cover{
 	@apply bg-slate-900/50;
 }
+
+.small-title{
+	@apply font-bold text-2xl font-title text-slate-700;
+}
