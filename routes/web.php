@@ -116,3 +116,23 @@ Route::get('/{locale}/contact', function ($locale) {
 
     return view('contact');
 });
+
+Route::get('/{locale}/register', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('register');
+});
+
+Route::get('/{locale}/login', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('login');
+});
