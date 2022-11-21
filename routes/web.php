@@ -196,3 +196,13 @@ Route::get('/{locale}/reset-password', function ($locale) {
 
     return view('forgotten_password');
 });
+
+Route::get('/{locale}/forum/{question}', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('single.forum');
+});
