@@ -156,3 +156,23 @@ Route::get('/{locale}/teachers/{teacher}', function ($locale, $teacher) {
 
     return view('single.teacher');
 });
+
+Route::get('/{locale}/alumnis/{alumni}', function ($locale, $alumni) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('single.alumni');
+});
+
+Route::get('/{locale}/blog/{article}', function ($locale, $article) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('single.article');
+});
