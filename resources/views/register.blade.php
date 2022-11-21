@@ -49,5 +49,6 @@
       <fieldset>
         <button class="button w-max" type="submit">S'inscrire</button>
     </form>
+    <a class="link inline-block mt-4" href="">Déja un compte?</a>
   </section>
 </x-layouts.main>

@@ -18,8 +18,10 @@
         <label class="label" for="password">Mot de passe</label>
         <p>EX: trounoirdistortiondutemps</p>
         <input class="input w-full" type="text" id="password">
+        <a class="link" href="">Mot de passe oublié?</a>
       </fieldset>
-      <button class="button w-max" type="submit">Se conecter</button>
+      <button class="button w-max" type="submit">Se connecter</button>
     </form>
+    <a class="link mt-4 inline-block" href="">Tu n'as pas encore de compte?</a>
   </section>
 </x-layouts.main>

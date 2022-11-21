@@ -176,3 +176,23 @@ Route::get('/{locale}/blog/{article}', function ($locale, $article) {
 
     return view('single.article');
 });
+
+Route::get('/{locale}/profile', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('profile');
+});
+
+Route::get('/{locale}/reset-password', function ($locale) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('forgotten_password');
+});
