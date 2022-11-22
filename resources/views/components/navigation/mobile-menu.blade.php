@@ -25,7 +25,7 @@
 <nav class="flex items-center nav-2:hidden">
   <h2 class="sr-only">Menu</h2>
   <input type="checkbox" name="menu" id="menu" class="sr-only peer">
-  <label for="menu" class="cursor-pointer text-slate-600 space-y-1.5 groupkk">
+  <label for="menu" class="cursor-pointer text-slate-600 space-y-1.5 group">
     <span class="block w-7 h-0.5 bg-slate-600 group-hover:w-5 transition-all"></span>
     <span class="block w-7 h-0.5 bg-slate-600"></span>
     <span class="block w-5 h-0.5 bg-slate-600 group-hover:w-7 transition-all"></span>

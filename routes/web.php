@@ -197,7 +197,7 @@ Route::get('/{locale}/reset-password', function ($locale) {
     return view('forgotten_password');
 });
 
-Route::get('/{locale}/forum/{question}', function ($locale) {
+Route::get('/{locale}/forum/{question}', function ($locale, $question) {
     if (! in_array($locale, ['en', 'fr'])) {
         abort(400);
     }
@@ -205,4 +205,14 @@ Route::get('/{locale}/forum/{question}', function ($locale) {
     App::setLocale($locale);
 
     return view('single.forum');
+});
+
+Route::get('/{locale}/internships/{internship}', function ($locale, $internship) {
+    if (! in_array($locale, ['en', 'fr'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    return view('single.internship');
 });
