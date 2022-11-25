@@ -17,6 +17,7 @@ module.exports = {
 			gridTemplateColumns: {
 				'fill': 'repeat(auto-fill, clamp(288px, 90% ,312px))',
 				'teachers': '1fr, 320px',
+				'nav': 'repeat(auto-fill, minmax(150px, 1fr))',
 			},
 			minWidth: {
 				'clamp': 'clamp(280px, 90%, 440px)',

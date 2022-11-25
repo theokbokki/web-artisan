@@ -6,7 +6,7 @@
           fill="#4f46e5" />
       </svg>
     </div>
-    <figcaption class="hidden text-base leading-4 text-indigo-600 font-title font-bold max-w-[5.5rem] ml-3 nav-1:block">
+    <figcaption class=" text-base leading-4 text-indigo-600 font-title font-bold max-w-[5.5rem] ml-3 nav-1:block">
       {{ __('logo.tagline') }}
     </figcaption>
   </figure>

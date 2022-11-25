@@ -38,29 +38,34 @@
 ])
 
 <x-layouts.main>
-  <section class="space-y-4  w-[90%] ml-[5vw] gap-4 xl:flex">
-    <div class="order-2 md:max-w-[70%] xl:max-w-[40%]">
-      <img src="images/hero-image.png" alt="" class="base-shadow">
-    </div>
-    <div class="max-w-[33rem] xl:max-w-none space-y-4">
-      <h2 class="title max-w-[33rem]">{{ __('home.intro_title') }}</h2>
-      <div class="space-y-2 max-w-[33rem]">
+  <section class="grid gap-10 w-[90%] max-w-5xl mx-auto text-center">
+    <div class="space-y-4">
+      <h2 class="title md:text-4xl md:leading-[3rem] lg:text-5xl lg:leading-[4rem]">N’attends
+        pas le chômage,
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-600">deviens
+          développeur
+          web</span>
+      </h2>
+      <div class="max-w-4xl mx-auto space-y-4">
         <p>{{ __('home.intro_p1') }}</p>
         <p>{{ __('home.intro_p2') }}</p>
         <p>{{ __('home.intro_p3') }}</p>
       </div>
       <a class="button inline-block" href="#">{{ __('home.intro_cta') }}</a>
     </div>
+    <div class="">
+      <img src="images/hero-image.png" alt="" class="base-shadow">
+    </div>
   </section>
-  <section class="mt-16 space-y-4 w-[90%] ml-[5vw]">
+  <section class="mt-16 w-[90%] mx-auto max-w-5xl">
     <h2 class="title">{{ __('home.teachings_title') }}</h2>
-    <p class="max-w-[33rem]">{{ __('home.teachings_subtitle') }}</p>
-    <ul class="relative mt-8 space-y-4">
+    <p class="max-w-[33rem] mt-4">{{ __('home.teachings_subtitle') }}</p>
+    <ul class="relative mt-8">
       @foreach ($accordionItems as $accordionItem)
         <x-accordion-item tabindex="0" :title="$accordionItem['title']" :content="$accordionItem['content']" :img-src="$accordionItem['imgSrc']" :img-alt="$accordionItem['imgAlt']" />
       @endforeach
     </ul>
-    <a href="#" class="button inline-block">{{ __('home.teachings_cta') }}</a>
+    <a href="#" class="button inline-block mt-8">{{ __('home.teachings_cta') }}</a>
   </section>
   <section class="space-y-4 mt-16 w-[90%] max-w-[33rem] ml-[5vw]">
     <h2 class="title">{{ __('home.philosophy_title') }}</h2>
