@@ -44,11 +44,14 @@
         {!! __("N'attends pas le chômage, <span class=\"gradient-text\">deviens développeur web</span>") !!}
       </h2>
       <div class="max-w-4xl mx-auto space-y-4">
-        <p>{{ __('home.intro_p1') }}</p>
-        <p>{{ __('home.intro_p2') }}</p>
-        <p>{{ __('home.intro_p3') }}</p>
+        <p>
+          {{ __('Notre bachelier te permettra de te lancer dans
+                    tous les domaines du web, du développement au design.') }}
+        </p>
+        <p>{{ __('Après 3 ans chez nous, tu seras un vrai développeur full stack, mais pas que.') }}</p>
+        <p>{{ __('Trop beau pour être vrai?') }}</p>
       </div>
-      <a class="button inline-block" href="#">{{ __('home.intro_cta') }}</a>
+      <a class="button inline-block" href="#">{{ __('Viens vérifier par toi même') }}</a>
     </div>
     <div class="">
       <img src="images/hero-image.png" alt="" class="base-shadow">
