@@ -12,13 +12,26 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $this->call(UsersSeeder::class);
+        $this->call(PostsSeeder::class);
+        $this->call(TagSeeder::class);
+        $this->call(WorksSeeder::class);
+        $this->call(QuestionsSeeder::class);
+        $this->call(AnswersSeeder::class);
+        $this->call(CommentsSeeder::class);
+        $this->call(CompaniesSeeder::class);
+        $this->call(InternshipsSeeder::class);
+        $this->call(YearsSeeder::class);
+        $this->call(LessonsSeeder::class);
+        $this->call(VotesSeeder::class);
+        $this->call(QuartersSeeder::class);
+        $this->call(PostUserRelationshipSeeder::class);
+        $this->call(LessonUserRelationShipSeeder::class);
+        $this->call(InternshipTagRelationShipSeeder::class);
+        $this->call(LessonQuarterRelationShipSeeder::class);
+        $this->call(PostTagRelationShipSeeder::class);
+        $this->call(QuestionTagRelationShipSeeder::class);
     }
 }

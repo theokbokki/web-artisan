@@ -20,7 +20,7 @@ class Tag extends Model
 
     public function works()
     {
-        return $this->belongsToMany(Work::class);
+        return $this->hasMany(Work::class);
     }
 
     public function questions()

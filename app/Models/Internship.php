@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Internship extends Model
 {
@@ -24,15 +24,18 @@ class Internship extends Model
     ];
 
     /**
+     * @return BelongsToMany
+     */
+    public function tags(): BelongsToMany
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
+    /**
      * @return BelongsTo
      */
     public function company(): BelongsTo
     {
         return $this->belongsTo(Company::class);
-    }
-
-    public function tag(): HasMany
-    {
-        return $this->hasMany(Tag::class);
     }
 }

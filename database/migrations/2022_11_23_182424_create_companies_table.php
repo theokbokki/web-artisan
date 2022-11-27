@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('avatar');
             $table->text('about');
-            $table->timestamp('published_at');
             $table->timestamps();
             $table->softDeletes();
         });

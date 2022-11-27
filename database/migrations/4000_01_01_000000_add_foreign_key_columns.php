@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class () extends Migration {
     /**
      * Run the migrations.
      *
@@ -23,11 +22,6 @@ return new class extends Migration
             $table->foreignId('tag_id')->constrained()->onUpdate('cascade');
         });
 
-        Schema::table('tag_user', static function (Blueprint $table) {
-            $table->foreignId('tag_id')->constrained()->onUpdate('cascade');
-            $table->foreignId('user_id')->constrained()->onUpdate('cascade');
-        });
-
         Schema::table('lesson_user', static function (Blueprint $table) {
             $table->foreignId('lesson_id')->constrained()->onUpdate('cascade');
             $table->foreignId('user_id')->constrained()->onUpdate('cascade');
@@ -36,11 +30,6 @@ return new class extends Migration
         Schema::table('lesson_quarter', static function (Blueprint $table) {
             $table->foreignId('lesson_id')->constrained()->onUpdate('cascade');
             $table->foreignId('quarter_id')->constrained()->onUpdate('cascade');
-        });
-
-        Schema::table('question_user', static function (Blueprint $table) {
-            $table->foreignId('question_id')->constrained()->onUpdate('cascade');
-            $table->foreignId('user_id')->constrained()->onUpdate('cascade');
         });
 
         Schema::table('question_tag', static function (Blueprint $table) {
@@ -59,9 +48,13 @@ return new class extends Migration
         });
 
         Schema::table('comments', static function (Blueprint $table) {
-            $table->foreignId('question_id')->constrained()->onUpdate('cascade');
+            $table->foreignId('question_id')->nullable()->constrained()->onUpdate('cascade');
             $table->foreignId('user_id')->constrained()->onUpdate('cascade');
-            $table->foreignId('answer_id')->constrained()->onUpdate('cascade');
+            $table->foreignId('answer_id')->nullable()->constrained()->onUpdate('cascade');
+        });
+
+        Schema::table('internships', static function (Blueprint $table) {
+            $table->foreignId('company_id')->constrained()->onUpdate('cascade');
         });
 
         Schema::table('lessons', static function (Blueprint $table) {
@@ -73,14 +66,13 @@ return new class extends Migration
         });
 
         Schema::table('votes', static function (Blueprint $table) {
-            $table->foreignId('question_id')->constrained()->onUpdate('cascade');
+            $table->foreignId('question_id')->nullable()->constrained()->onUpdate('cascade');
             $table->foreignId('user_id')->constrained()->onUpdate('cascade');
-            $table->foreignId('answer_id')->constrained()->onUpdate('cascade');
+            $table->foreignId('answer_id')->nullable()->constrained()->onUpdate('cascade');
         });
 
         Schema::table('works', static function (Blueprint $table) {
             $table->foreignId('user_id')->constrained()->onUpdate('cascade');
-            $table->foreignId('tag_id')->constrained()->onUpdate('cascade');
         });
     }
 

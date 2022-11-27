@@ -26,6 +26,10 @@
   font-stretch: normal;
 }
 
+.gradient-text{
+	@apply text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-600;
+}
+
 .title {
 	@apply text-slate-800 font-extrabold font-title text-3xl leading-[1.25em];
 }

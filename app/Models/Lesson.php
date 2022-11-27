@@ -37,7 +37,7 @@ class Lesson extends Model
     /**
      * @return BelongsToMany
      */
-    public function quarter(): BelongsToMany
+    public function quarters(): BelongsToMany
     {
         return $this->belongsToMany(Quarter::class);
     }

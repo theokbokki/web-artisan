@@ -40,11 +40,8 @@
 <x-layouts.main>
   <section class="grid gap-10 w-[90%] max-w-5xl mx-auto text-center">
     <div class="space-y-4">
-      <h2 class="title md:text-4xl md:leading-[3rem] lg:text-5xl lg:leading-[4rem]">N’attends
-        pas le chômage,
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-600">deviens
-          développeur
-          web</span>
+      <h2 class="title md:text-4xl md:leading-[3rem] lg:text-5xl lg:leading-[4rem]">
+        {!! __("N'attends pas le chômage, <span class=\"gradient-text\">deviens développeur web</span>") !!}
       </h2>
       <div class="max-w-4xl mx-auto space-y-4">
         <p>{{ __('home.intro_p1') }}</p>
