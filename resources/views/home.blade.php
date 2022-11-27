@@ -46,7 +46,7 @@
       <div class="max-w-4xl mx-auto space-y-4">
         <p>
           {{ __('Notre bachelier te permettra de te lancer dans
-                    tous les domaines du web, du développement au design.') }}
+                                                                      tous les domaines du web, du développement au design.') }}
         </p>
         <p>{{ __('Après 3 ans chez nous, tu seras un vrai développeur full stack, mais pas que.') }}</p>
         <p>{{ __('Trop beau pour être vrai?') }}</p>
@@ -54,12 +54,14 @@
       <a class="button inline-block" href="#">{{ __('Viens vérifier par toi même') }}</a>
     </div>
     <div class="">
-      <img src="images/hero-image.png" alt="" class="base-shadow">
+      <img src="images/hero-image.png" alt="" class="base-shadow rounded-lg">
     </div>
   </section>
   <section class="mt-16 w-[90%] mx-auto max-w-5xl">
-    <h2 class="title">{{ __('home.teachings_title') }}</h2>
-    <p class="max-w-[33rem] mt-4">{{ __('home.teachings_subtitle') }}</p>
+    <h2 class="title">{{ __('Un apprentissage diversifié et complet') }}</h2>
+    <p class="mt-4">
+      {{ __('Au terme du bachelier, vous possèderez de nombreuses compétences, importantes au métier de développeur web.') }}
+    </p>
     <ul class="relative mt-8">
       @foreach ($accordionItems as $accordionItem)
         <x-accordion-item tabindex="0" :title="$accordionItem['title']" :content="$accordionItem['content']" :img-src="$accordionItem['imgSrc']" :img-alt="$accordionItem['imgAlt']" />

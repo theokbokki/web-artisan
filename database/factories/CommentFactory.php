@@ -26,7 +26,7 @@ class CommentFactory extends Factory
             'created_at' => $created_at,
             'updated_at' => $updated_at,
             'published_at' => $published_at,
-            'body' => '<p>'.implode('</p><p>', fake()->paragraphs(12)).'</p>',
+            'body' => '<p>'.implode('</p><p>', fake()->paragraphs(3)).'</p>',
         ];
     }
 }
