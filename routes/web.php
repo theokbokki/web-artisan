@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +20,7 @@ Route::get('/language/{locale}', function ($locale) {
     return redirect()->back();
 });
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/blog', function () {
     return view('blog');

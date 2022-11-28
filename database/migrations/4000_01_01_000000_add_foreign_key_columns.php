@@ -42,6 +42,12 @@ return new class () extends Migration {
             $table->foreignId('tag_id')->constrained()->onUpdate('cascade');
         });
 
+
+        Schema::table('role_user', static function (Blueprint $table) {
+            $table->foreignId('role_id')->constrained()->onUpdate('cascade');
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade');
+        });
+
         Schema::table('answers', static function (Blueprint $table) {
             $table->foreignId('question_id')->constrained()->onUpdate('cascade');
             $table->foreignId('user_id')->constrained()->onUpdate('cascade');

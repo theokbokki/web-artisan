@@ -23,6 +23,9 @@ module.exports = {
 				'clamp': 'clamp(280px, 90%, 440px)',
 				'clamp-lg': 'clamp(440px, 90%, 800px)',
 			},
+			maxWidth: {
+				'1.5xl': '39rem',
+			},
 			transitionProperty: {
 				'height': 'height',
 				'spacing': 'margin, padding',

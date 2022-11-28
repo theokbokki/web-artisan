@@ -28,11 +28,13 @@ class DatabaseSeeder extends Seeder
         $this->call(VotesSeeder::class);
         $this->call(QuartersSeeder::class);
         $this->call(TeachingsSeeder::class);
+        $this->call(RoleSeeder::class);
         $this->call(PostUserRelationshipSeeder::class);
         $this->call(LessonUserRelationShipSeeder::class);
         $this->call(InternshipTagRelationShipSeeder::class);
         $this->call(LessonQuarterRelationShipSeeder::class);
         $this->call(PostTagRelationShipSeeder::class);
         $this->call(QuestionTagRelationShipSeeder::class);
+        $this->call(RoleUserRelationshipSeeder::class);
     }
 }

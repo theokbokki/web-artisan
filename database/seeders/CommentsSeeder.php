@@ -20,7 +20,7 @@ class CommentsSeeder extends Seeder
         User::all()->each(static function ($user) {
             Question::all()->each(static function ($question) use ($user) {
                 Comment::factory()
-                ->count(random_int(0, 2))
+                ->count(random_int(0, 1))
                 ->for($question)
                 ->for($user)
                 ->create();
@@ -30,7 +30,7 @@ class CommentsSeeder extends Seeder
         User::all()->each(static function ($user) {
             Answer::all()->each(static function ($answer) use ($user) {
                 Comment::factory()
-                ->count(random_int(0, 2))
+                ->count(random_int(0, 1))
                 ->for($answer)
                 ->for($user)
                 ->create();
