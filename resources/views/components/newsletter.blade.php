@@ -1,15 +1,22 @@
-  <section class="space-y-4 mt-16  w-[90%] mb-10 ml-[5vw]">
-    <h2 class="title max-w-[33rem]">{{ __('home.newsletter_title') }}</h2>
-    <div class="space-y-2 max-w-[33rem]">
-      <p>{{ __('home.newsletter_p1') }}</p>
-      <p>{{ __('home.newsletter_p2') }}</p>
-    </div>
-    <form action="/{{ app()->getLocale() }}" class="space-y-4" method="post">
-      <div class="space-y-2 grid">
-        <label class="label" for="email">{{ __('home.newsletter_label') }}</label>
-        <input class="input max-w-[400px]" type="email" id="email" name="email"
-          placeholder="{{ __('home.newsletter_input') }}">
+  <div class="bg-gradient-to-r from-cyan-400 to-indigo-600 w-[90%] max-w-5xl p-0.5 rounded-lg mx-auto">
+    <section
+      class="w-full max-w-5xl mx-auto bg-white rounded-md p-5 sm:px-8 grid nav-2:flex gap-y-8 items-center justify-between gap-x-16">
+      <div class="space-y-6 flex-1 min-w-0">
+        <h2 class="title">{{ __('Abonne toi à notre newsletter') }}</h2>
+        <div class="space-y-4 flex-1 max-w-1.5xl">
+          <p>
+            {{ __('Tu recevras un article chaque semaine reprenant les actualités de la section ou des faits sur ce qui s’est passé dans le monde du web dernièrement. ') }}
+          </p>
+          <p>{{ __('Bien sur tu pourras annuler ton abonnement à tout moment.') }}</p>
+        </div>
       </div>
-      <button class="button mt-3" type="submit">{{ __('home.newsletter_cta') }}</button>
-    </form>
-  </section>
+      <form action="/{{ app()->getLocale() }}" class="gap-4 grid nav-2:min-w-[40%]" method="post">
+        <fieldset class="grid gap-2">
+          <label class="label" for="email">{{ __('Ton email') }}</label>
+          <p class="inline-block">{{ __('Ex: FuturEtudiant@student.hepl.be') }}</p>
+          <input class="input max-w-[400px]" type="email" id="email" name="email" />
+        </fieldset>
+        <button class="button mt-3 w-max" type="submit">{{ __('S’abonner à la newsletter') }}</button>
+      </form>
+    </section>
+  </div>

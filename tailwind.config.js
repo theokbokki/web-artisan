@@ -20,7 +20,7 @@ module.exports = {
 				'nav': 'repeat(auto-fill, minmax(150px, 1fr))',
 			},
 			minWidth: {
-				'clamp': 'clamp(280px, 90%, 440px)',
+				'clamp': 'clamp(224px, 70%, 440px)',
 				'clamp-lg': 'clamp(440px, 90%, 800px)',
 			},
 			maxWidth: {

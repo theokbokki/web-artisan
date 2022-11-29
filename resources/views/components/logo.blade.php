@@ -7,6 +7,6 @@
       </svg>
     </div>
     <figcaption class=" text-base leading-4 text-indigo-600 font-title font-bold max-w-[5.5rem] ml-3 nav-1:block">
-      {{ __('logo.tagline') }}
+      {{ __('3 ans pour un futur') }}
     </figcaption>
   </figure>

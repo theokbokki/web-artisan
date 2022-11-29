@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Teaching;
 use App\Models\User;
 use App\Models\Work;
@@ -39,7 +40,13 @@ class HomeController extends Controller
             }
         )->get();
 
+        $posts = Post::orderBy('published_at', 'DESC')->limit(4)->get();
 
-        return view('home', compact('teachings', 'works', 'alumnis'));
+        foreach ($posts as $post) {
+            $post->published_at = Carbon::parse($post->published_at)->translatedFormat('d M Y');
+            $post->excerpt = Str::limit($post->excerpt, 150);
+        }
+
+        return view('home', compact('teachings', 'works', 'alumnis', 'posts'));
     }
 }

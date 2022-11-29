@@ -1,13 +1,6 @@
-@props([
-    'label' => 'Chercher sur notre forum',
-    'input' => 'Une question ? C\'est par ici !',
-    'button' => 'Chercher',
-    'labelHidden' => 'true',
-])
-
 <x-layouts.main>
-  <section class="grid gap-10 w-[90%] max-w-5xl mx-auto text-center">
-    <div class="space-y-4">
+  <section class="grid gap-x-10 gap-y-8 w-[90%] max-w-5xl mx-auto text-center">
+    <div class="space-y-6">
       <h2 class="title md:text-4xl md:leading-[3rem] lg:text-5xl lg:leading-[4rem]">
         {!! __("N'attends pas le chômage, <span class=\"gradient-text\">deviens développeur web</span>") !!}
       </h2>
@@ -20,13 +13,13 @@
       </div>
       <a class="button inline-block" href="#">{{ __('Viens vérifier par toi même') }}</a>
     </div>
-    <div class="">
-      <img src="images/hero-image.png" alt="" class="base-shadow rounded-lg">
-    </div>
+    <img src="images/hero-image.png" alt="" class="base-shadow rounded-lg">
   </section>
-  <section class="mt-16 w-[90%] mx-auto max-w-5xl text-center">
-    <h2 class="title">{{ __('Un apprentissage diversifié et complet') }}</h2>
-    <p class="mt-4 max-w-1.5xl mx-auto">
+  <section class="mt-24 w-[90%] mx-auto max-w-5xl text-center">
+    <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">
+      {{ __('Un apprentissage diversifié et complet') }}
+    </h2>
+    <p class="mt-6 max-w-1.5xl mx-auto">
       {{ __('Au terme du bachelier, vous possèderez de nombreuses compétences, importantes au métier de développeur web.') }}
     </p>
     <dl class="relative mt-8 text-left">
@@ -36,9 +29,10 @@
     </dl>
     <a href="#" class="button inline-block mt-8">{{ __('Voir la grille des cours') }}</a>
   </section>
-  <section class="mt-16 w-[90%] max-w-5xl mx-auto flex flex-wrap gap-6 text-center">
-    <div class="w-full md:w-[48%] md:text-left space-y-4">
-      <h2 class="title">{{ __('Un web de qualité, pour tous') }}</h2>
+
+  <section class="mt-24 w-[90%] max-w-5xl mx-auto flex flex-wrap gap-x-6 gap-y-8 text-center">
+    <div class="w-full md:w-[48%] md:text-left space-y-6">
+      <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">{{ __('Un web de qualité, pour tous') }}</h2>
       <div class="space-y-4 max-w-1.5xl mx-auto">
         <p>
           {{ __('Dans notre section, nous croyons fermement en l\'importance de réaliser des sites de qualité, qui respectent les différentes normes actuelles du web.') }}
@@ -54,10 +48,11 @@
     <a class="button inline-block max-w-[80%] mx-auto"
       href="#">{{ __('En apprendre plus sur la qualité web') }}</a>
   </section>
-  <section class="mt-16 space-y-6 w-[90%] mx-auto max-w-5xl text-center">
-    <div class="space-y-4">
-      <h2 class="title">{{ __('Toi aussi tu peux le faire') }}</h2>
-      <div class="max-w-1.5xl mx-auto space-y-4">
+
+  <section class="mt-24 space-y-8 w-[90%] mx-auto max-w-5xl text-center">
+    <div>
+      <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">{{ __('Toi aussi tu peux le faire') }}</h2>
+      <div class="max-w-1.5xl mx-auto space-y-4 mt-6">
         <p>
           {{ __('Chaque année, nos étudiants doivent réaliser des projets ambitieux, que ce soit pour un client ou pour leur PFE.') }}
         </p>
@@ -65,7 +60,7 @@
       </div>
     </div>
     <div class="relative">
-      <div class="columns-1 sm:columns-2 xl:columns-3 gap-6 space-y-6 break-inside-avoid">
+      <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-16 gap-y-10 items-start">
         @foreach ($works as $work)
           <x-work-card :$work />
         @endforeach
@@ -76,62 +71,74 @@
     </div>
     <a href="" class="button inline-block">{{ __('Voir tous les projets') }}</a>
   </section>
-  <section class="space-y-4 grid items-center mt-16 w-[90%] max-w-5xl mx-auto text-center">
-    <h2 class="title">{{ __('Rencontre tes futurs profs') }}</h2>
-    <p class="max-w-1.5xl mx-auto">
+  <section class="grid items-center mt-24 w-[90%] max-w-5xl mx-auto text-center">
+    <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">{{ __('Rencontre tes futurs profs') }}</h2>
+    <p class="max-w-1.5xl mx-auto mt-6">
       {{ __('Nous avons la chance d\'avoir une super équipe composée de professeurs permanents, de professionnels invités, et d\'anciens étudiants.') }}
     </p>
-    <img src="images/teachers.jpg" alt="">
-    <a href="#" class="button inline-block mx-auto ">{{ __('Voir tous les professeurs') }}</a>
+    <img src="images/teachers.jpg" alt="" class="mt-8">
+    <a href="#" class="button inline-block mx-auto mt-8">{{ __('Voir tous les professeurs') }}</a>
   </section>
-  <section class="mt-16 relative gap-2 ml-[5vw]">
-    <div class="space-y-4 max-w-[33rem]">
-      <h2 class="title">{{ __('Un travail garanti, en voici la preuve') }}</h2>
-      <p>
+  <section class="mt-24 relative space-y-8 mx-auto max-w-5xl w-[90%] text-center">
+    <div class="space-y-4">
+      <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">
+        {{ __('Un travail garanti, en voici la preuve') }}</h2>
+      <p class="max-w-1.5xl mx-auto">
         {{ __('Nos alumnis sont la preuve la plus évidente de la légitimité du bachelier. Voici quelques success story de nos anciens.') }}
       </p>
     </div>
-    <div class="relative flex gap-x-4 overflow-x-scroll scroll-smooth snap-x snap-mandatory p-5 -ml-5 min-w-full "
-      role="region" aria-label="Alumni cards carousel" tabindex="0">
-      @foreach ($alumnis as $alumni)
-        <x-alumni-card :$alumni />
+    <div class="relative">
+      <div class=" flex gap-x-10 overflow-x-scroll scroll-smooth snap-x snap-mandatory -ml-5 min-w-full pb-10"
+        role="region" aria-label="Alumni cards carousel" tabindex="0">
+        @foreach ($alumnis as $alumni)
+          <x-alumni-card :$alumni />
+        @endforeach
+      </div>
+    </div>
+    <a href="#" class="button inline-block">{{ __('Voir tous nos anciens') }}</a>
+  </section>
+  <section class="max-w-5xl w-[90%] mt-24  mx-auto main-nav:mx-0 text-center">
+    <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl"> {{ __('Les actus du bachelier') }}</h2>
+    <div class="space-y-4 max-w-1.5xl mx-auto mt-6">
+      <p>
+        {{ __('Nos professeurs postent régulièrement des articles à propos du bachelier ou même du web en général.') }}
+      </p>
+      <p>
+        {{ __('Nous accueillons aussi parfois des invités dont nous pensons qu’il peuvent écrire des choses interessantes.') }}
+      </p>
+    </div>
+    <div class=" mx-auto mt-10 space-y-8">
+      @foreach ($posts as $post)
+        <x-post-card :$post />
       @endforeach
     </div>
-    <a href="#" class="button inline-block">{{ __('home.alumni_cta') }}</a>
+    <a href="" class="button inline-block mt-8">{{ __('Voir tous nos articles') }}</a>
   </section>
-  <section class="max-w-[90%] mt-16 space-y-4 mx-auto main-nav:mx-0">
-    <h2 class="title max-w-[33rem]">{{ __('home.blog_title') }}</h2>
-    <div class="space-y-2 max-w-[33rem]">
-      <p>
-        {{ __('home.blog_p1') }}
-      </p>
-      <p>
-        {{ __('home.blog_p2') }}
-      </p>
-    </div>
-    <ul class="space-y-4">
-      <x-article-card />
-      <x-article-card />
-      <x-article-card />
-    </ul>
-    <a href="" class="button inline-block">{{ __('home.blog_cta') }}</a>
-  </section>
-  <section class="w-[90%] mt-16 space-y-4 mx-auto main-nav:mx-0 ">
-    <h2 class="title max-w-[33rem]">{{ __('home.contact_title') }}</h2>
-    <div class="space-y-2">
-      <p class="font-bold">{{ __('home.contact_forum') }}</p>
-      <x-search :$label :$button :$input :label-hidden="$labelHidden" class="max-w-[25rem]" />
-    </div>
-    <div class="space-y-2">
-      <p class="font-bold">{{ __('home.contact_email') }}</p>
-      <a href="" class="button inline-block">
-        {{ __('home.contact_cta') }}
-      </a>
+
+  <section class="space-y-8 w-[90%] max-w-5xl text-center mx-auto">
+    <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">
+      {{ __('Ne sois pas timide, viens nous parler') }}</h2>
+    <div class="flex justify-between gap-8 max-w-1.5xl mx-auto flex-wrap">
+      <div class="space-y-2 self-center mx-auto">
+        <p class="font-bold">{{ __('Sur notre forum') }}</p>
+        <a href="" class="button inline-block">
+          {{ __('Une question ? c\'est par ici') }}
+        </a>
+      </div>
+      <div class="space-y-2 mx-auto">
+        <p class="font-bold">{{ __('Directement par email') }}</p>
+        <a href="" class="button inline-block">
+          {{ __('Accéder au formulaire de contact') }}
+        </a>
+      </div>
     </div>
   </section>
-  <section class="space-y-4 mt-16  w-[90%] mx-auto main-nav:mx-0">
-    <h2 class="title max-w-[33rem]">{{ __('home.register_title') }}</h2>
-    <p class="max-w-[33rem]">{{ __('home.register_subtitle') }}</p>
-    <a class="button inline-block" href="">{{ __('home.register_cta') }}</a>
+  <section class="space-y-4 w-[90%] max-w-5xl text-center mx-auto">
+    <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">{{ __('Construis ton futur avec nous') }}
+    </h2>
+    <p class="max-w-1.5xl mx-auto">
+      {{ __('Notre site t’as convaincu? Alors inscris toi à la HEPL et deviens un grand développeur et designer web.') }}
+    </p>
+    <a class="button inline-block" href="">{{ __('S’inscrire au bachelier') }}</a>
   </section>
 </x-layouts.main>

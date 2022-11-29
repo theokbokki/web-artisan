@@ -9,7 +9,7 @@
     <h2 class="sr-only">
       {{ __('navigation.header_title') }}
     </h2>
-    <x-logo class="w-10" />
+    <x-logo class="w-14" />
     <div class="flex gap-4 items-center">
       <x-login-signup-buttons class="gap-2 items-center nav-1:gap-4 hidden nav-2:flex" />
       <x-navigation.mobile-search />
