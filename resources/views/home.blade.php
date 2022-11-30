@@ -115,7 +115,7 @@
     <a href="" class="button inline-block mt-8">{{ __('Voir tous nos articles') }}</a>
   </section>
 
-  <section class="space-y-8 w-[90%] max-w-5xl text-center mx-auto">
+  <section class="space-y-8 w-[90%] max-w-5xl text-center mx-auto mt-24">
     <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">
       {{ __('Ne sois pas timide, viens nous parler') }}</h2>
     <div class="flex justify-between gap-8 max-w-1.5xl mx-auto flex-wrap">
@@ -133,7 +133,7 @@
       </div>
     </div>
   </section>
-  <section class="space-y-4 w-[90%] max-w-5xl text-center mx-auto">
+  <section class="space-y-4 w-[90%] max-w-5xl text-center mx-auto mt-24">
     <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">{{ __('Construis ton futur avec nous') }}
     </h2>
     <p class="max-w-1.5xl mx-auto">

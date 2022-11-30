@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ForumController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,8 @@ Route::get('/language/{locale}', function ($locale) {
 });
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/forum', [ForumController::class, 'index']);
 
 Route::get('/blog', function () {
     return view('blog');

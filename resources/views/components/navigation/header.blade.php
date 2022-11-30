@@ -7,7 +7,7 @@
 <header class="pb-5 space-y-10 w-[90%] mx-auto">
   <nav class="flex flex-wrap gap-y-4 gap-x-2 nav-1:gap-x-4 items-center mt-6 justify-between">
     <h2 class="sr-only">
-      {{ __('navigation.header_title') }}
+      {{ __('Navigation principale') }}
     </h2>
     <x-logo class="w-14" />
     <div class="flex gap-4 items-center">

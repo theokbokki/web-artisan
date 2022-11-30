@@ -19,7 +19,7 @@
   </h1>
   <x-navigation.header />
   <div class="flex">
-    <main class="mt-10 space-y-24 w-full">
+    <main class="mt-10 w-full">
       {{ $slot }}
       <x-newsletter />
     </main>

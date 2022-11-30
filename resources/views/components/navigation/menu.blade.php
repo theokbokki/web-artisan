@@ -8,44 +8,44 @@
         </a>
       </li>
       <li class="">
-        <a href="/{{ app()->getLocale() }}/works" class="menu-link">
+        <a href="/works" class="menu-link">
           Projets étudiants
         </a>
       </li>
       <li class="">
-        <a href="/{{ app()->getLocale() }}/course-grid" class="menu-link">
+        <a href="/course-grid" class="menu-link">
           Grille des cours
         </a>
       </li>
       <li class="">
-        <a href="/{{ app()->getLocale() }}/teachers" class="menu-link">
+        <a href="/teachers" class="menu-link">
           Professeurs
         </a>
       </li>
       <li class="">
-        <a href="/{{ app()->getLocale() }}/alumnis" class="menu-link">
+        <a href="/alumnis" class="menu-link">
           Anciens
         </a>
       </li>
       <li class="">
-        <a href="/{{ app()->getLocale() }}/blog" class="menu-link">
+        <a href="/blog" class="menu-link">
           Blog
         </a>
       </li>
     </div>
     <div class="flex justify-around grow gap-4 items-center">
       <li class="">
-        <a href="/{{ app()->getLocale() }}/forum" class="menu-link">
+        <a href="/forum" class="menu-link">
           Forum
         </a>
       </li>
       <li class="">
-        <a href="/{{ app()->getLocale() }}/internships" class="menu-link">
+        <a href="/internships" class="menu-link">
           Stages
         </a>
       </li>
       <li class="">
-        <a href="/{{ app()->getLocale() }}/translations" class="menu-link">
+        <a href="/translations" class="menu-link">
           Traductions
         </a>
       </li>
@@ -55,7 +55,7 @@
         </a>
       </li>
       <li class="">
-        <a href="/{{ app()->getLocale() }}/contact" class="menu-link">
+        <a href="/contact" class="menu-link">
           Contact
         </a>
       </li>

@@ -1,4 +1,4 @@
-  <div class="bg-gradient-to-r from-cyan-400 to-indigo-600 w-[90%] max-w-5xl p-0.5 rounded-lg mx-auto">
+  <div class="bg-gradient-to-r from-cyan-400 to-indigo-600 w-[90%] max-w-5xl p-0.5 rounded-lg mx-auto mt-24">
     <section
       class="w-full max-w-5xl mx-auto bg-white rounded-md p-5 sm:px-8 grid nav-2:flex gap-y-8 items-center justify-between gap-x-16">
       <div class="space-y-6 flex-1 min-w-0">
@@ -10,11 +10,11 @@
           <p>{{ __('Bien sur tu pourras annuler ton abonnement à tout moment.') }}</p>
         </div>
       </div>
-      <form action="/{{ app()->getLocale() }}" class="gap-4 grid nav-2:min-w-[40%]" method="post">
+      <form action="#" class="gap-4 grid nav-2:min-w-[40%]" method="post">
         <fieldset class="grid gap-2">
-          <label class="label" for="email">{{ __('Ton email') }}</label>
+          <label class="label" for="newsletter_email">{{ __('Ton email') }}</label>
           <p class="inline-block">{{ __('Ex: FuturEtudiant@student.hepl.be') }}</p>
-          <input class="input max-w-[400px]" type="email" id="email" name="email" />
+          <input class="input max-w-[400px]" type="mail" id="newsletter_email" name="newsletter_email" />
         </fieldset>
         <button class="button mt-3 w-max" type="submit">{{ __('S’abonner à la newsletter') }}</button>
       </form>
