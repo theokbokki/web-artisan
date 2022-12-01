@@ -29,7 +29,7 @@ class QuestionFactory extends Factory
             'published_at' => $published_at,
             'title' => $title,
             'slug' => Str::slug($title),
-            'body' => '<p>'.implode('</p><p>', fake()->paragraphs(12)).'</p>',
+            'body' => '<p>'.implode('</p><p>', fake()->paragraphs(4)).'</p>',
             'solved_status' => mt_rand(0, 1),
         ];
     }

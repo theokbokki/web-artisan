@@ -34,7 +34,7 @@
   </aside>
   <div class="flex flex-col gap-6">
     <h3 class="font-bold text-slate-800 text-xl hover:text-indigo-600 hover:underline underline-offset-4"><a
-        href="" class="">{{ $question->title }}</a>
+        href="forum/{{ $question->slug }}">{{ $question->title }}</a>
     </h3>
     <div class="flex gap-2">
       <img class="w-7 h-7 rounded-md" src="{{ $question->user->avatar }}" alt="">

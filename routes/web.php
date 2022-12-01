@@ -25,6 +25,8 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/forum', [ForumController::class, 'index']);
 
+Route::get('/forum/{question:slug}', [ForumController::class, 'show']);
+
 Route::get('/blog', function () {
     return view('blog');
 });
