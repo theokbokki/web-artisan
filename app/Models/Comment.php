@@ -18,6 +18,11 @@ class Comment extends Model
         'published_at'
     ];
 
+    public function FunctionName(Type $var = null)
+    {
+        # code...
+    }
+
     public function question(): BelongsTo
     {
         return $this->belongsTo(Question::class);
