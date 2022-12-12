@@ -12,6 +12,10 @@ class Comment extends Model
 
     protected $fillable = [
         'body',
+        'user_id',
+        'answer_id',
+        'question_id',
+        'published_at'
     ];
 
     public function question(): BelongsTo

@@ -38,7 +38,28 @@ class ForumController extends Controller
     {
         $question->published_at_formatted = Carbon::parse($question->published_at)->translatedFormat('d M Y');
 
+
+        if ($question->votes) {
+            foreach ($question->votes as $vote) {
+                if ($vote->status) {
+                    $question->score ++;
+                } else {
+                    $question->score --;
+                }
+            }
+            // dd($question->score);
+        }
+
         foreach ($question->answers as $answer) {
+            if ($answer->votes) {
+                foreach ($answer->votes as $vote) {
+                    if ($vote->status) {
+                        $answer->score ++;
+                    } else {
+                        $answer->score --;
+                    }
+                }
+            }
             if ($answer->comments) {
                 foreach ($answer->comments as $comment) {
                     $question->total_comment_count ++;

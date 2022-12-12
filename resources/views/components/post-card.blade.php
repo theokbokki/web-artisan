@@ -9,9 +9,13 @@
       <div class="flex flex-wrap justify-between gap-4">
         <div class="flex items-center gap-2">
           <img src="{{ $post->users()->get()[0]->avatar }}" alt="" class="w-7 h-7 object-cover rounded-md">
-          <p class="text-slate-500 leading-4 text-base">Par <a href="/users/{{ $post->users()->get()[0]->name }}"
-              class="link ">{{ $post->users()->get()[0]->name }}</a>
-            le <time datetime="{{ $post->published_at }}">{{ $post->published_at }}</time></p>
+          <div>
+            <p class="text-slate-500 leading-4 text-base">Par @foreach ($post->users as $user)
+                <a href="/profile/{{ $user->name }}" class="link ">{{ $user->name }}</a>
+              @endforeach
+              le <time datetime="{{ $post->published_at }}">{{ $post->published_at }}</time></p>
+
+          </div>
         </div>
         <div>
           @foreach ($post->tags()->get() as $tag)

@@ -2,7 +2,7 @@
   <h2 class="sr-only">
     Main Navigation
   </h2>
-  <input type="checkbox" name="menu" id="menu" class="sr-only peer">
+  <input type="checkbox" name="menu" id="menu" class=" peer">
   <label for="menu" class="cursor-pointer text-slate-600 group">
     <div class="space-y-1.5">
       <span class="block w-7 h-0.5 bg-slate-600 group-hover:w-5 transition-all"></span>

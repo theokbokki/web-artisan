@@ -13,6 +13,9 @@ class Answer extends Model
 
     protected $fillable = [
         'body',
+        'published_at',
+        'question_id',
+        'user_id',
     ];
 
     public function question(): BelongsTo
