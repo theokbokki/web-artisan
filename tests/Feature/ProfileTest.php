@@ -4,6 +4,8 @@ namespace Tests\Feature;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class ProfileTest extends TestCase
@@ -68,7 +70,7 @@ class ProfileTest extends TestCase
         $response = $this
             ->actingAs($user)
             ->delete('/profile', [
-                'password' => 'password',
+                'password' => 'change_this',
             ]);
 
         $response
@@ -95,5 +97,17 @@ class ProfileTest extends TestCase
             ->assertRedirect('/profile');
 
         $this->assertNotNull($user->fresh());
+    }
+
+    public function test_user_can_upload_profile_picture()
+    {
+        Storage::fake('avatars');
+        $user = User::factory()->create();
+
+        $response = $this
+->actingAs($user)
+        ->post('/profile', ['avatar'=>UploadedFile::fake()->image('avatar.jpg')]);
+
+        Storage::disk('avatars')->assertExists('avatar.jpg');
     }
 }

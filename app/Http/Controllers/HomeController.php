@@ -15,7 +15,6 @@ class HomeController extends Controller
     {
         $teachings = Teaching::all();
 
-
         $works = Work::whereHas(
             'user',
             function ($q) {

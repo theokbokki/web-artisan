@@ -42,6 +42,8 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request)
     {
+        $request->validate(['avatar'=> ['image','required',]]);
+
         $request->user()->fill($request->validated());
 
         if ($request->user()->isDirty('email')) {

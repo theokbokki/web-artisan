@@ -59,17 +59,19 @@
         <p>{{ __('En voici quelques exemples.') }}</p>
       </div>
     </div>
-    <div class="relative">
-      <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-16 gap-y-10 items-start">
-        @foreach ($works as $work)
-          <x-work-card :$work />
-        @endforeach
+    @if ($works)
+      <div class="relative">
+        <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-16 gap-y-10 items-start">
+          @foreach ($works as $work)
+            <x-work-card :$work />
+          @endforeach
+        </div>
+        <div
+          class="w-full left-0 h-40 absolute bottom-0 from-white to-white/0 opacity-80 z-10 bg-gradient-to-t rounded-md">
+        </div>
       </div>
-      <div
-        class="w-full left-0 h-40 absolute bottom-0 from-white to-white/0 opacity-80 z-10 bg-gradient-to-t rounded-md">
-      </div>
-    </div>
-    <a href="" class="button inline-block">{{ __('Voir tous les projets') }}</a>
+      <a href="" class="button inline-block">{{ __('Voir tous les projets') }}</a>
+    @endif
   </section>
   <section class="grid items-center mt-24 w-[90%] max-w-5xl mx-auto text-center">
     <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">{{ __('Rencontre tes futurs profs') }}</h2>

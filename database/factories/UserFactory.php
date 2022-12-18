@@ -18,12 +18,13 @@ class UserFactory extends Factory
     public function definition()
     {
         $username = strtolower(fake()->sentence(5));
+        $name = strtolower(fake()->name());
 
         return [
-            'name' => strtolower(fake()->name()),
+            'name' =>$name,
             'username' => $username,
             'slug' => Str::slug($username),
-            'avatar' => fake()->imageUrl(128, 128, true, 'people', $username),
+            'avatar' => 'https://eu.ui-avatars.com/api/?background=random&name='.$name,
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'job'=>fake()->sentence(8),

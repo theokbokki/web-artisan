@@ -46,12 +46,13 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'slug'=>Str::slug($request->fullname),
+            'avatar'=>'https://eu.ui-avatars.com/api/?background=random&name='.$request->fullname,
         ]);
 
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect('/profile');
+        return redirect()->route('profile.edit', ['profile_picture' => false]);
     }
 }
