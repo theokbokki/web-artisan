@@ -46,7 +46,7 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'slug'=>Str::slug($request->fullname),
-            'avatar'=>'https://eu.ui-avatars.com/api/?background=random&name='.$request->fullname,
+            'avatar'=>'https://eu.ui-avatars.com/api/?background=random&size=128&name='.$request->fullname,
         ]);
 
         event(new Registered($user));

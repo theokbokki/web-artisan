@@ -4,7 +4,10 @@
       <img src="{{ $work->user->avatar }}" alt="" class="object-cover w-7 h-7 rounded-md">
       <p class="font-bold text-slate-700 leading-4 text-base">{{ $work->user->name }}</p>
     </div>
-    <p class="tag text-base">{{ $work->user->roles()->whereIn('role', ['alumni', 'student'])->get()[0]->role }}</p>
+    @if (isset(
+        $work->user->roles()->whereIn('role', ['alumni', 'student'])->get()[0]->role))
+      <p class="tag text-base">{{ $work->user->roles()->whereIn('role', ['alumni', 'student'])->get()[0]->role }}</p>
+    @endif
   </div>
   <p class="font-bold text-slate-800 text-xl md:text-2xl mt-4">{{ $work->title }}</p>
   <p class="mt-4">{{ $work->excerpt }}</p>

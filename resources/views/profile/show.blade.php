@@ -17,6 +17,9 @@
       </div>
     </div>
     <p class="mt-6 max-w-1.5xl">{{ $user->excerpt }}</p>
+    @if ($user->id == auth()->id())
+      <a href="/profile" class="button inline-block mt-6">Edit profile</a>
+    @endif
   </section>
 
   @if ($user->posts->count())
