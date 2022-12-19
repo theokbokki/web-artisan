@@ -1,7 +1,7 @@
 <article class="grid min-[400px]:grid-cols-[128px_1fr] h-full relative gap-4" role="group"
   aria-label="slide {{ $alumni->index }} of 5">
   <div class="">
-    <img src="{{ $alumni->avatar }}" alt="" class="rounded-md w-64 h-full object-cover">
+    <img src="/{{ $alumni->avatar }}" alt="" class="rounded-md w-64 h-full object-cover">
   </div>
   <div class="text-left">
     <h3 class="font-bold text-slate-700">{{ $alumni->name }}</h3>

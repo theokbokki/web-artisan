@@ -8,7 +8,7 @@
       <p class="">{{ $post->excerpt }}</p>
       <div class="flex flex-wrap justify-between gap-4">
         <div class="flex items-center gap-2">
-          <img src="{{ $post->users()->get()[0]->avatar }}" alt="" class="w-7 h-7 object-cover rounded-md">
+          <img src="/{{ $post->users()->get()[0]->avatar }}" alt="" class="w-7 h-7 object-cover rounded-md">
           <div>
             <p class="text-slate-500 leading-4 text-base">Par @foreach ($post->users as $user)
                 <a href="/profile/{{ $user->name }}" class="link ">{{ $user->name }}</a>

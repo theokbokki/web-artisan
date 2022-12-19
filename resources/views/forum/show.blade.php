@@ -22,7 +22,7 @@
     </div>
     <div class="mt-6">
       <div class="flex gap-2">
-        <img class="w-7 h-7 rounded-md" src="{{ $question->user->avatar }}" alt="">
+        <img class="w-7 h-7 rounded-md" src="/{{ $question->user->avatar }}" alt="">
         <p class="text-base"><a href="users/{{ $question->user->slug }}" class="link">
             {{ $question->user->name }}</a> <time datetime="{{ $question->published_at }}"> le
             {{ $question->published_at_formatted }}</time></p>
@@ -76,7 +76,7 @@
       <div class="mt-16 border-b border-slate-300 pb-16 last:border-none" id="answer{{ $answer->id }}">
         <div class="mt-6">
           <div class="flex gap-2">
-            <img class="w-7 h-7 rounded-md" src="{{ $answer->user->avatar }}" alt="">
+            <img class="w-7 h-7 rounded-md" src="/{{ $answer->user->avatar }}" alt="">
             <p class="text-base"><a href="users/{{ $answer->user->slug }}" class="link">
                 {{ $answer->user->name }}</a> <time datetime="{{ $answer->published_at }}"> le
                 {{ $answer->published_at_formatted }}</time></p>
@@ -142,7 +142,7 @@
               </div>
               <div class="mt-10">
                 <div class="flex gap-2">
-                  <img class="w-7 h-7 rounded-md" src="{{ $comment->user->avatar }}" alt="">
+                  <img class="w-7 h-7 rounded-md" src="/{{ $comment->user->avatar }}" alt="">
                   <p class="text-base"><a href="users/{{ $comment->user->slug }}" class="link">
                       {{ $comment->user->name }}</a> <time datetime="{{ $comment->published_at }}"> le
                       {{ $comment->published_at_formatted }}</time></p>

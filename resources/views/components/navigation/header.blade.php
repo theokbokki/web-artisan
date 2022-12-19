@@ -7,7 +7,7 @@
     <div class="flex gap-4 items-center">
       @auth
         <a href="/profile">
-          <img src="{{ auth()->user()->avatar }}" alt="" class="w-9 h-9 object-cover rounded-md">
+          <img src="/{{ auth()->user()->avatar }}" alt="" class="w-9 h-9 object-cover rounded-md">
         </a>
       @endauth
       @guest

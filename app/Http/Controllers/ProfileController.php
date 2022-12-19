@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProfileUpdateRequest;
-
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Password;
 
 class ProfileController extends Controller
 {
@@ -40,17 +40,28 @@ class ProfileController extends Controller
      * @param  \App\Http\Requests\ProfileUpdateRequest  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(ProfileUpdateRequest $request)
+    public function update(Request $request)
     {
-        $request->validate(['avatar'=> ['image','required',]]);
+        $request->validate([
+            'email' => ['email' ,'nullable', 'max:255', Rule::unique(User::class)],
+            'username'=>['nullable', 'max:24'],
+            'avatar'=>['nullable'],
+            'old-password' => ['nullable', 'current-password'],
+            'password' => ['nullable', 'confirmed', Password::defaults()],
+        ]);
 
-        $request->user()->fill($request->validated());
+        $user=Auth::user();
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        isset($request->username) ? $user->username = $request->username : '';
+        isset($request->email) ? $user->email = $request->email : '';
+        if (isset($request->avatar)) {
+            $request->avatar = $request->file('avatar')->store('avatars');
+            $user->avatar = $request->avatar;
         }
+        isset($request->old_password) ?
+        isset($request->password) ? $user->password = bcrypt($request->password) : '' : '';
 
-        $request->user()->save();
+        $user->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
