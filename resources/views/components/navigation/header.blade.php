@@ -14,7 +14,7 @@
         <x-login-signup-buttons class="gap-2 items-center nav-1:gap-4 hidden nav-2:flex" />
       @endguest
       <x-navigation.mobile-search />
-      <x-navigation.mobile-nav2 />
+      <a href="#footer-menu" class="link font-bold no-underline nav-2:hidden">Menu</a>
       <x-navigation.search />
     </div>
   </nav>
