@@ -1,11 +1,9 @@
-<article
-  class="min-w-clamp relative snap-center rounded-md lg:flex lg:min-w-clamp-lg text-left first:ml-[5vw] last:mr-[5vw] items-center"
-  role="group" aria-label="slide {{ $alumni->index }} of 5">
-  <div class="w-full min-w-64">
-    <img src="{{ $alumni->avatar }}" alt=""
-      class="w-full aspect-video lg:aspect-square rounded-t-md object-cover lg:rounded-l-md lg:rounded-tr-none">
+<article class="grid min-[400px]:grid-cols-[128px_1fr] h-full relative gap-4" role="group"
+  aria-label="slide {{ $alumni->index }} of 5">
+  <div class="">
+    <img src="{{ $alumni->avatar }}" alt="" class="rounded-md w-64 h-full object-cover">
   </div>
-  <div class="w-full min-w-[70%] mt-6 lg:mt-0 lg:hover:bg-slate-100 lg:p-5 rounded-r-lg transition-all duration-300">
+  <div class="text-left">
     <h3 class="font-bold text-slate-700">{{ $alumni->name }}</h3>
     <p class="text-base text-slate-500 mt-2">{{ $alumni->job }}</p>
     <p class="mt-4">{{ $alumni->excerpt }}</p>

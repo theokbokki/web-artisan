@@ -81,7 +81,7 @@
     <img src="images/teachers.jpg" alt="" class="mt-8">
     <a href="#" class="button inline-block mx-auto mt-8">{{ __('Voir tous les professeurs') }}</a>
   </section>
-  <section class="mt-24 relative space-y-8 mx-auto max-w-5xl w-[90%] text-center">
+  <section class="mt-24 relative space-y-10 mx-auto max-w-5xl w-[90%] text-center">
     <div class="space-y-4">
       <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">
         {{ __('Un travail garanti, en voici la preuve') }}</h2>
@@ -89,13 +89,10 @@
         {{ __('Nos alumnis sont la preuve la plus évidente de la légitimité du bachelier. Voici quelques success story de nos anciens.') }}
       </p>
     </div>
-    <div class="relative">
-      <div class=" flex gap-x-10 overflow-x-scroll scroll-smooth snap-x snap-mandatory -ml-5 min-w-full pb-10"
-        role="region" aria-label="Alumni cards carousel" tabindex="0">
-        @foreach ($alumnis as $alumni)
-          <x-alumni-card :$alumni />
-        @endforeach
-      </div>
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      @foreach ($alumnis as $alumni)
+        <x-alumni-card :$alumni />
+      @endforeach
     </div>
     <a href="#" class="button inline-block">{{ __('Voir tous nos anciens') }}</a>
   </section>

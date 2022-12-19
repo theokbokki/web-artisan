@@ -25,7 +25,8 @@ class HomeController extends Controller
                     }
                 );
             }
-        )->get()->random(9);
+        )->inRandomOrder()->limit(9)->get();
+
 
         foreach ($works as $work) {
             $work->published_at = Carbon::parse($work->published_at)->translatedFormat('M Y');
@@ -37,7 +38,7 @@ class HomeController extends Controller
             function ($q) {
                 $q->where('role', 'alumni');
             }
-        )->get();
+        )->inRandomOrder()->limit(6)->get();
 
         $posts = Post::orderBy('published_at', 'DESC')->limit(4)->get();
 
