@@ -1,6 +1,6 @@
 <nav class="hidden md:flex">
   <h2 class="sr-only">Menu</h2>
-  <ul class="flex flex-wrap gap-y-4 w-full">
+  <ul class="flex flex-wrap gap-4 w-full">
     <div class="flex justify-around grow gap-4 items-center">
       <li class="">
         <a href="/" aria-current="page" class="menu-link">

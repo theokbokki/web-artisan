@@ -24,7 +24,7 @@
       <x-newsletter />
     </main>
   </div>
-  <x-footer />
+  <x-navigation.footer />
 </body>
 
 </html>

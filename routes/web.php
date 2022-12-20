@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnswerController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\HomeController;
@@ -25,8 +26,10 @@ Route::get('/language/{locale}', function ($locale) {
     return redirect()->back();
 });
 
+//HOME
 Route::get('/', [HomeController::class, 'index']);
 
+//Forum
 Route::get('/forum', [ForumController::class, 'index']);
 
 Route::get('/forum/{question:slug}', [ForumController::class, 'show']);
@@ -43,6 +46,10 @@ Route::post('/forum/{question:slug}/vote', [VoteController::class, 'store']);
 Route::patch('/forum/{question:slug}/vote', [VoteController::class, 'update']);
 Route::delete('/forum/{question:slug}/vote', [VoteController::class, 'delete']);
 
+//Blog
+Route::get('/blog', [BlogController::class, 'index']);
+
+//Authentification stuff
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

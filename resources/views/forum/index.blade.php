@@ -2,8 +2,25 @@
   <section class="w-[90%] mx-auto max-w-5xl">
     <h2 class="title sr-only">{{ __('Forum') }}</h2>
     <div class="flex items-center gap-4 mt-8 lg:flex-wrap">
-      <x-forum.filters />
-      <x-forum.search />
+      <x-filters>
+        <select class="input select-bg appearance-none max-w-full pr-10" id="authors" name="authors">
+          <option value="latest_first">{{ __('Plus récent d\'abord') }}</option>
+          <option value="oldest_first">{{ __('Plus ancien d\'abord') }}</option>
+        </select>
+        <select class="input select-bg appearance-none max-w-full pr-14" id="solved_status" name="solved_status">
+          <option value="solved_and_unsolved">{{ __('Résolu et non résolu') }}</option>
+          <option value="solved_only">{{ __('Résolu uniquement') }}</option>
+          <option value="unsolved_only">{{ __('Non résolu uniquement') }}</option>
+        </select>
+        <select class="input select-bg appearance-none max-w-full pr-14" id="popularity" name="popularity">
+          <option value="most_popular_first">{{ __('Plus populaire d\'abord') }}</option>
+          <option value="less_popular_first">{{ __('Moins populaire d\'abord') }}</option>
+        </select>
+      </x-filters>
+      <x-search>
+        <label class="label" for="search">Chercher dans notre forum</label>
+        <p>Cherchez par tag, question, date, ...</p>
+      </x-search>
     </div>
   </section>
   <div class="grid md:flex max-w-5xl w-[90%] mx-auto mt-10 gap-x-24">
