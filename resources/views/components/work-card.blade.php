@@ -1,7 +1,7 @@
 <div class="relative text-left break-inside-avoid-column p-5 hover:bg-slate-100 transition-all duration-300 rounded-lg">
   <div class="flex items-center justify-between gap-4 ">
     <div class="flex items-center gap-2 ">
-      <img src="{{ $work->user->avatar }}" alt="" class="object-cover w-7 h-7 rounded-md">
+      <img src="/{{ $work->user->avatar }}" alt="" class="object-cover w-7 h-7 rounded-md">
       <p class="font-bold text-slate-700 leading-4 text-base">{{ $work->user->name }}</p>
     </div>
     @if (isset(

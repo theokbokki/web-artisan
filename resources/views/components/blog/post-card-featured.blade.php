@@ -1,6 +1,5 @@
-  <article class="pb-8 relative text-left flex flex-col sm:flex-row items-start gap-6 border-b last:border-none">
-    <img src="/{{ $post->thumbnail }}" alt=""
-      class="w-full aspect-[2/1] sm:aspect-square sm:w-40 rounded-md object-cover">
+  <article class="pb-8 relative text-left grid flex-col sm:flex-row items-start gap-6 border-b last:border-none">
+    <img src="/{{ $post->thumbnail }}" alt="" class="w-full aspect-[2/1] object-cover rounded-md">
     <div class="space-y-4">
       <h3
         class="font-bold text-xl text-slate-800 relative z-10 hover:text-indigo-600 hover:underline hover:underline-offset-4">

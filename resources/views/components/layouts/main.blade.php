@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="{{-- overflow-x-hidden --}} max-w-screen">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="{{-- overflow-x-hidden --}} max-w-screen">
 
 <head>
   <meta charset="UTF-8">

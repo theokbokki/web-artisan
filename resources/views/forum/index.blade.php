@@ -3,16 +3,16 @@
     <h2 class="title sr-only">{{ __('Forum') }}</h2>
     <div class="flex items-center gap-4 mt-8 lg:flex-wrap">
       <x-filters>
-        <select class="input select-bg appearance-none max-w-full pr-10" id="authors" name="authors">
+        <select class="select" id="date" name="date">
           <option value="latest_first">{{ __('Plus récent d\'abord') }}</option>
           <option value="oldest_first">{{ __('Plus ancien d\'abord') }}</option>
         </select>
-        <select class="input select-bg appearance-none max-w-full pr-14" id="solved_status" name="solved_status">
+        <select class="select" id="solved_status" name="solved_status">
           <option value="solved_and_unsolved">{{ __('Résolu et non résolu') }}</option>
           <option value="solved_only">{{ __('Résolu uniquement') }}</option>
           <option value="unsolved_only">{{ __('Non résolu uniquement') }}</option>
         </select>
-        <select class="input select-bg appearance-none max-w-full pr-14" id="popularity" name="popularity">
+        <select class="select" id="popularity" name="popularity">
           <option value="most_popular_first">{{ __('Plus populaire d\'abord') }}</option>
           <option value="less_popular_first">{{ __('Moins populaire d\'abord') }}</option>
         </select>
@@ -43,7 +43,7 @@
           @if ($user->score)
             <div class="flex justify-between items-center pb-6 border-b border-slate-200 gap-6">
               <div class="flex gap-2 items-center relative">
-                <img src="{{ $user->avatar }}" alt="" class="w-7 h-7 rounded-md">
+                <img src="/{{ $user->avatar }}" alt="" class="w-7 h-7 rounded-md">
                 <a href=""
                   class="text-base leading-4 hover:text-indigo-600 underline-offset-3 hover:underline relative z-10">
                   {{ $user->username }}</p>
