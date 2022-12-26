@@ -17,7 +17,7 @@ class TagFactory extends Factory
      */
     public function definition()
     {
-        $tag = strtolower(fake()->words(1, true));
+        $tag = strtolower(fake()->unique()->words(1, true));
 
         return [
             'tag' => $tag,

@@ -46,11 +46,13 @@ class ProfileController extends Controller
             'email' => ['email' ,'nullable', 'max:255', Rule::unique(User::class)],
             'username'=>['nullable', 'max:24'],
             'avatar'=>['nullable'],
-            'old-password' => ['nullable', 'current-password'],
+            'old_password' => ['nullable', 'current-password'],
             'password' => ['nullable', 'confirmed', Password::defaults()],
         ]);
 
         $user=Auth::user();
+
+        $user_old_pw=Auth::user()->password;
 
         isset($request->username) ? $user->username = $request->username : '';
         isset($request->email) ? $user->email = $request->email : '';
@@ -60,6 +62,8 @@ class ProfileController extends Controller
         }
         isset($request->old_password) ?
         isset($request->password) ? $user->password = bcrypt($request->password) : '' : '';
+
+        // dd($user_old_pw, $user->password, $request->old_password);
 
         $user->save();
 

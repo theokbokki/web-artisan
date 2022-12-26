@@ -8,6 +8,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules;
 
@@ -40,13 +41,16 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $image_name = Str::random(24);
+        Storage::disk('public')->put('/avatars/'. Str::slug($request->username).'/'.$image_name . '.png', file_get_contents('https://eu.ui-avatars.com/api/?background=random&name='. Str::slug($request->fullname)));
+
         $user = User::create([
             'name' => $request->fullname,
             'username'=>$request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'slug'=>Str::slug($request->fullname),
-            'avatar'=>'https://eu.ui-avatars.com/api/?background=random&size=128&name='.$request->fullname,
+            'avatar'=> 'avatars/'.Str::slug($request->username).'/'.$image_name . '.png',
         ]);
 
         event(new Registered($user));

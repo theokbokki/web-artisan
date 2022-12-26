@@ -17,7 +17,8 @@ class AnswerFactory extends Factory
      */
     public function definition()
     {
-        $created_at = Carbon::create(fake()->dateTimeBetween('-3 years', 'now'));
+        $date = fake()->dateTimeBetween('-3 years', 'now')->setTimezone(timezone_open('Europe/Berlin'));
+        $created_at = Carbon::parse($date, 'Europe/Berlin');
         $updated_at = random_int(1, 10) > 5 ? $created_at : $created_at->addWeeks(random_int(2, 8));
         $published_at = $created_at->addDays(random_int(0, 2) * random_int(2, 20));
 

@@ -1,6 +1,4 @@
 <x-layouts.main>
-  <!-- Session Status -->
-  <x-auth-session-status class="mb-4" :status="session('status')" />
 
   <section class="w-[90%] max-w-xl mx-auto">
     <form method="POST" action="{{ route('login') }}" class="space-y-6">
@@ -10,7 +8,7 @@
       <fieldset class="grid gap-2">
         <label for="email" class="label">{{ __('Email') }}</label>
         <p class="text-base text-slate-500">{{ __('Ex: theo.leonet@student.hepl.be') }}</p>
-        <x-input-error :messages="$errors->get('email')" />
+        <x-input-error :messages="$errors->get('email')" class="mt-2" />
         <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus
           class="input" />
       </fieldset>
@@ -20,7 +18,7 @@
         <fieldset class="grid gap-2">
           <label for="password" class="label">{{ __('Password') }}</label>
           <p class="text-base text-slate-500">{{ __('Ex: rosebonbongrenouilleglacevanille') }}</p>
-          <x-input-error :messages="$errors->get('password')" />
+          <x-input-error :messages="$errors->get('password')" class="mt-2" />
           <input id="password" type="password" name="password" value="{{ old('password') }}" required class="input" />
         </fieldset>
 
@@ -45,7 +43,7 @@
           {{ __('Pas encore de compte ?') }}
         </a>
 
-        <button type="submit" class="button">
+        <button type="submit" class="button" id="login-button">
           {{ __('Se connecter') }}
         </button>
       </div>

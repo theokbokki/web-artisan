@@ -17,7 +17,7 @@ class QuestionsSeeder extends Seeder
     {
         User::all()->each(static function ($user) {
             Question::factory()
-                ->count(random_int(0, 3))
+                ->count(random_int(0, 1))
                 ->for($user)
                 ->create();
         });
