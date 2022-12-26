@@ -31,7 +31,7 @@ class PostFactory extends Factory
             'title' => $title,
             'slug' => Str::slug($title),
             'excerpt' => fake()->sentence(40),
-            'thumbnail' => '/thumbnails/seed_post_thumbnail.png',
+            'thumbnail' => 'thumbnails/seed_post_thumbnail.png',
             'body' => '<p>'.implode('</p><p>', fake()->paragraphs(12)).'</p>',
         ];
     }

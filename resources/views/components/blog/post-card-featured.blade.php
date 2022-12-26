@@ -1,29 +1,43 @@
-  <article class="pb-8 relative text-left grid flex-col sm:flex-row items-start gap-6 border-b last:border-none">
-    <img src="/{{ $post->thumbnail }}" alt="" class="w-full aspect-[2/1] object-cover rounded-md">
-    <div class="space-y-4">
-      <h3
-        class="font-bold text-xl text-slate-800 relative z-10 hover:text-indigo-600 hover:underline hover:underline-offset-4">
-        <a href="" class="">{{ $post->title }}</a>
-      </h3>
-      <p class="">{{ $post->excerpt }}</p>
-      <div class="flex flex-wrap justify-between gap-4">
-        <div class="flex items-start gap-2">
-          <img src="/{{ $post->users()->get()[0]->avatar }}" alt="" class="w-7 h-7 object-cover rounded-md">
-          <div>
-            <p class="text-slate-500 leading-6 text-base">Par @foreach ($post->users as $user)
-                <a href="/profile/{{ $user->name }}" class="link ">{{ $user->name }}</a>,
-              @endforeach
-              le <time
-                datetime="{{ $post->published_at }}">{{ \Carbon\Carbon::parse($post->published_at)->translatedFormat('d M Y') }}</time>
-            </p>
-          </div>
-        </div>
+<article class="border-b flex-col gap-6 items-start last:border-none pb-8 relative sm:flex-row text-left grid">
+  <!-- Post thumbnail -->
+  <img src="/{{ $post->thumbnail }}" alt="" class="aspect-[2/1] object-cover rounded-md w-full">
+
+  <!-- Post content -->
+  <div class="space-y-4">
+    <!-- Post title -->
+    <h3
+      class="font-bold hover:text-indigo-600 hover:underline hover:underline-offset-4 relative text-slate-800 text-xl z-10">
+      <a href="/blog/{{ $post->slug }}" class="">{{ $post->title }}</a>
+    </h3>
+
+    <!-- Post excerpt -->
+    <p class="">{{ $post->excerpt }}</p>
+
+    <!-- Post meta data -->
+    <div class="flex flex-wrap gap-4 justify-between">
+      <!-- Post authors -->
+      <div class="flex gap-2 items-start">
         <div>
-          @foreach ($post->tags()->get() as $tag)
-            <p class="tag inline-block text-base">{{ $tag->tag }}</p>
-          @endforeach
+          <p class="leading-6 relative text-base text-slate-500 z-10">
+            Par
+            @foreach ($post->users as $user)
+              <a href="/profile/{{ $user->slug }}" class="link ">{{ $user->name }}</a>,
+            @endforeach
+            le <time
+              datetime="{{ $post->published_at }}">{{ \Carbon\Carbon::parse($post->published_at)->translatedFormat('d M Y') }}</time>
+          </p>
         </div>
       </div>
+
+      <!-- Post tags -->
+      <div>
+        @foreach ($post->tags()->get() as $tag)
+          <p class="inline-block tag text-base">{{ $tag->tag }}</p>
+        @endforeach
+      </div>
     </div>
-    <a href="#" class="absolute inset-0 z-1"><span class="sr-only">Lire la suite de l'article</span></a>
-  </article>
+  </div>
+
+  <!-- Read more link -->
+  <a href="#" class="absolute inset-0 z-1"><span class="sr-only">Lire la suite de l'article</span></a>
+</article>

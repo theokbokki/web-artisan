@@ -8,6 +8,7 @@
           <option value="oldest_first">{{ __('Plus ancien d\'abord') }}</option>
         </select>
         <select class="select" id="authors" name="authors">
+          <option value="all-authors">{{ __('All authors') }}</option>
           @foreach ($authors as $author)
             <option value="{{ $author->slug }}">{{ $author->name }}</option>
           @endforeach
