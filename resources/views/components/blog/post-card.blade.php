@@ -1,4 +1,4 @@
-<article class="border-b flex-col gap-6 items-start last:border-none pb-8 relative sm:flex-row text-left">
+<article class="border-b flex flex-col gap-6 items-start last:border-none pb-8 relative sm:flex-row text-left">
   <!-- Post thumbnail -->
   <img src="/{{ $post->thumbnail }}" alt=""
     class="aspect-[2/1] object-cover rounded-md w-full sm:aspect-square sm:w-40">

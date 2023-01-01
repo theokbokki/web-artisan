@@ -49,6 +49,7 @@ Route::delete('/forum/{question:slug}/vote', [VoteController::class, 'delete']);
 
 //Blog
 Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog/{post:slug}', [BlogController::class, 'show']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {
