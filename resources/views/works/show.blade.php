@@ -24,7 +24,7 @@
   @if ($sameAuthorQuestions->count())
     <section class="w-[90%] max-w-5xl mx-auto mt-24 space-y-8">
       <h2 class="small-title">{{ __('Des questions que cette personne à posées') }}</h2>
-      <div class="">
+      <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-16 gap-y-10 items-start mt-16">
         @foreach ($sameAuthorQuestions as $question)
           <x-forum.question :$question />
         @endforeach

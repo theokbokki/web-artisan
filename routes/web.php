@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LessonsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VoteController;
 use App\Http\Controllers\WorkController;
@@ -55,6 +56,9 @@ Route::get('/blog/{post:slug}', [BlogController::class, 'show']);
 //Works
 Route::get('/works', [WorkController::class, 'index']);
 Route::get('/works/{work:slug}', [WorkController::class, 'show']);
+
+//Lessons
+Route::get('/lessons-grid', [LessonsController::class, 'index']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {

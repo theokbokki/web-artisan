@@ -13,7 +13,7 @@
         </a>
       </li>
       <li class="">
-        <a href="/course-grid" class="menu-link">
+        <a href="/lessons-grid" class="menu-link">
           Grille des cours
         </a>
       </li>
