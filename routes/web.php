@@ -54,6 +54,7 @@ Route::get('/blog/{post:slug}', [BlogController::class, 'show']);
 
 //Works
 Route::get('/works', [WorkController::class, 'index']);
+Route::get('/works/{work:slug}', [WorkController::class, 'show']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {

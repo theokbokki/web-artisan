@@ -14,4 +14,11 @@ class WorkController extends Controller
 
         return view('works.index', compact('works', 'students'));
     }
+
+    public function show(Work $work)
+    {
+        $work = $work;
+
+        return view('works.show', compact('work'));
+    }
 }
