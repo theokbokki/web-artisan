@@ -37,7 +37,7 @@
         href="forum/{{ $question->slug }}">{{ $question->title }}</a>
     </h3>
     <div class="flex gap-2">
-      <img class="w-7 h-7 rounded-md" src="{{ $question->user->avatar }}" alt="">
+      <img class="w-7 h-7 rounded-md" src="/{{ $question->user->avatar }}" alt="">
       <p class="text-base">Question posée par <a href="users/{{ $question->user->slug }}" class="link">
           {{ $question->user->name }}</a> <time datetime="{{ $question->published_at }}"> le
           {{ $question->published_at_formatted }}</time></p>

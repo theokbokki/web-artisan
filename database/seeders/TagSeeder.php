@@ -23,7 +23,7 @@ class TagSeeder extends Seeder
             'slug'=>'alumni',
         ]);
         Tag::factory()
-            ->count(random_int(80, 100))
+            ->count(random_int(1, 10))
             ->create();
     }
 }

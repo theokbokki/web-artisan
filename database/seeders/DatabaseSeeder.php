@@ -36,5 +36,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PostTagRelationShipSeeder::class);
         $this->call(QuestionTagRelationShipSeeder::class);
         $this->call(RoleUserRelationshipSeeder::class);
+        $this->call(TagWorkRelationshipSeeder::class);
     }
 }

@@ -11,6 +11,11 @@
   </div>
   <p class="font-bold text-slate-800 text-xl md:text-2xl mt-4">{{ $work->title }}</p>
   <p class="mt-4">{{ $work->excerpt }}</p>
+  <div class="flex gap-2 flex-wrap mt-4">
+    @foreach ($work->tags as $tag)
+      <p class="tag">{{ $tag->tag }}</p>
+    @endforeach
+  </div>
   <div class="flex gap-2 items-center link mt-4">
     <a href="/works/{{ $work->slug }}" class="">{{ __('En savoir plus') }}</a>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"

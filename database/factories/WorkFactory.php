@@ -31,7 +31,7 @@ class WorkFactory extends Factory
             'title' => $title,
             'slug' => Str::slug($title),
             'excerpt' => fake()->sentence(15),
-            'thumbnail' => fake()->imageUrl(640, 480, true, 'landscape'),
+            'thumbnail' => 'thumbnails/seed_post_thumbnail.png',
             'body' => '<p>'.implode('</p><p>', fake()->paragraphs(12)).'</p>',
             'url' => 'https://web-artisan.test/works/'.Str::slug($title),
         ];

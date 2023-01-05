@@ -43,6 +43,7 @@ return new class () extends Migration {
         });
 
 
+
         Schema::table('role_user', static function (Blueprint $table) {
             $table->foreignId('role_id')->constrained()->onUpdate('cascade');
             $table->foreignId('user_id')->constrained()->onUpdate('cascade');
@@ -71,6 +72,7 @@ return new class () extends Migration {
             $table->foreignId('user_id')->constrained()->onUpdate('cascade');
         });
 
+
         Schema::table('votes', static function (Blueprint $table) {
             $table->foreignId('question_id')->nullable()->constrained()->onUpdate('cascade');
             $table->foreignId('user_id')->constrained()->onUpdate('cascade');
@@ -79,6 +81,11 @@ return new class () extends Migration {
 
         Schema::table('works', static function (Blueprint $table) {
             $table->foreignId('user_id')->constrained()->onUpdate('cascade');
+        });
+
+        Schema::table('tag_work', static function (Blueprint $table) {
+            $table->foreignId('tag_id')->constrained()->onUpdate('cascade');
+            $table->foreignId('work_id')->constrained()->onUpdate('cascade');
         });
     }
 
@@ -156,6 +163,11 @@ return new class () extends Migration {
 
         Schema::table('works', static function (Blueprint $table) {
             $table->dropConstrainedForeignId('user_id');
+        });
+
+        Schema::table('tag_work', static function (Blueprint $table) {
+            $table->dropConstrainedForeignId('tag_id');
+            $table->dropConstrainedForeignId('work_id');
         });
     }
 };
