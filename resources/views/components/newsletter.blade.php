@@ -10,13 +10,13 @@
           <p>{{ __('Bien sur tu pourras annuler ton abonnement à tout moment.') }}</p>
         </div>
       </div>
-      <form action="#" class="gap-4 grid nav-2:min-w-[40%]" method="post">
+      <form action="#" class=" gap-4 grid nav-2:min-w-[40%]" method="post">
         <fieldset class="grid gap-2">
           <label class="label" for="newsletter_email">{{ __('Ton email') }}</label>
-          <p class="inline-block">{{ __('Ex: FuturEtudiant@student.hepl.be') }}</p>
-          <input class="input max-w-[400px]" type="mail" id="newsletter_email" name="newsletter_email" />
+          <p class="inline-block">{{ __('Ex: Etudiant@student.hepl.be') }}</p>
+          <input class="input w-full max-w-[400px]" type="mail" id="newsletter_email" name="newsletter_email" />
         </fieldset>
-        <button class="button mt-3 w-max" type="submit">{{ __('S’abonner à la newsletter') }}</button>
+        <button class="button w-full mt-3 max-w-max" type="submit">{{ __('S’abonner à la newsletter') }}</button>
       </form>
     </section>
   </div>

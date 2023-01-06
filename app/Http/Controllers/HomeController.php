@@ -6,7 +6,6 @@ use App\Models\Post;
 use App\Models\Teaching;
 use App\Models\User;
 use App\Models\Work;
-use Carbon\Carbon;
 use Illuminate\Support\Str;
 
 class HomeController extends Controller
@@ -29,7 +28,6 @@ class HomeController extends Controller
 
 
         foreach ($works as $work) {
-            $work->published_at = Carbon::parse($work->published_at)->translatedFormat('M Y');
             $work->excerpt = Str::limit($work->excerpt, 150);
         }
 
@@ -43,7 +41,6 @@ class HomeController extends Controller
         $posts = Post::orderBy('published_at', 'DESC')->limit(4)->get();
 
         foreach ($posts as $post) {
-            $post->published_at = Carbon::parse($post->published_at)->translatedFormat('d M Y');
             $post->excerpt = Str::limit($post->excerpt, 150);
         }
 

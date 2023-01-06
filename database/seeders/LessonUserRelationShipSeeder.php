@@ -21,7 +21,7 @@ class LessonUserRelationShipSeeder extends Seeder
         // Populate the pivot table
         Lesson::all()->each(function ($lesson) use ($users) {
             $lesson->users()->attach(
-                $users->random(rand(0, 3))->pluck('id')->toArray()
+                $users->random(rand(1, 2))->pluck('id')->toArray()
             );
         });
     }

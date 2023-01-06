@@ -108,7 +108,7 @@
     </div>
     <div class=" mx-auto mt-10 space-y-8">
       @foreach ($posts as $post)
-        <x-post-card :$post />
+        <x-blog.post-card :$post />
       @endforeach
     </div>
     <a href="" class="button inline-block mt-8">{{ __('Voir tous nos articles') }}</a>

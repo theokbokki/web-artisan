@@ -16,7 +16,10 @@
           @endforeach
         </select>
       </x-filters>
-      <x-search></x-search>
+      <x-search>
+        <label class="label" for="search">{{ __('Cherchez parmis les travaux des étudiants') }}</label>
+        <p>{{ __('Cherchez par tag, étudiant, titre, ...') }}</p>
+      </x-search>
     </div>
     <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-16 gap-y-10 items-start mt-16">
       @foreach ($works as $work)

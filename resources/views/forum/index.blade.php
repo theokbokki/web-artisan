@@ -18,8 +18,8 @@
         </select>
       </x-filters>
       <x-search>
-        <label class="label" for="search">Chercher dans notre forum</label>
-        <p>Cherchez par tag, question, date, ...</p>
+        <label class="label" for="search">{{ __('Chercher dans notre forum') }}</label>
+        <p>{{ __('Cherchez par tag, question, date, ...') }}</p>
       </x-search>
     </div>
   </section>

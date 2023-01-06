@@ -14,7 +14,10 @@
           @endforeach
         </select>
       </x-filters>
-      <x-search></x-search>
+      <x-search>
+        <label class="label" for="search">{{ __('Cherchez dans notre blog') }}</label>
+        <p>{{ __('Cherchez par tag, titre, date, ...') }}</p>
+      </x-search>
     </div>
     <div class="mt-16 space-y-8">
       @foreach ($posts as $post)
