@@ -90,8 +90,8 @@
       </p>
     </div>
     <div class="grid lg:grid-cols-2 gap-16 items-start">
-      @foreach ($alumnis as $alumni)
-        <x-alumni-card :$alumni />
+      @foreach ($alumnis as $user)
+        <x-user-card :$user />
       @endforeach
     </div>
     <a href="#" class="button inline-block">{{ __('Voir tous nos anciens') }}</a>

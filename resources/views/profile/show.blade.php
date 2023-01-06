@@ -29,7 +29,7 @@
       </h2>
       <div class="space-y-8">
         @foreach ($user->posts as $post)
-          <x-post-card :$post />
+          <x-blog.post-card :$post />
         @endforeach
       </div>
     </section>
@@ -68,7 +68,6 @@
       </h2>
       <div class="space-y-8">
         @foreach ($user->lessons as $lesson)
-          <x-lesson-card :$lesson />
         @endforeach
       </div>
     </section>
