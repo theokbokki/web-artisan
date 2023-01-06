@@ -18,7 +18,7 @@
                 href="/lessons-grid/?sort-field=teacher">
                 {{ __('Professeur') }}</a></th>
             <th class="text-slate-400 hover:text-slate-500 hover:underline transition-all duration-150"><a
-                href="/lessons-grid/?sort-field=year">
+                href="/lessons-grid/?sort-field=teacher">
                 {{ __('Bloc') }}</a></th>
             <th class="text-slate-400 hover:text-slate-500 hover:underline transition-all duration-150"><a
                 href="/lessons-grid/?sort-field=quarter">
@@ -31,7 +31,7 @@
                 {{ __('Crédits') }}</a></th>
           </tr>
         </thead>
-        <tbody class="">
+        <tbody class="border-spacing-0">
           @foreach ($lessons as $lesson)
             <tr class="h-16 [&>*]:px-8 group [&>*]:hover:bg-slate-100 relative">
               <td class=" border-t border-b border-r border-l border-slate-200 rounded-l-md">
