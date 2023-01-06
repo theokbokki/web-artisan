@@ -59,6 +59,7 @@ Route::get('/works/{work:slug}', [WorkController::class, 'show']);
 
 //Lessons
 Route::get('/lessons-grid', [LessonsController::class, 'index']);
+Route::get('/lessons-grid/{lesson:slug}', [LessonsController::class, 'show']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {

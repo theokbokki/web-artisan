@@ -3,11 +3,11 @@
     <h2 class="sr-only">
       {{ __('Grille des cours') }}
     </h2>
+    <x-search>
+      <label for="search">{{ __('Cherchez parmis les cours') }}</label>
+      <p>{{ __('Cherchez par professeur, intitulé, bloc, ...') }}</p>
+    </x-search>
     <section class=" overflow-auto">
-      <x-search>
-        <label for="search">{{ __('Cherchez parmis les cours') }}</label>
-        <p>{{ __('Cherchez par professeur, intitulé, bloc, ...') }}</p>
-      </x-search>
       <table class="text-left whitespace-nowrap border-separate border-spacing-x-0 border-spacing-y-4 mt-6">
         <thead class="">
           <tr class="[&>*]:px-8">
@@ -35,7 +35,7 @@
           @foreach ($lessons as $lesson)
             <tr class="h-16 [&>*]:px-8 group [&>*]:hover:bg-slate-100 relative">
               <td class=" border-t border-b border-r border-l border-slate-200 rounded-l-md">
-                <a href="/lessons/{{ $lesson->slug }}"
+                <a href="/lessons-grid/{{ $lesson->slug }}"
                   class="font-bold transition-all duration-150 hover:text-indigo-600 hover:underline before:absolute before:inset-0">
                   {{ $lesson->title }}
                 </a>

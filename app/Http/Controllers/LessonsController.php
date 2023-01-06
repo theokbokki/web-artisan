@@ -11,4 +11,10 @@ class LessonsController extends Controller
         $lessons = Lesson::all();
         return view('lessons.index', compact('lessons'));
     }
+
+    public function show(Lesson $lesson)
+    {
+        $lesson = $lesson;
+        return view('lessons.show', compact('lesson'));
+    }
 }
