@@ -7,6 +7,7 @@ use App\Http\Controllers\ForumController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LessonsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\VoteController;
 use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
@@ -60,6 +61,9 @@ Route::get('/works/{work:slug}', [WorkController::class, 'show']);
 //Lessons
 Route::get('/lessons-grid', [LessonsController::class, 'index']);
 Route::get('/lessons-grid/{lesson:slug}', [LessonsController::class, 'show']);
+
+//Teachers
+Route::get('/teachers', [TeacherController::class, 'index']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {
