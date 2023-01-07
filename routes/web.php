@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\LessonsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TeacherController;
@@ -68,6 +69,9 @@ Route::get('/teachers', [TeacherController::class, 'index']);
 
 //Alumnis
 Route::get('/alumnis', [AlumnisController::class, 'index']);
+
+//Internships
+Route::get('/internships', [InternshipController::class, 'index']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {

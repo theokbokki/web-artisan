@@ -27,5 +27,8 @@
         <x-blog.post-card :$post />
       @endforeach
     </div>
+    <div class="mt-16">
+      {{ $posts->links('pagination::tailwind') }}
+    </div>
   </section>
   </x-layouts-main>

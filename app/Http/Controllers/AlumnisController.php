@@ -13,7 +13,8 @@ class AlumnisController extends Controller
             function ($q) {
                 $q->where('role', 'alumni');
             }
-        )->get();
+        )->paginate(10);
+
         return view('alumnis.index', compact('alumnis'));
     }
 }
