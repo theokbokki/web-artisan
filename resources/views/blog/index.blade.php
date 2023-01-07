@@ -21,10 +21,11 @@
     </div>
     <div class="mt-16 space-y-8">
       @foreach ($posts as $post)
-        @if ($loop->first)
+        @if ($loop->first && request()->page == 1)
           <x-blog.post-card-featured :$post />
+        @else
+          <x-blog.post-card :$post />
         @endif
-        <x-blog.post-card :$post />
       @endforeach
     </div>
     <div class="mt-16">

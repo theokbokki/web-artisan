@@ -4,6 +4,7 @@ use App\Http\Controllers\AlumnisController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InternshipController;
@@ -73,6 +74,9 @@ Route::get('/alumnis', [AlumnisController::class, 'index']);
 //Internships
 Route::get('/internships', [InternshipController::class, 'index']);
 Route::get('/internships/{internship:slug}', [InternshipController::class, 'show']);
+
+//Contact
+Route::get('/contact', [ContactController::class, 'index']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {
