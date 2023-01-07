@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlumnisController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
@@ -64,6 +65,9 @@ Route::get('/lessons-grid/{lesson:slug}', [LessonsController::class, 'show']);
 
 //Teachers
 Route::get('/teachers', [TeacherController::class, 'index']);
+
+//Alumnis
+Route::get('/alumnis', [AlumnisController::class, 'index']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {

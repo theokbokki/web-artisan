@@ -22,7 +22,7 @@
           <p class="leading-6 relative text-base text-slate-500 z-10">
             Par
             @foreach ($post->users as $user)
-              <a href="/profile/{{ $user->name }}" class="link ">{{ $user->name }}</a>,
+              <a href="/profile/{{ $user->slug }}" class="link ">{{ $user->name }}</a>,
             @endforeach
             le <time
               datetime="{{ $post->published_at }}">{{ \Carbon\Carbon::parse($post->published_at)->translatedFormat('d M Y') }}</time>

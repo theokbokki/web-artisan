@@ -1,64 +1,64 @@
 <nav class="hidden md:flex">
   <h2 class="sr-only">Menu</h2>
-  <ul class="flex flex-wrap gap-4 w-full">
+  <div class="flex flex-wrap gap-4 w-full">
     <div class="flex justify-around grow gap-4 items-center">
-      <li class="">
-        <a href="/" aria-current="page" class="menu-link">
+      <div class="">
+        <a href="/" {{ request()->is('/') ? 'aria-current=page' : '' }} class="menu-link">
           Accueil
         </a>
-      </li>
-      <li class="">
-        <a href="/works" class="menu-link">
+      </div>
+      <div class="">
+        <a href="/works" {{ request()->is('works') ? 'aria-current=page' : '' }} class="menu-link">
           Projets étudiants
         </a>
-      </li>
-      <li class="">
-        <a href="/lessons-grid" class="menu-link">
+      </div>
+      <div class="">
+        <a href="/lessons-grid" {{ request()->is('lessons-grid') ? 'aria-current=page' : '' }} class="menu-link">
           Grille des cours
         </a>
-      </li>
-      <li class="">
-        <a href="/teachers" class="menu-link">
+      </div>
+      <div class="">
+        <a href="/teachers" {{ request()->is('teachers') ? 'aria-current=page' : '' }} class="menu-link">
           Professeurs
         </a>
-      </li>
-      <li class="">
-        <a href="/alumnis" class="menu-link">
+      </div>
+      <div class="">
+        <a href="/alumnis" {{ request()->is('alumnis') ? 'aria-current=page' : '' }} class="menu-link">
           Anciens
         </a>
-      </li>
-      <li class="">
-        <a href="/blog" class="menu-link">
+      </div>
+      <div class="">
+        <a href="/blog" {{ request()->is('blog') ? 'aria-current=page' : '' }} class="menu-link">
           Blog
         </a>
-      </li>
+      </div>
     </div>
-    <div class="flex justify-around grow gap-4 items-center">
-      <li class="">
+    <div class="flex {{ request()->is('forum') ? 'aria-current=page' : '' }} justify-around grow gap-4 items-center">
+      <div class="">
         <a href="/forum" class="menu-link">
           Forum
         </a>
-      </li>
-      <li class="">
-        <a href="/internships" class="menu-link">
+      </div>
+      <div class="">
+        <a href="/internships" {{ request()->is('internships') ? 'aria-current=page' : '' }} class="menu-link">
           Stages
         </a>
-      </li>
-      <li class="">
-        <a href="/translations" class="menu-link">
+      </div>
+      <div class="">
+        <a href="/translations" {{ request()->is('translations') ? 'aria-current=page' : '' }} class="menu-link">
           Traductions
         </a>
-      </li>
-      <li class="">
+      </div>
+      <div class="">
         <a href="https://ecolevirtuelle.provincedeliege.be/asp/Admissions/Admissions/Accueil" class="menu-link">
           S'inscrire à l'école
         </a>
-      </li>
-      <li class="">
-        <a href="/contact" class="menu-link">
+      </div>
+      <div class="">
+        <a href="/contact" {{ request()->is('contact') ? 'aria-current=page' : '' }} class="menu-link">
           Contact
         </a>
-      </li>
+      </div>
     </div>
-  </ul>
+  </div>
 </nav>

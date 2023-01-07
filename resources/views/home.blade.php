@@ -11,11 +11,12 @@
         <p>{{ __('Après 3 ans chez nous, tu seras un vrai développeur full stack, mais pas que.') }}</p>
         <p>{{ __('Trop beau pour être vrai?') }}</p>
       </div>
-      <a class="button inline-block" href="#">{{ __('Viens vérifier par toi même') }}</a>
+      <a class="button inline-block" href="#teachings">{{ __('Viens vérifier par toi même') }}</a>
     </div>
     <img src="images/hero-image.png" alt="" class="base-shadow rounded-lg">
   </section>
-  <section class="mt-24 w-[90%] mx-auto max-w-5xl text-center">
+  <section class="mt-24 w-[90%] mx-auto max-w-5xl text-center relative">
+    <p class="invisible absolute -top-64" aria-hidden="true" id="teachings"></p>
     <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl">
       {{ __('Un apprentissage diversifié et complet') }}
     </h2>
@@ -27,7 +28,7 @@
         <x-teaching-accordion tabindex="0" :$teaching />
       @endforeach
     </dl>
-    <a href="#" class="button inline-block mt-8">{{ __('Voir la grille des cours') }}</a>
+    <a href="/lessons-grid" class="button inline-block mt-8">{{ __('Voir la grille des cours') }}</a>
   </section>
 
   <section class="mt-24 w-[90%] max-w-5xl mx-auto flex flex-wrap gap-x-6 gap-y-8 text-center">
@@ -70,7 +71,7 @@
           class="w-full left-0 h-40 absolute bottom-0 from-white to-white/0 opacity-80 z-10 bg-gradient-to-t rounded-md">
         </div>
       </div>
-      <a href="" class="button inline-block">{{ __('Voir tous les projets') }}</a>
+      <a href="/works" class="button inline-block">{{ __('Voir tous les projets') }}</a>
     @endif
   </section>
   <section class="grid items-center mt-24 w-[90%] max-w-5xl mx-auto text-center">
@@ -79,7 +80,7 @@
       {{ __('Nous avons la chance d\'avoir une super équipe composée de professeurs permanents, de professionnels invités, et d\'anciens étudiants.') }}
     </p>
     <img src="images/teachers.jpg" alt="" class="mt-8">
-    <a href="#" class="button inline-block mx-auto mt-8">{{ __('Voir tous les professeurs') }}</a>
+    <a href="/teachers" class="button inline-block mx-auto mt-8">{{ __('Voir tous les professeurs') }}</a>
   </section>
   <section class="mt-24 relative space-y-10 mx-auto max-w-5xl w-[90%] text-center">
     <div class="space-y-4">
@@ -94,7 +95,7 @@
         <x-user-card :$user />
       @endforeach
     </div>
-    <a href="#" class="button inline-block">{{ __('Voir tous nos anciens') }}</a>
+    <a href="/alumnis" class="button inline-block">{{ __('Voir tous nos anciens') }}</a>
   </section>
   <section class="max-w-5xl w-[90%] mt-24  mx-auto main-nav:mx-0 text-center">
     <h2 class="font-bold font-title text-slate-800 text-2xl md:text-3xl"> {{ __('Les actus du bachelier') }}</h2>
@@ -111,7 +112,7 @@
         <x-blog.post-card :$post />
       @endforeach
     </div>
-    <a href="" class="button inline-block mt-8">{{ __('Voir tous nos articles') }}</a>
+    <a href="/blog" class="button inline-block mt-8">{{ __('Voir tous nos articles') }}</a>
   </section>
 
   <section class="space-y-8 w-[90%] max-w-5xl text-center mx-auto mt-24">
@@ -120,13 +121,13 @@
     <div class="flex justify-between gap-8 max-w-1.5xl mx-auto flex-wrap">
       <div class="space-y-2 self-center mx-auto">
         <p class="font-bold">{{ __('Sur notre forum') }}</p>
-        <a href="" class="button inline-block">
+        <a href="/forum" class="button inline-block">
           {{ __('Une question ? c\'est par ici') }}
         </a>
       </div>
       <div class="space-y-2 mx-auto">
         <p class="font-bold">{{ __('Directement par email') }}</p>
-        <a href="" class="button inline-block">
+        <a href="/contact" class="button inline-block">
           {{ __('Accéder au formulaire de contact') }}
         </a>
       </div>

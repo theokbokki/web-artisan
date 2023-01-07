@@ -3,7 +3,7 @@
     <h2 class="sr-only">
       {{ __('Travaux étudiants') }}
     </h2>
-    <div class="space-y-6 flex flex-wrap">
+    <div class="flex items-center gap-4 mt-8 lg:flex-wrap">
       <x-filters>
         <select class="select" id="date" name="date">
           <option value="latest_first">{{ __('Plus récent d\'abord') }}</option>
