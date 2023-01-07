@@ -31,7 +31,7 @@ class InternshipFactory extends Factory
             'title' => $title,
             'slug' => Str::slug($title),
             'excerpt' => fake()->sentence(40),
-            'address' => fake()->address(),
+            'address' => fake()->city,
             'position' => fake()->jobTitle(),
             'profile' => '<p>'.implode('</p><p>', fake()->paragraphs(5)).'</p>',
             'teachings' => '<p>'.implode('</p><p>', fake()->paragraphs(8)).'</p>',

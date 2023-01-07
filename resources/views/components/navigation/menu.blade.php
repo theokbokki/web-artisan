@@ -33,9 +33,9 @@
         </a>
       </div>
     </div>
-    <div class="flex {{ request()->is('forum') ? 'aria-current=page' : '' }} justify-around grow gap-4 items-center">
+    <div class="flex  justify-around grow gap-4 items-center">
       <div class="">
-        <a href="/forum" class="menu-link">
+        <a href="/forum" class="menu-link" {{ request()->is('forum') ? 'aria-current=page' : '' }}>
           Forum
         </a>
       </div>
