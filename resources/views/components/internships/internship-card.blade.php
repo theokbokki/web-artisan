@@ -1,4 +1,4 @@
-        <div class="p-5 hover:bg-slate-100 rounded-md transition-all duartion-300">
+        <div class="p-5 hover:bg-slate-100 rounded-md transition-all duartion-300 relative">
           <h3 class="label">
             {{ $internship->title }}
           </h3>
@@ -18,4 +18,5 @@
               @endforeach
             </div>
           @endif
+          <a href="/internships/{{ $internship->slug }}" class="absolute inset-0 z-0"></a>
         </div>

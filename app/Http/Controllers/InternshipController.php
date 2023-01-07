@@ -15,4 +15,11 @@ class InternshipController extends Controller
 
         return view('internships.index', compact('internships', 'companies', 'cities'));
     }
+
+    public function show(Internship $internship)
+    {
+        $internship = $internship;
+
+        return view('internships.show', compact('internship'));
+    }
 }

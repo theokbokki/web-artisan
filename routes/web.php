@@ -72,6 +72,7 @@ Route::get('/alumnis', [AlumnisController::class, 'index']);
 
 //Internships
 Route::get('/internships', [InternshipController::class, 'index']);
+Route::get('/internships/{internship:slug}', [InternshipController::class, 'show']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {
