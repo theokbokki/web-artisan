@@ -23,7 +23,7 @@ return new class () extends Migration {
             $table->text('teachings');
             $table->text('work');
             $table->boolean('work_possibility')->nullable();
-            $table->text('avatar')->nullable();
+            $table->string('contact');
             $table->timestamp('published_at');
             $table->timestamps();
             $table->softDeletes();

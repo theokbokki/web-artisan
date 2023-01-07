@@ -37,7 +37,7 @@ class InternshipFactory extends Factory
             'teachings' => '<p>'.implode('</p><p>', fake()->paragraphs(8)).'</p>',
             'work' => '<p>'.implode('</p><p>', fake()->paragraphs(12)).'</p>',
             'work_possibility' => mt_rand(0, 1),
-            'avatar' => fake()->imageUrl(128, 128, true, 'people', $title),
+            'contact'=>fake()->email,
         ];
     }
 }

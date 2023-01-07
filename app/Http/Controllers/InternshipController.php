@@ -20,6 +20,19 @@ class InternshipController extends Controller
     {
         $internship = $internship;
 
-        return view('internships.show', compact('internship'));
+        $randomInternships = Internship::all()->except($internship->id);
+
+        $tags = $internship->tags->pluck('tag')->all();
+        $internships = Internship::whereHas('tags', function ($query) use ($tags) {
+            $query->whereIn('tag', $tags);
+        })->with('tags')->get();
+
+        $randomInternships = $randomInternships->concat($internships);
+
+        if ($randomInternships->count() > 6) {
+            $randomInternships = $randomInternships->random(6);
+        }
+
+        return view('internships.show', compact('internship', 'randomInternships'));
     }
 }
