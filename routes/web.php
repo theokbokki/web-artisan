@@ -77,6 +77,7 @@ Route::get('/internships/{internship:slug}', [InternshipController::class, 'show
 
 //Contact
 Route::get('/contact', [ContactController::class, 'index']);
+Route::post('/contact', [ContactController::class, 'store']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {
