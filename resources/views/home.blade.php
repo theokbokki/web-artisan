@@ -25,7 +25,7 @@
     </p>
     <dl class="relative mt-8 text-left">
       @foreach ($teachings as $teaching)
-        <x-teaching-accordion tabindex="0" :$teaching />
+        <x-teaching-accordion tabindex="0" :$teaching :index="$loop->index" />
       @endforeach
     </dl>
     <a href="/lessons-grid" class="button inline-block mt-8">{{ __('Voir la grille des cours') }}</a>
