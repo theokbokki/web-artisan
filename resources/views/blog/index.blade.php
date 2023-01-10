@@ -13,6 +13,10 @@
             <option value="{{ $author->slug }}">{{ $author->name }}</option>
           @endforeach
         </select>
+        @if (request('search'))
+          <input type="hidden" name="search" value="{{ request('search') }}" />
+        @endif
+
       </x-filters>
       <x-search>
         <label class="label" for="search">{{ __('Cherchez dans notre blog') }}</label>

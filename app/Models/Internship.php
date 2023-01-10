@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Laravel\Scout\Searchable;
 
 class Internship extends Model
 {
     use HasFactory;
+    use Searchable;
 
     protected $fillable = [
         'title',
@@ -37,5 +39,16 @@ class Internship extends Model
     public function company(): BelongsTo
     {
         return $this->belongsTo(Company::class);
+    }
+
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+        $array['tags'] = $this->tags->toArray();
+
+        $company = Company::where('id', $this->company_id)->first();
+        $array['company_name'] = $company->name;
+
+        return $array;
     }
 }

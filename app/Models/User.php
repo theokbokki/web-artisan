@@ -8,17 +8,21 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
     use Notifiable;
+    use Searchable;
 
     protected $hidden = [
         'password',
         'remeber_token',
-    ];
+        ];
+
+
     protected $fillable = [
         'name',
         'email',
@@ -109,5 +113,13 @@ class User extends Authenticatable
                 }
             }
         }
+    }
+
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+        $array['roles'] = $this->roles->toArray();
+
+        return $array;
     }
 }

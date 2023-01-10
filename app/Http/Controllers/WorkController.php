@@ -10,7 +10,7 @@ class WorkController extends Controller
 {
     public function index()
     {
-        $works = Work::paginate(12);
+        $works = Work::search(request('search'))->paginate(12);
         $students = User::has('works')->get();
 
         return view('works.index', compact('works', 'students'));

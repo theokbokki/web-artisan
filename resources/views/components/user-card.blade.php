@@ -1,5 +1,4 @@
-<article class="grid min-[400px]:grid-cols-[128px_1fr] h-full relative gap-4" role="group"
-  aria-label="slide {{ $user->index }} of 5">
+<article class="grid min-[400px]:grid-cols-[128px_1fr] h-full relative gap-4">
   <div class="">
     <img src="/{{ $user->avatar }}" alt="" class="rounded-md w-full aspect-video min-[400px]:h-full object-cover">
   </div>

@@ -25,6 +25,15 @@
     </main>
   </div>
   <x-navigation.footer />
+  @if (session('success'))
+    <div class="p-3 fixed bottom-0 bg-lime-100/90 right-0 mr-[5vw] mb-[5vw] rounded-xl flex gap-4 items-center">
+      <div
+        class="w-2 aspect-square rounded-full bg-lime-500 shadow-lime-400/70 shadow-[0_0_10px_5px] border-white border-[.95px]">
+      </div>
+      <p class="text-lime-700">{{ session('success') }}</p>
+      <a href="/" class="text-lime-700 font-bold -mt-0.5">&#9587;</a>
+    </div>
+  @endif
 </body>
 
 </html>

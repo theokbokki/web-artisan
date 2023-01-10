@@ -10,7 +10,10 @@ class ForumController extends Controller
 {
     public function index()
     {
-        $questions = Question::with('comments', 'user', 'tags')->paginate(10);
+        $questions = Question::whereIn('id', Question::search(request('search'))->get()->pluck('id'))
+                     ->with('comments', 'user', 'tags')
+        ->paginate(10);
+
         foreach ($questions as $question) {
             $question->published_at_formatted = Carbon::parse($question->published_at)->translatedFormat('d M Y');
         }

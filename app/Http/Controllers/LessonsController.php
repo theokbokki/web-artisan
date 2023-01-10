@@ -8,7 +8,7 @@ class LessonsController extends Controller
 {
     public function index()
     {
-        $lessons = Lesson::all();
+        $lessons = Lesson::search(request('search'))->get();
         return view('lessons.index', compact('lessons'));
     }
 

@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\LessonsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\VoteController;
 use App\Http\Controllers\WorkController;
@@ -78,6 +79,9 @@ Route::get('/internships/{internship:slug}', [InternshipController::class, 'show
 //Contact
 Route::get('/contact', [ContactController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'store']);
+
+//Search
+Route::get('/search', [SearchController::class, 'index']);
 
 //Authentification stuff
 Route::get('/dashboard', function () {

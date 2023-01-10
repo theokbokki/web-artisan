@@ -9,7 +9,7 @@ class InternshipController extends Controller
 {
     public function index()
     {
-        $internships = Internship::paginate(10);
+        $internships = Internship::search(request('search'))->paginate(10);
         $companies = Company::all();
         $cities = Internship::all();
 

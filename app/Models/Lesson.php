@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Laravel\Scout\Searchable;
 
 class Lesson extends Model
 {
     use HasFactory;
+    use Searchable;
 
     protected $fillable = [
         'title',
@@ -40,5 +42,19 @@ class Lesson extends Model
     public function quarters(): BelongsToMany
     {
         return $this->belongsToMany(Quarter::class);
+    }
+
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+        $users = $this->users->map(function ($user) {
+            return [
+            'name' => $user->name,
+            'username' => $user->username,
+        ];
+        });
+        $array['users'] = $users->toArray();
+
+        return $array;
     }
 }

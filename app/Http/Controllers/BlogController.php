@@ -9,7 +9,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $posts = Post::paginate(10);
+        $posts = Post::search(request('search'))->paginate(10);
         $authors = User::has('posts')->get();
 
         return view('blog.index', compact('posts', 'authors'));

@@ -19,6 +19,10 @@
             <option value="{{ $city->address }}">{{ $city->address }}</option>
           @endforeach
         </select>
+
+        @if (request('search'))
+          <input type="hidden" name="search" value="{{ request('search') }}" />
+        @endif
       </x-filters>
       <x-search>
         <label class="label" for="search">{{ __('Cherchez parmis les stages') }}</label>
