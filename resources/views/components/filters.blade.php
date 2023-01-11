@@ -9,7 +9,7 @@
         class="mx-auto w-full max-w-3xl flex flex-wrap min-h-0 rounded-lg bg-white p-4 gap-4 max-h-[75vh] overflow-scroll relative z-20 items-center">
         <div class="mx-auto">
           <p class="small-title">{{ __('Filtres') }}</p>
-          <form action="" class="grid gap-8 mt-8">
+          <form action="/works" method="get" class="grid gap-8 mt-8">
             {{ $slot }}
             <button class="button" type="submit">Filtrer</button>
           </form>
@@ -19,7 +19,7 @@
   </div>
   <div class="hidden lg:block">
     <p class="small-title">{{ __('Filtres') }}</p>
-    <form action="" class="gap-4 mt-8 flex flex-wrap">
+    <form action="/works" class="gap-4 mt-8 flex flex-wrap">
       {{ $slot }}
       <button class="button" type="submit">Filtrer</button>
     </form>

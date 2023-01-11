@@ -47,13 +47,11 @@ class Lesson extends Model
     public function toSearchableArray()
     {
         $array = $this->toArray();
-        $users = $this->users->map(function ($user) {
-            return [
-            'name' => $user->name,
-            'username' => $user->username,
-        ];
-        });
-        $array['users'] = $users->toArray();
+        $array['users'] = $this->users;
+        $array['quarters'] = $this->quarters;
+        $array['teacher'] = $this->users->first()->name;
+        $array['quarter'] = $this->quarters->first()->quarter;
+        $array['year']=$this->year->year;
 
         return $array;
     }

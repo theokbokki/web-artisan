@@ -6,13 +6,16 @@
     <div class="flex items-center gap-4 mt-8 lg:flex-wrap">
       <x-filters>
         <select class="select" id="date" name="date">
-          <option value="latest_first">{{ __('Plus récent d\'abord') }}</option>
-          <option value="oldest_first">{{ __('Plus ancien d\'abord') }}</option>
+          <option value="latest_first" {{ request('date') == 'latest_first' ? 'selected' : '' }}>
+            {{ __('Plus récent d\'abord') }}</option>
+          <option value="oldest_first" {{ request('date') == 'oldest_first' ? 'selected' : '' }}>
+            {{ __('Plus ancien d\'abord') }}</option>
         </select>
         <select class="select" id="students" name="students">
           <option value="all-students">{{ __('Tous les étudiants') }}</option>
           @foreach ($students as $student)
-            <option value="{{ $student->slug }}">{{ $student->name }}</option>
+            <option value="{{ $student->slug }}" {{ request('students') == $student->username ? 'selected' : '' }}>
+              {{ $student->name }}</option>
           @endforeach
         </select>
         @if (request('search'))
@@ -22,6 +25,13 @@
       <x-search>
         <label class="label" for="search">{{ __('Cherchez parmis les travaux des étudiants') }}</label>
         <p>{{ __('Cherchez par tag, étudiant, titre, ...') }}</p>
+
+        @if (request('students'))
+          <input type="hidden" name="students" value="{{ request()->input('students') }}">
+        @endif
+        @if (request('date'))
+          <input type="hidden" name="date" value="{{ request()->input('date') }}">
+        @endif
       </x-search>
     </div>
     <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-16 gap-y-10 items-start mt-16">

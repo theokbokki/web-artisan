@@ -6,7 +6,13 @@
       <path stroke-linecap="round" stroke-linejoin="round"
         d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
     </svg>
-    <span class="">Chercher...</span>
+    <span class="">
+      @if (request('search'))
+        {{ request('search') }}
+      @else
+        {{ __('Chercher...') }}
+      @endif
+    </span>
   </label>
   <div class="fixed top-0 left-0 h-[100vh] w-[100vw] p-4 invisible peer-checked:visible z-[100] md:grid">
     <label for="forum-search" class="fixed inset-0 bg-slate-900 backdrop-blur-sm bg-opacity-20">
@@ -24,7 +30,8 @@
                   d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
               </svg>
             </div>
-            <input type="search" id="search" name="search" class="input block w-full pl-10" placeholder="">
+            <input type="search" id="search" name="search" class="input block w-full pl-10" placeholder=""
+              @if (request('search')) value="{{ request('search') }}" @endif>
           </div>
           <button type="submit" class="button">
             <div class="">

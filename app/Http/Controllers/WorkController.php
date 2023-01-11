@@ -10,7 +10,18 @@ class WorkController extends Controller
 {
     public function index()
     {
-        $works = Work::search(request('search'))->paginate(12);
+        $works = Work::search(request('search'));
+
+        if (request()->has('students') && request('students') !== 'all-students') {
+            $student = User::where('username', request('students'))->first();
+            if ($student) {
+                $works = $works->where('user_id', $student->id);
+            }
+        }
+
+        $works = $works->orderBy('created_at', request('date') === 'latest_first' ? 'desc' : 'asc')->paginate(12);
+
+
         $students = User::has('works')->get();
 
         return view('works.index', compact('works', 'students'));

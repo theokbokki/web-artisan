@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Lesson;
 use App\Models\User;
+use App\Models\Work;
 
 return [
 
@@ -135,6 +137,21 @@ return [
         'host' => env('MEILISEARCH_HOST', 'http://localhost:7700'),
         'key' => env('MEILISEARCH_KEY', null),
         'index-settings' => [
+            Work::class => [
+                'filterableAttributes'=>['user_id'],
+                'sortableAttributes'=>['created_at'],
+            ],
+            Lesson::class=>[
+                'sortableAttributes'=>[
+                    'created_at',
+                    'title',
+                    'credits',
+                    'hours',
+                    'year',
+                    'quarter',
+                    'teacher',
+                ]
+            ]
         ],
     ],
 ];
