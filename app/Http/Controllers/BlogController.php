@@ -9,7 +9,27 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $posts = Post::search(request('search'))->paginate(10);
+        $query = request('search');
+        $authors = request('authors');
+        $perPage = 10;
+
+        if (request('authors') && request('authors') != 'all-authors') {
+            $posts = Post::search($query)->get();
+
+            $filteredPosts = $posts->filter(function ($post) use ($authors) {
+                return $post->users->contains(function ($user) use ($authors) {
+                    return $user->username === $authors;
+                });
+            });
+
+            $filteredIds = $filteredPosts->map(function ($post) {
+                return $post->id;
+            })->toArray();
+            $posts = Post::whereIn('id', $filteredIds)->orderBy('created_at', request('date') === 'latest_first' ? 'desc' : 'asc')->paginate($perPage);
+        } else {
+            $posts = Post::search($query)->orderBy('created_at', request('date') === 'latest_first' ? 'desc' : 'asc')->paginate($perPage);
+        }
+
         $authors = User::has('posts')->get();
 
         return view('blog.index', compact('posts', 'authors'));

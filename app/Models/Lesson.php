@@ -49,9 +49,9 @@ class Lesson extends Model
         $array = $this->toArray();
         $array['users'] = $this->users;
         $array['quarters'] = $this->quarters;
-        $array['teacher'] = $this->users->first()->name;
-        $array['quarter'] = $this->quarters->first()->quarter;
-        $array['year']=$this->year->year;
+        $array['teacher'] = $this->users->first() ? $this->users->first()->name : null;
+        $array['quarter'] = $this->quarters->first() ? $this->quarters->first()->quarter : null;
+        $array['year']=$this->year ? $this->year->year : null;
 
         return $array;
     }

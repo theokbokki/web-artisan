@@ -6,6 +6,12 @@
     <x-search>
       <label for="search">{{ __('Cherchez parmis les cours') }}</label>
       <p>{{ __('Cherchez par professeur, intitulé, bloc, ...') }}</p>
+      @if (request('sort-field'))
+        <input type="hidden" name="sort-field" value="{{ request()->input('sort-field') }}">
+      @endif
+      @if (request('sort-direction'))
+        <input type="hidden" name="sort-direction" value="{{ request()->input('sort-direction') }}">
+      @endif
     </x-search>
     <section class=" overflow-auto">
       <table class="text-left whitespace-nowrap border-separate border-spacing-x-0 border-spacing-y-4 mt-6">
@@ -48,7 +54,7 @@
               <td class="border-t border-b border-r border-slate-200">
                 @foreach ($lesson->quarters as $quarter)
                   <!-- DON'T CHANGE THE STRING HERE, IT WOULD MESS UP THE INDENTATION -->
-                  {{ $quarter->quarter }}{{ $loop->index == 0 ? ', ' : '' }}
+                  {{ $quarter->quarter }}{{ !$loop->last ? ', ' : '' }}
                 @endforeach
 
               </td>

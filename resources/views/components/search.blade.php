@@ -19,6 +19,7 @@
     </label>
     <div
       class="mx-auto w-full max-w-3xl flex flex-col min-h-0 rounded-lg bg-white p-4 gap-4 max-h-[75vh] overflow-scroll relative z-[200] md:self-center">
+
       <form action="{{ request('url') }}" class="grid gap-4">
         {{ $slot }}
         <div class="flex gap-x-2">

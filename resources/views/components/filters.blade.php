@@ -19,7 +19,7 @@
   </div>
   <div class="hidden lg:block">
     <p class="small-title">{{ __('Filtres') }}</p>
-    <form action="/works" class="gap-4 mt-8 flex flex-wrap">
+    <form action="{{ request('url') }}" class="gap-4 mt-8 flex flex-wrap">
       {{ $slot }}
       <button class="button" type="submit">Filtrer</button>
     </form>

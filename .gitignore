@@ -38,3 +38,6 @@ tags
 
 # Packer
 plugin/packer_compiled.lua
+
+# Meilisearch
+/data.ms/*

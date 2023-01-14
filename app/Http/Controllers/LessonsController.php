@@ -12,7 +12,7 @@ class LessonsController extends Controller
         $sortDirection = request('sort-direction');
         $results = Lesson::search(request('search'))->raw()['hits'];
 
-        if ($sortField) {
+        if ($sortField && in_array($sortField, ['title', 'teacher', 'year', 'hours', 'quarter', 'credits'])) {
             usort($results, function ($a, $b) use ($sortField, $sortDirection) {
                 if ($sortDirection === 'asc') {
                     return $a[$sortField] <=> $b[$sortField];

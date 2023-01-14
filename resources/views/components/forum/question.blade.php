@@ -25,9 +25,9 @@
       </svg>
     </div>
     <div class="flex gap-2 items-center justify-self-end">
-      <p>{{ $question->votes->count() }}</p>
+      <p>{{ $question->score }}</p>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-        stroke="currentColor" class="w-4 h-4">
+        stroke="currentColor" class="w-4 h-4 @if ($question->score < 0) rotate-180 @endif">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
       </svg>
     </div>

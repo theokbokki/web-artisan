@@ -1,6 +1,8 @@
 <?php
 
 use App\Models\Lesson;
+use App\Models\Post;
+use App\Models\Question;
 use App\Models\User;
 use App\Models\Work;
 
@@ -151,6 +153,14 @@ return [
                     'quarter',
                     'teacher',
                 ]
+            ],
+            Post::class=>[
+                'filterableAttributes'=>['users'],
+                'sortableAttributes'=>['created_at'],
+            ],
+            Question::class=>[
+                'sortableAttributes'=>['created_at', 'score'],
+                'filterableAttributes'=>['solved_status'],
             ]
         ],
     ],

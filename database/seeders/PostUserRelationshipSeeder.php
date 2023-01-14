@@ -20,7 +20,7 @@ class PostUserRelationshipSeeder extends Seeder
         // Populate the pivot table
         User::all()->each(function ($user) use ($posts) {
             $user->posts()->attach(
-                $posts->random(rand(1, 2))->pluck('id')->toArray()
+                $posts->random(rand(2, 5))->pluck('id')->toArray()
             );
         });
     }

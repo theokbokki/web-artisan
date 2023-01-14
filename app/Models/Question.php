@@ -52,6 +52,16 @@ class Question extends Model
         $array['author_name'] = $author->name;
         $array['author_username'] = $author->username;
 
+        $score = 0;
+        foreach ($this->votes as $vote) {
+            if ($vote->status) {
+                $score ++;
+            } else {
+                $score --;
+            }
+        }
+        $array['score'] = $score;
+
         return $array;
     }
 }

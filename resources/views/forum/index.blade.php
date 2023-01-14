@@ -33,7 +33,7 @@
         @foreach ($questions as $question)
           <x-forum.question :$question />
         @endforeach
-        {{ $questions->links('pagination::tailwind') }}
+        {{ $questions->appends(request()->except('page'))->links('pagination::tailwind') }}
       </div>
     </section>
     <aside class="mt-16 md:mt-0 max-w-[100%] lg:w-max  ">
