@@ -8217,12 +8217,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:whitecube/hiker.git",
-                "reference": "ec252ba774c7ddedf80ca593fa7af540c997c68f"
+                "reference": "3f5d4bc2238ad200ff1a357526470efb1dc025e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whitecube/hiker/zipball/ec252ba774c7ddedf80ca593fa7af540c997c68f",
-                "reference": "ec252ba774c7ddedf80ca593fa7af540c997c68f",
+                "url": "https://api.github.com/repos/whitecube/hiker/zipball/3f5d4bc2238ad200ff1a357526470efb1dc025e2",
+                "reference": "3f5d4bc2238ad200ff1a357526470efb1dc025e2",
                 "shasum": ""
             },
             "require": {
@@ -8280,7 +8280,7 @@
                 "source": "https://github.com/whitecube/hiker/tree/1.x",
                 "issues": "https://github.com/whitecube/hiker/issues"
             },
-            "time": "2023-01-12T14:58:22+00:00"
+            "time": "2023-01-15T17:46:31+00:00"
         },
         {
             "name": "whitecube/trail",

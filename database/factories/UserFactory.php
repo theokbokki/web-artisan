@@ -20,7 +20,6 @@ class UserFactory extends Factory
         $username = strtolower(fake()->unique()->word(2));
         $name = ucfirst(fake()->name());
 
-
         return [
             'name' =>$name,
             'username' => $username,
