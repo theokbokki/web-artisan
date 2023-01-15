@@ -97,7 +97,7 @@ return [
 
     'fallback_locale' => 'fr',
 
-/*
+    /*
 |--------------------------------------------------------------------------
 | Available locales
 |--------------------------------------------------------------------------
@@ -106,12 +106,12 @@ return [
 |
 */
 
-'available_locales' => [
-  'English' => 'en',
-  'French' => 'fr',
-  'Dutch' => 'nl',
-  'German' => 'de',
-],
+    'available_locales' => [
+        'English' => 'en',
+        'French' => 'fr',
+        'Dutch' => 'nl',
+        'German' => 'de',
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -200,7 +200,8 @@ return [
 
         /*
          * Package Service Providers...
-         */
+                 */
+        App\Providers\HikerServiceProvider::class,
 
         /*
          * Application Service Providers...

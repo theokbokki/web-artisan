@@ -3,25 +3,24 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Scout\Searchable;
+use Trail\Models\Concerns\HasPrefix;
+use Trail\Models\Concerns\HasUuid;
+use Trail\Models\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens;
     use HasFactory;
-    use Notifiable;
     use Searchable;
+    use HasPrefix;
+    use HasUuid;
 
     protected $hidden = [
         'password',
         'remeber_token',
-        ];
-
+    ];
 
     protected $fillable = [
         'name',
@@ -55,7 +54,6 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Post::class);
     }
-
 
     public function roles(): BelongsToMany
     {
@@ -100,7 +98,7 @@ class User extends Authenticatable
             if (isset($question)) {
                 if ($vote->question_id == $question->id && $vote->status) {
                     return 'up';
-                } elseif ($vote->question_id == $question->id && !$vote->status) {
+                } elseif ($vote->question_id == $question->id && ! $vote->status) {
                     return 'down';
                 }
             }
@@ -108,7 +106,7 @@ class User extends Authenticatable
             if (isset($answer)) {
                 if ($vote->answer_id == $answer->id && $vote->status) {
                     return 'up';
-                } elseif ($vote->answer_id == $answer->id && !$vote->status) {
+                } elseif ($vote->answer_id == $answer->id && ! $vote->status) {
                     return 'down';
                 }
             }
