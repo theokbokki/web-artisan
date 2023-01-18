@@ -5,7 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
+use Spatie\Translatable\HasTranslations;
 use Trail\Models\Concerns\HasPrefix;
 use Trail\Models\Concerns\HasUuid;
 use Trail\Models\User as Authenticatable;
@@ -16,6 +19,7 @@ class User extends Authenticatable
     use Searchable;
     use HasPrefix;
     use HasUuid;
+    use HasTranslations;
 
     protected $hidden = [
         'password',
@@ -29,6 +33,12 @@ class User extends Authenticatable
         'avatar',
         'password',
         'slug',
+    ];
+
+    protected $translatable = [
+        'excerpt',
+        'body',
+        'job',
     ];
 
     /**
@@ -92,6 +102,11 @@ class User extends Authenticatable
         return $this->hasMany(Vote::class);
     }
 
+    public function avatarUrl($path)
+    {
+        return Storage::url($path);
+    }
+
     public function has_voted(Question | null $question, Answer | null $answer)
     {
         foreach ($this->votes as $vote) {
@@ -119,5 +134,13 @@ class User extends Authenticatable
         $array['roles'] = $this->roles->toArray();
 
         return $array;
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::saving(function ($user) {
+            $user->slug = Str::slug($user->name);
+        });
     }
 }

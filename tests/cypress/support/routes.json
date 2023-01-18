@@ -102,6 +102,146 @@
       "HEAD"
     ]
   },
+  "passport.token": {
+    "name": "passport.token",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\AccessTokenController@issueToken",
+    "uri": "oauth/token",
+    "method": [
+      "POST"
+    ]
+  },
+  "passport.authorizations.authorize": {
+    "name": "passport.authorizations.authorize",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\AuthorizationController@authorize",
+    "uri": "oauth/authorize",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "passport.token.refresh": {
+    "name": "passport.token.refresh",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\TransientTokenController@refresh",
+    "uri": "oauth/token/refresh",
+    "method": [
+      "POST"
+    ]
+  },
+  "passport.authorizations.approve": {
+    "name": "passport.authorizations.approve",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\ApproveAuthorizationController@approve",
+    "uri": "oauth/authorize",
+    "method": [
+      "POST"
+    ]
+  },
+  "passport.authorizations.deny": {
+    "name": "passport.authorizations.deny",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\DenyAuthorizationController@deny",
+    "uri": "oauth/authorize",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "passport.tokens.index": {
+    "name": "passport.tokens.index",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\AuthorizedAccessTokenController@forUser",
+    "uri": "oauth/tokens",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "passport.tokens.destroy": {
+    "name": "passport.tokens.destroy",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\AuthorizedAccessTokenController@destroy",
+    "uri": "oauth/tokens/{token_id}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "passport.clients.index": {
+    "name": "passport.clients.index",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\ClientController@forUser",
+    "uri": "oauth/clients",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "passport.clients.store": {
+    "name": "passport.clients.store",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\ClientController@store",
+    "uri": "oauth/clients",
+    "method": [
+      "POST"
+    ]
+  },
+  "passport.clients.update": {
+    "name": "passport.clients.update",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\ClientController@update",
+    "uri": "oauth/clients/{client_id}",
+    "method": [
+      "PUT"
+    ]
+  },
+  "passport.clients.destroy": {
+    "name": "passport.clients.destroy",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\ClientController@destroy",
+    "uri": "oauth/clients/{client_id}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "passport.scopes.index": {
+    "name": "passport.scopes.index",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\ScopeController@all",
+    "uri": "oauth/scopes",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "passport.personal.tokens.index": {
+    "name": "passport.personal.tokens.index",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\PersonalAccessTokenController@forUser",
+    "uri": "oauth/personal-access-tokens",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "passport.personal.tokens.store": {
+    "name": "passport.personal.tokens.store",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\PersonalAccessTokenController@store",
+    "uri": "oauth/personal-access-tokens",
+    "method": [
+      "POST"
+    ]
+  },
+  "passport.personal.tokens.destroy": {
+    "name": "passport.personal.tokens.destroy",
+    "domain": null,
+    "action": "Laravel\\Passport\\Http\\Controllers\\PersonalAccessTokenController@destroy",
+    "uri": "oauth/personal-access-tokens/{token_id}",
+    "method": [
+      "DELETE"
+    ]
+  },
   "sanctum.csrf-cookie": {
     "name": "sanctum.csrf-cookie",
     "domain": null,
@@ -140,6 +280,105 @@
       "POST"
     ]
   },
+  "hiker.client.dashboard": {
+    "name": "hiker.client.dashboard",
+    "domain": null,
+    "action": "Hiker\\Http\\Controllers\\DashboardController",
+    "uri": "admin/client",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.client.resource.resourcepicker": {
+    "name": "hiker.client.resource.resourcepicker",
+    "domain": null,
+    "action": "Hiker\\Http\\Controllers\\ResourcePickerController",
+    "uri": "admin/client/resources/{resource}/resourcepicker/{related?}/{model?}/{relationship?}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.client.resource.tooltip": {
+    "name": "hiker.client.resource.tooltip",
+    "domain": null,
+    "action": "Hiker\\Http\\Controllers\\ResourceTooltipController",
+    "uri": "admin/client/resources/{resource}/{model}/tooltip",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.client.resource.fileupload": {
+    "name": "hiker.client.resource.fileupload",
+    "domain": null,
+    "action": "Hiker\\Http\\Controllers\\FileUploadController",
+    "uri": "admin/client/file-upload",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.client.admin.index": {
+    "name": "hiker.client.admin.index",
+    "domain": null,
+    "action": "Hiker\\Http\\Controllers\\AdminIndexController",
+    "uri": "admin/client/admin",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.client.admin.group": {
+    "name": "hiker.client.admin.group",
+    "domain": null,
+    "action": "Hiker\\Http\\Controllers\\AdminGroupController",
+    "uri": "admin/client/admin/{group}/{tab?}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.client.search": {
+    "name": "hiker.client.search",
+    "domain": null,
+    "action": "Hiker\\Http\\Controllers\\SearchController",
+    "uri": "admin/client/search",
+    "method": [
+      "GET",
+      "POST",
+      "HEAD"
+    ]
+  },
+  "hiker.client.notifications.read": {
+    "name": "hiker.client.notifications.read",
+    "domain": null,
+    "action": "Hiker\\Http\\Controllers\\NotificationsController",
+    "uri": "admin/client/notifications/read",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.client.plugin.styles": {
+    "name": "hiker.client.plugin.styles",
+    "domain": null,
+    "action": "Hiker\\Http\\Controllers\\PluginAssetsController@styles",
+    "uri": "admin/client/styles/{package}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.client.plugin.scripts": {
+    "name": "hiker.client.plugin.scripts",
+    "domain": null,
+    "action": "Hiker\\Http\\Controllers\\PluginAssetsController@scripts",
+    "uri": "admin/client/scripts/{package}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
   "": {
     "name": null,
     "domain": null,
@@ -147,6 +386,269 @@
     "uri": "confirm-password",
     "method": [
       "POST"
+    ]
+  },
+  "hiker.api.resource.index": {
+    "name": "hiker.api.resource.index",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Api\\IndexController",
+    "uri": "trail/api/{resource}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.api.resource.flow": {
+    "name": "hiker.api.resource.flow",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Api\\FlowController",
+    "uri": "trail/api/{resource}/{model}/{flow}",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.api.resource.create": {
+    "name": "hiker.api.resource.create",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Api\\CreateController",
+    "uri": "trail/api/{resource}",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.api.resource.read": {
+    "name": "hiker.api.resource.read",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Api\\ReadController",
+    "uri": "trail/api/{resource}/{model}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.api.resource.update": {
+    "name": "hiker.api.resource.update",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Api\\UpdateController",
+    "uri": "trail/api/{resource}/{model}",
+    "method": [
+      "PATCH"
+    ]
+  },
+  "hiker.api.resource.delete": {
+    "name": "hiker.api.resource.delete",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Api\\DeleteController",
+    "uri": "trail/api/{resource}/{model}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "hiker.api.resource.flow.static": {
+    "name": "hiker.api.resource.flow.static",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Api\\StaticFlowController",
+    "uri": "trail/api/resources/{resource}/flow/{flow}",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.client.user.profiles.switch": {
+    "name": "hiker.client.user.profiles.switch",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\UserProfileSwitchController",
+    "uri": "admin/client/user/switch/{profile}",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.client.resource.index": {
+    "name": "hiker.client.resource.index",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\ResourceIndexController",
+    "uri": "admin/client/resources/{resource}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.client.resource.draft": {
+    "name": "hiker.client.resource.draft",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\ResourceDraftController",
+    "uri": "admin/client/resources/{resource}",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.client.resource.flow.static": {
+    "name": "hiker.client.resource.flow.static",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\ResourceStaticFlowController",
+    "uri": "admin/client/resources/{resource}/flow/{flow}",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.client.resource.trip.update": {
+    "name": "hiker.client.resource.trip.update",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\TripUpdateController",
+    "uri": "admin/client/resources/{resource}/trips/{trip}/update",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.client.resource.trip.delete": {
+    "name": "hiker.client.resource.trip.delete",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\TripDeleteController",
+    "uri": "admin/client/resources/{resource}/trips/{trip}/delete",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.client.resource.search": {
+    "name": "hiker.client.resource.search",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\ResourceSearchController",
+    "uri": "admin/client/resources/{resource}/search",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.client.resource.read": {
+    "name": "hiker.client.resource.read",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\ResourceReadController",
+    "uri": "admin/client/resources/{resource}/{model}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.client.resource.flow": {
+    "name": "hiker.client.resource.flow",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\ResourceFlowController",
+    "uri": "admin/client/resources/{resource}/{model}/{flow}",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.client.resource.reorder": {
+    "name": "hiker.client.resource.reorder",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\ResourceStaticFlowController@reorder",
+    "uri": "admin/client/resources/{resource}/reorder",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.client.component.action": {
+    "name": "hiker.client.component.action",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\ComponentActionController",
+    "uri": "admin/client/components/{component}/{id}/{action}",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.auth.login": {
+    "name": "hiker.auth.login",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Auth\\LoginController@show",
+    "uri": "admin/login",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.auth.login.process": {
+    "name": "hiker.auth.login.process",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Auth\\LoginController@login",
+    "uri": "admin/login",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.auth.password": {
+    "name": "hiker.auth.password",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Auth\\ForgotPasswordController@showLinkRequestForm",
+    "uri": "admin/password/reset",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.auth.password.email": {
+    "name": "hiker.auth.password.email",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Auth\\ForgotPasswordController@sendResetLinkEmail",
+    "uri": "admin/password/email",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.auth.password.email.sent": {
+    "name": "hiker.auth.password.email.sent",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Auth\\ForgotPasswordController@feedback",
+    "uri": "admin/password/email/sent",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.auth.password.process": {
+    "name": "hiker.auth.password.process",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Auth\\ResetPasswordController@reset",
+    "uri": "admin/password/reset",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.auth.password.reset": {
+    "name": "hiker.auth.password.reset",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Auth\\ResetPasswordController@showResetForm",
+    "uri": "admin/password/reset/{email}/{token}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.auth.password.success": {
+    "name": "hiker.auth.password.success",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Auth\\ResetPasswordController@feedback",
+    "uri": "password/reset/success",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "hiker.auth.logout": {
+    "name": "hiker.auth.logout",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\Auth\\LoginController@logout",
+    "uri": "admin/logout",
+    "method": [
+      "POST"
+    ]
+  },
+  "hiker.index": {
+    "name": "hiker.index",
+    "domain": null,
+    "action": "Trail\\Http\\Controllers\\RouterController@show",
+    "uri": "admin",
+    "method": [
+      "GET",
+      "HEAD"
     ]
   },
   "dashboard": {

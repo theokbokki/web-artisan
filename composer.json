@@ -16,7 +16,8 @@
 		"laravel/scout": "^9.7",
 		"laravel/tinker": "^2.7",
 		"meilisearch/meilisearch-php": "^0.26.1",
-		"whitecube/hiker": "1.x-dev"
+		"whitecube/hiker": "1.x-dev",
+		"spatie/laravel-translatable": "^6.0"
 	},
 	"repositories": [
 		{

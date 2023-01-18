@@ -16,9 +16,9 @@ return new class() extends Migration {
             $table->string('username')->unique()->nullable();
             $table->string('slug')->unique()->nullable();
             $table->string('avatar')->nullable();
-            $table->string('job')->nullable();
-            $table->text('excerpt')->nullable();
-            $table->text('body')->nullable();
+            $table->json('job')->nullable();
+            $table->json('excerpt')->nullable();
+            $table->json('body')->nullable();
         });
     }
 
