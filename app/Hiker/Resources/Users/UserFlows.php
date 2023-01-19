@@ -3,6 +3,7 @@
 namespace App\Hiker\Resources\Users;
 
 use App\Hiker\Resources\Users\Forms\UserForm;
+use App\Hiker\Resources\Users\Nodes\PrepareUser;
 use Hiker\Tracks\FlowsRepository;
 use Trail\Http\Requests\ResourceRequest;
 
@@ -48,7 +49,8 @@ class UserFlows extends FlowsRepository
     {
         return $this->from(ResourceRequest::class)
             ->setTransitory()
-            //
+            // ->run(PrepareUser::class)
+            ->show(UserForm::class)
             ->chain('update');
     }
 
@@ -62,7 +64,7 @@ class UserFlows extends FlowsRepository
     public function update()
     {
         return $this->from(ResourceRequest::class)
-            //
+            ->save(Nodes\SaveUser::class)
             ->chain('read');
     }
 
@@ -76,7 +78,8 @@ class UserFlows extends FlowsRepository
     public function read()
     {
         return $this->from(ResourceRequest::class)
-            ->setTransitory();
+            ->setTransitory()
+            ->show(Views\SingleView::class);
     }
 
     /**
@@ -90,7 +93,7 @@ class UserFlows extends FlowsRepository
     {
         return $this->from(ResourceRequest::class)
             ->setTransitory()
-            //
+            ->show(Forms\Remove::class)
             ->chain('delete');
     }
 
@@ -104,7 +107,7 @@ class UserFlows extends FlowsRepository
     public function delete()
     {
         return $this->from(ResourceRequest::class)
-            //
+            ->run(Nodes\Delete::class)
             ->chain('index');
     }
 }

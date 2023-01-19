@@ -33,8 +33,8 @@ class SaveUser extends Node implements Saveable
         $this->model->password = $bag->password ? bcrypt($bag->password) : $this->model->password;
         $this->model->avatar = $bag->avatar;
         $this->model->excerpt = $bag->excerpt;
-        $this->model->job = $bag->work;
-        $this->model->body = $bag->about;
+        $this->model->job = $bag->job;
+        $this->model->body = $bag->body;
 
         $this->model->save();
 

@@ -52,13 +52,13 @@ class UserForm extends Form
                             'formats' => ['jpeg', 'png'],
                         ]),
 
-                    Text::make('Travail', 'work')
+                    Text::make('Travail', 'job')
                     ->translated(),
 
                     Text::make('Résumé', 'excerpt')
                     ->translated(),
 
-                    Wysiwyg::make('À propos', 'about')
+                    Wysiwyg::make('À propos', 'body')
                     ->translated(),
 
                     Checklist::make('Roles', 'roles')
