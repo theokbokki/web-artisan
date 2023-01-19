@@ -68,6 +68,7 @@
       <a href="/register" class="button text-center w-full max-w-[200px]">
         S'inscrire
       </a>
+      <x-navigation.language-picker />
     </div>
   </div>
 </footer>

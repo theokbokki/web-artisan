@@ -20,6 +20,12 @@
     @if ($user->id == auth()->id())
       <a href="/profile" class="button inline-block mt-6">Edit profile</a>
     @endif
+    <div class="space-y-4 mt-6">
+      <p class="small-title">{{ __('À propos') }}</p>
+      @if ($user->body)
+        {!! $user->body !!}
+      @endif
+    </div>
   </section>
 
   @if ($user->posts->count())

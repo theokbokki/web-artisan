@@ -16,6 +16,7 @@
       <x-navigation.mobile-search />
       <a href="#footer-menu" class="link font-bold no-underline nav-2:hidden">Menu</a>
       <x-navigation.search />
+      <x-navigation.language-picker class="hidden nav-2:flex" />
     </div>
   </nav>
   <x-navigation.menu />

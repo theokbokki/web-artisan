@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="{{-- overflow-x-hidden --}} max-w-screen">
+<html lang="{{ str_replace('_', '-', LaravelLocalization::getCurrentLocale()) }}"
+  class="{{-- overflow-x-hidden --}} max-w-screen">
 
 <head>
   <meta charset="UTF-8">
@@ -14,6 +15,7 @@
 </head>
 
 <body class="max-w-screen-2xl {{-- overflow-x-hidden --}} mx-auto">
+
   <h1 class="sr-only">
     {{ __('home.title') }}
   </h1>
