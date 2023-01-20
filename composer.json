@@ -31,6 +31,7 @@
 		}
 	],
 	"require-dev": {
+		"amirami/localizator": "^0.11.1@alpha",
 		"fakerphp/faker": "^1.9.1",
 		"laracasts/cypress": "^3.0",
 		"laravel-lang/attributes": "^2.0",

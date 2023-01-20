@@ -16,6 +16,6 @@ class UsersSeeder extends Seeder
     {
         User::factory()->create(['name'=>'Theo Leonet', 'username'=>'theoleonet', 'email'=>'theo.leonet@student.hepl.be', 'excerpt'=>'{}', 'job'=>'{}']);
         User::factory()->create(['name'=>'Alyssa Delfleur', 'username'=>'alyssadelfleur', 'email'=>'alyssa.delfleur@example.com', 'excerpt'=>'{}', 'job'=>'{}']);
-        // User::factory()->count(21)->create();
+        User::factory()->count(21)->create();
     }
 }
