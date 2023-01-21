@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
 
 class Question extends Model
@@ -15,6 +16,8 @@ class Question extends Model
         'title',
         'body',
         'solved_status',
+        'published_at',
+        'user_id',
     ];
 
     public function comments()
@@ -42,7 +45,6 @@ class Question extends Model
         return $this->belongsToMany(Tag::class);
     }
 
-
     public function toSearchableArray()
     {
         $array = $this->toArray();
@@ -55,13 +57,21 @@ class Question extends Model
         $score = 0;
         foreach ($this->votes as $vote) {
             if ($vote->status) {
-                $score ++;
+                $score++;
             } else {
-                $score --;
+                $score--;
             }
         }
         $array['score'] = $score;
 
         return $array;
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::saving(function ($question) {
+            $question->slug = Str::slug($question->title);
+        });
     }
 }

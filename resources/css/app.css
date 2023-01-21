@@ -61,7 +61,7 @@
 }
 
 .input {
-	@apply bg-slate-100 text-slate-600 rounded-md py-1 px-4 border-2 border-transparent outline-none transition hover:border-slate-200 focus:border-slate-300;
+	@apply bg-slate-100 text-slate-600 rounded-md py-1 px-4 border-2 border-transparent outline-none transition hover:border-slate-200 focus:border-slate-300 min-w-0;
 }
 
 .link{
@@ -69,11 +69,11 @@
 }
 
 .menu-link{
-	@apply text-slate-500 aria-[current=page]:text-indigo-600 px-2 aria-[current=page]:py-1 aria-[current=page]:underline aria-[current=page]:font-bold underline-offset-4 w-full inline-block hover:text-indigo-600 transition-all duration-300;
+	@apply text-slate-500 aria-[current=page]:text-indigo-600 px-2 aria-[current=page]:py-1 aria-[current=page]:underline aria-[current=page]:font-bold underline-offset-4 w-full inline-block hover:text-indigo-600 transition-all duration-300 hover:underline;
 }
 
 .mobile-menu-link{
-	@apply text-slate-500 aria-[current=page]:text-indigo-600 px-2 aria-[current=page]:py-1 aria-[current=page]:bg-indigo-50  rounded-md w-full inline-block hover:text-indigo-600 peer-checked:transition-all duration-300 transition-none;
+	@apply text-slate-500 aria-[current=page]:text-indigo-600 px-2 aria-[current=page]:py-1 aria-[current=page]:bg-indigo-50  rounded-md w-full inline-block hover:text-indigo-600 peer-checked:transition-all duration-300 transition-none aria-[current=page]:hover:no-underline hover:underline;
 
 }
 

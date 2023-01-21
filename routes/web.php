@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\LessonsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\VoteController;
@@ -40,6 +41,10 @@ Route::group(
     Route::get('/forum', [ForumController::class, 'index']);
 
     Route::get('/forum/{question:slug}', [ForumController::class, 'show']);
+
+    Route::get('/question/create', [QuestionController::class, 'create']);
+    Route::post('/question/add-tags', [QuestionController::class, 'add_tags']);
+    Route::post('/question/store', [QuestionController::class, 'store']);
 
     Route::post('/forum/{question:slug}/{answer:id}/comment', [CommentController::class, 'store']);
 

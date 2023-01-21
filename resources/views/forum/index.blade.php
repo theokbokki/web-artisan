@@ -27,7 +27,8 @@
     <section class="max-w-1.5xl">
       <div class="flex items-center gap-4 justify-between flex-wrap">
         <h2 class="small-title">{{ __('Questions') }}</h2>
-        <a class="button inline-block" href="">{{ __('Nouvelle question') }}</a>
+        <a class="button inline-block"
+          href="{{ LaravelLocalization::localizeUrl('/forum/create') }}">{{ __('Nouvelle question') }}</a>
       </div>
       <div class="max-w-3xl space-y-8 mt-8">
         @foreach ($questions as $question)

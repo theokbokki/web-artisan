@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Question;
 use App\Models\User;
 use App\Models\Work;
-use App\Models\Question;
 
 class WorkController extends Controller
 {
@@ -13,14 +13,13 @@ class WorkController extends Controller
         $works = Work::search(request('search'));
 
         if (request()->has('students') && request('students') !== 'all-students') {
-            $student = User::where('username', request('students'))->first();
+            $student = User::where('slug', request('students'))->first();
             if ($student) {
                 $works = $works->where('user_id', $student->id);
             }
         }
 
         $works = $works->orderBy('created_at', request('date') === 'latest_first' ? 'desc' : 'asc')->paginate(12);
-
 
         $students = User::has('works')->get();
 
@@ -41,7 +40,6 @@ class WorkController extends Controller
         $works = Work::whereHas('tags', function ($query) use ($tags) {
             $query->whereIn('tag', $tags);
         })->with('tags')->get();
-
 
         $randomWorks = $randomWorks->concat($works);
 
