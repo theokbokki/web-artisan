@@ -140,7 +140,7 @@ class User extends Authenticatable
     {
         parent::boot();
         static::saving(function ($user) {
-            $user->slug = Str::slug($user->name);
+            $user->slug = Str::slug($user->username);
         });
     }
 }

@@ -22,8 +22,7 @@ class ContactController extends Controller
             'message' => ['required', 'string'],
         ]);
 
-        Mail::to('test@test.test')->send(new ContactForm($validatedRequest));
-
+        Mail::to('dev@theoleonet.be')->send(new ContactForm($validatedRequest));
 
         return redirect('/')->with('success', 'Message sent!');
     }

@@ -2,6 +2,7 @@
 
 namespace App\Hiker\Chrome;
 
+use App\Hiker\Resources\Lessons\Lesson;
 use App\Hiker\Resources\Users\User;
 use Hiker\Components\Icon\Icon;
 use Hiker\Components\Navigation\Link;
@@ -28,7 +29,11 @@ class Navigation extends NavigationConstructor
             //     ->icon(Icon::active('filled-icon')->inactive('icon')),
             Link::resource(User::class)
                 ->order(0)
-                ->keyCode('users'),
+            ->keyCode('users'),
+
+            Link::resource(Lesson::class)
+            ->order(10)
+            ->keyCode('lessons'),
         ];
     }
 }

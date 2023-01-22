@@ -10,6 +10,10 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
   <title>{{ config('app.name') }}</title>
   @vite('resources/css/app.css')
 </head>
@@ -28,7 +32,7 @@
   </div>
   <x-navigation.footer />
   @if (session('success'))
-    <div class="p-3 fixed bottom-0 bg-lime-100/90 right-0 mr-[5vw] mb-[5vw] rounded-xl flex gap-4 items-center">
+    <div class="p-3 fixed bottom-0 bg-lime-100/90 right-0 mr-5 mb-5 rounded-xl flex gap-4 items-center">
       <div
         class="w-2 aspect-square rounded-full bg-lime-500 shadow-lime-400/70 shadow-[0_0_10px_5px] border-white border-[.95px]">
       </div>

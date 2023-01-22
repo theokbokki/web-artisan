@@ -68,6 +68,11 @@
           @endforeach
         </tbody>
       </table>
+      @if (!count($lessons))
+        <p>
+          {{ __('Pas de leçon correspondant à votre recherche') }}
+        </p>
+      @endif
     </section>
   </section>
 </x-layouts.main>

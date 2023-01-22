@@ -34,6 +34,11 @@
         @endif
       </x-search>
     </div>
+    @if (!count($works))
+      <p class="label mt-10">
+        {{ __('Pas de posts correspondant à votre recherche') }}
+      </p>
+    @endif
     <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-x-16 gap-y-10 items-start mt-16">
       @foreach ($works as $work)
         <x-work-card :$work />

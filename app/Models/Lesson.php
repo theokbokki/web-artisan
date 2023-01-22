@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
 
 class Lesson extends Model
@@ -18,6 +19,8 @@ class Lesson extends Model
         'credits',
         'hours',
         'body',
+        'slug',
+        'year_id',
     ];
 
     /**
@@ -51,8 +54,16 @@ class Lesson extends Model
         $array['quarters'] = $this->quarters;
         $array['teacher'] = $this->users->first() ? $this->users->first()->name : null;
         $array['quarter'] = $this->quarters->first() ? $this->quarters->first()->quarter : null;
-        $array['year']=$this->year ? $this->year->year : null;
+        $array['year'] = $this->year ? $this->year->year : null;
 
         return $array;
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::saving(function ($lesson) {
+            $lesson->slug = Str::slug($lesson->title);
+        });
     }
 }

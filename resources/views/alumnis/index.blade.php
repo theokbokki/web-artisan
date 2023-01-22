@@ -13,5 +13,11 @@
     <div class="mt-16">
       {{ $alumnis->links('pagination::tailwind') }}
     </div>
+
+    @if (!count($alumnis))
+      <p>
+        {{ __('Pas d\'alumnis correspondant à votre recherche') }}
+      </p>
+    @endif
   </section>
 </x-layouts.main>

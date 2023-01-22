@@ -3,10 +3,21 @@
     <div>
       <img src="/{{ $work->thumbnail }}" alt="" class="w-full aspect-video object-cover rounded-md">
     </div>
-    <div class="flex space-x-2 flex-wrap mt-4">
-      @foreach ($work->tags as $tag)
-        <p class="tag">{{ $tag->tag }}</p>
-      @endforeach
+    <div class="flex flex-wrap gap-x-6 items-center">
+      <div class="flex gap-2 relative w-max flex-wrap items-center">
+        <div class="w-7">
+          <img src="{{ $work->user->avatarUrl($work->user->avatar) }}" alt=""
+            class="w-full aspect-square rounded-md">
+        </div>
+        <p>{{ $work->user->name }}</p>
+        <a href="/profile/{{ $work->user->slug }}"
+          class="text-transparent text-[0] absolute inset-0">{{ __('Voir le profil de :user', ['user' => $work->user->name]) }}</a>
+      </div>
+      <div class="flex space-x-2 flex-wrap">
+        @foreach ($work->tags as $tag)
+          <p class="tag">{{ $tag->tag }}</p>
+        @endforeach
+      </div>
     </div>
     <h2 class="small-title">{{ $work->title }}</h2>
     <div class="space-y-4">

@@ -3,7 +3,7 @@
     <h2 class="sr-only">
       {{ __('Navigation principale') }}
     </h2>
-    <x-logo class="w-14" />
+    <x-logo class="w-12 sm:w-14" />
     <div class="flex gap-4 items-center">
       @auth
         <a href="/profile">

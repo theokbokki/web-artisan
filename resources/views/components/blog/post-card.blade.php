@@ -40,5 +40,6 @@
   </div>
 
   <!-- Read more link -->
-  <a href="#" class="absolute inset-0 z-1"><span class="sr-only">Lire la suite de l'article</span></a>
+  <a href="blog/{{ $post->slug }}" class="absolute inset-0 z-1"><span class="sr-only">Lire la suite de
+      l'article</span></a>
 </article>

@@ -20,13 +20,14 @@ class ForumController extends Controller
             }
         }
 
-        $questions = $questions->orderBy('score', request('popularity') === 'most_popular_first' ? 'asc' : 'desc');
+        $questions = $questions->orderBy('score', request('popularity') === 'most_popular_first' ? 'desc' : 'asc');
         $questions_score = $questions->raw();
         $questions = $questions->get();
         $index = 0;
         $questions->map(function ($item, $key) use (&$index, $questions_score) {
             $item->score = $questions_score['hits'][$index]['score'];
             $index++;
+
             return $item;
         });
 
@@ -40,9 +41,9 @@ class ForumController extends Controller
             foreach ($user->questions as $question) {
                 foreach ($question->votes as $vote) {
                     if ($vote->status) {
-                        $user->score ++;
+                        $user->score++;
                     } else {
-                        $user->score --;
+                        $user->score--;
                     }
                 }
             }
@@ -61,36 +62,36 @@ class ForumController extends Controller
         return view('forum.index', compact('questions', 'users'));
     }
 
-
     public function show(Question $question)
     {
         $question->published_at_formatted = Carbon::parse($question->published_at)->translatedFormat('d M Y');
 
-
+        $question->score = 0;
         if ($question->votes) {
             foreach ($question->votes as $vote) {
                 if ($vote->status) {
-                    $question->score ++;
+                    $question->score++;
                 } else {
-                    $question->score --;
+                    $question->score--;
                 }
             }
             // dd($question->score);
         }
 
         foreach ($question->answers as $answer) {
+            $answer->score = 0;
             if ($answer->votes) {
                 foreach ($answer->votes as $vote) {
                     if ($vote->status) {
-                        $answer->score ++;
+                        $answer->score++;
                     } else {
-                        $answer->score --;
+                        $answer->score--;
                     }
                 }
             }
             if ($answer->comments) {
                 foreach ($answer->comments as $comment) {
-                    $question->total_comment_count ++;
+                    $question->total_comment_count++;
                 }
                 if (request()->input('answer_with_all_comment') == $answer->id) {
                     $answer->limited_comments = $answer->comments()->get();

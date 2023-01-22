@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Hiker\Resources\Users;
+namespace App\Hiker\Resources\Lessons;
 
-use App\Hiker\Resources\Users\Forms\UserForm;
-use App\Hiker\Resources\Users\Nodes\PrepareUser;
+use App\Hiker\Resources\Lessons\Forms\LessonForm;
+use App\Hiker\Resources\Lessons\Nodes\PrepareLesson;
+use App\Hiker\Resources\Lessons\Nodes\SaveLesson;
 use Hiker\Tracks\FlowsRepository;
 use Trail\Http\Requests\ResourceRequest;
 
-class UserFlows extends FlowsRepository
+class LessonFlows extends FlowsRepository
 {
     /**
      * Returns the "draft" roadmap definition.
@@ -20,7 +21,7 @@ class UserFlows extends FlowsRepository
     {
         return $this->from(ResourceRequest::class)
             ->setTransitory()
-            ->show(UserForm::class)
+            ->show(LessonForm::class)
             ->chain('create');
     }
 
@@ -34,8 +35,8 @@ class UserFlows extends FlowsRepository
     public function create()
     {
         return $this->from(ResourceRequest::class)
-            ->save(Nodes\SaveUser::class)
-            ->chain('index');
+            ->save(SaveLesson::class)
+            ->chain('read');
     }
 
     /**
@@ -49,8 +50,8 @@ class UserFlows extends FlowsRepository
     {
         return $this->from(ResourceRequest::class)
             ->setTransitory()
-            ->run(PrepareUser::class)
-            ->show(UserForm::class)
+            ->run(PrepareLesson::class)
+            ->show(LessonForm::class)
             ->chain('update');
     }
 
@@ -64,7 +65,7 @@ class UserFlows extends FlowsRepository
     public function update()
     {
         return $this->from(ResourceRequest::class)
-            ->save(Nodes\SaveUser::class)
+            ->save(SaveLesson::class)
             ->chain('read');
     }
 

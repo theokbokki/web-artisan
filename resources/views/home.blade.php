@@ -13,7 +13,9 @@
       </div>
       <a class="button inline-block" href="#teachings">{{ __('Viens vérifier par toi même') }}</a>
     </div>
-    <img src="images/hero-image.png" alt="" class="base-shadow rounded-lg">
+    <div class="relative overflow-scroll w-full rounded-md">
+      <img src="images/hero_image.svg" alt="" class="base-shadow rounded-lg min-w-[600px] ">
+    </div>
   </section>
   <section class="mt-24 w-[90%] mx-auto max-w-5xl text-center relative">
     <p class="invisible absolute -top-64" aria-hidden="true" id="teachings"></p>
@@ -139,6 +141,6 @@
     <p class="max-w-1.5xl mx-auto">
       {{ __('Notre site t’as convaincu? Alors inscris toi à la HEPL et deviens un grand développeur et designer web.') }}
     </p>
-    <a class="button inline-block" href="">{{ __('S’inscrire au bachelier') }}</a>
+    <a class="button inline-block" href="https://www.hepl.be/fr/inscription">{{ __('S’inscrire au bachelier') }}</a>
   </section>
 </x-layouts.main>

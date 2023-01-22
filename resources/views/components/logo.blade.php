@@ -1,4 +1,5 @@
-  <figure class="flex items-center">
+  <figure class="flex items-center relative">
+    <a class="absolute inset-0" href="{{ LaravelLocalization::localizeUrl('/') }}"></a>
     <div {{ $attributes }}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.852 27.68">
         <path
@@ -6,7 +7,8 @@
           fill="#4f46e5" />
       </svg>
     </div>
-    <figcaption class=" text-base leading-4 text-indigo-600 font-title font-bold max-w-[5.5rem] ml-3 nav-1:block">
+    <figcaption
+      class="text-sm leading-4 text-indigo-600 font-title font-bold max-w-[5rem] sm:max-w-[5.5rem] ml-3 sm:text-base sm:leading-4">
       {{ __('3 ans pour un futur') }}
     </figcaption>
   </figure>

@@ -77,9 +77,9 @@
         <div class="mt-6">
           <div class="flex gap-2">
             <img class="w-7 h-7 rounded-md" src="/{{ $answer->user->avatar }}" alt="">
-            <p class="text-base"><a href="users/{{ $answer->user->slug }}" class="link">
+            <p class="text-base"><a href="/profile/{{ $answer->user->slug }}" class="link">
                 {{ $answer->user->name }}</a> <time datetime="{{ $answer->published_at }}"> le
-                {{ $answer->published_at_formatted }}</time></p>
+                {{ Carbon\Carbon::parse($answer->published_at)->translatedFormat('d M Y') }}</time></p>
           </div>
           <div class="space-y-4 mt-6">
             {!! $answer->body !!}
@@ -143,9 +143,9 @@
               <div class="mt-10">
                 <div class="flex gap-2">
                   <img class="w-7 h-7 rounded-md" src="/{{ $comment->user->avatar }}" alt="">
-                  <p class="text-base"><a href="users/{{ $comment->user->slug }}" class="link">
+                  <p class="text-base"><a href="/profile/{{ $comment->user->slug }}" class="link">
                       {{ $comment->user->name }}</a> <time datetime="{{ $comment->published_at }}"> le
-                      {{ $comment->published_at_formatted }}</time></p>
+                      {{ Carbon\Carbon::parse($comment->published_at)->translatedFormat('d M Y') }}</time></p>
                 </div>
                 <div class="space-y-4 mt-2">
                   {!! $comment->body !!}

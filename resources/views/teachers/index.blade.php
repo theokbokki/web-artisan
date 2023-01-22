@@ -10,5 +10,10 @@
         <x-user-card :$user />
       @endforeach
     </div>
+    @if (!count($teachers))
+      <p>
+        {{ __('Pas de professeurs correspondant à votre recherche') }}
+      </p>
+    @endif
   </section>
 </x-layouts.main>
