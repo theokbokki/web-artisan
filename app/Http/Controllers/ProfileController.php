@@ -19,8 +19,10 @@ class ProfileController extends Controller
                 $user->tag = $role->role;
             }
         }
+
         return view('profile.show', compact('user'));
     }
+
     /**
      * Display the user's profile form.
      *
@@ -43,22 +45,22 @@ class ProfileController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'email' => ['email' ,'nullable', 'max:255', Rule::unique(User::class)],
+            'email' => ['email', 'nullable', 'max:255', Rule::unique(User::class)],
             'username'=>['nullable', 'max:24'],
             'avatar'=>['nullable'],
             'old_password' => ['nullable', 'current-password'],
             'password' => ['nullable', 'confirmed', Password::defaults()],
         ]);
 
-        $user=Auth::user();
+        $user = Auth::user();
 
-        $user_old_pw=Auth::user()->password;
+        $user_old_pw = Auth::user()->password;
 
         isset($request->username) ? $user->username = $request->username : '';
         isset($request->email) ? $user->email = $request->email : '';
         if (isset($request->avatar)) {
-            $request->avatar = $request->file('avatar')->store('avatars');
-            $user->avatar = $request->avatar;
+            $request->avatar = $request->file('avatar')->store('public/avatars');
+            $user->avatar = str_replace('public', 'storage', $request->avatar);
         }
         isset($request->old_password) ?
         isset($request->password) ? $user->password = bcrypt($request->password) : '' : '';

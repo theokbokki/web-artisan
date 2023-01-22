@@ -8,7 +8,7 @@
 
       <fieldset class="grid gap-2">
         <label class="label" for="avatar">{{ __('Avatar') }}</label>
-        <p class="flex items-start gap-2">{{ __('Acutel: ') }} <img src="/{{ $user->avatar }}" alt=""
+        <p class="flex items-start gap-2">{{ __('Actuel: ') }} <img src="/{{ $user->avatar }}" alt=""
             id="user-avatar" class="rounded-md w-24 h-24 object-cover"></p>
         <input
           class="input file:bg-indigo-600 file:border-none file:text-slate-50 file:py-2 file:px-4 file:rounded-md file:mr-4 file:-ml-2 hover:file:bg-indigo-500 active:file:bg-indigo-700"
@@ -24,7 +24,7 @@
       <!-- Username -->
       <fieldset class="grid gap-2">
         <label for="username" class="label">{{ __('Nom d\'utilisateur') }}</label>
-        <p class="text-base text-slate-500" id="current-username">{{ __('Acutel: ') . $user->username }}</p>
+        <p class="text-base text-slate-500" id="current-username">{{ __('Actuel: ') . $user->username }}</p>
         <input id="username" type="text" name="username" value="{{ old('username') }}" class="input" />
       </fieldset>
 

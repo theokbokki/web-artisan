@@ -1,6 +1,6 @@
 <x-layouts.main>
   <section class="w-[90vw] max-w-5xl mx-auto space-y-16">
-    <h2 class="sr-only">Search</h2>
+    <h2 class="title">{{ __('Les résultats de votre recherche') }}</h2>
 
     <!-- Posts -->
     <section>
