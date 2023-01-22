@@ -23,7 +23,7 @@ class UserFactory extends Factory
         return [
             'name' =>$name,
             'username' => $username,
-            'avatar' => 'avatars/seed_user_avatar.svg',
+            'avatar' => 'storage/avatars/seed_user_avatar.svg',
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'job'=>fake()->sentence(8),

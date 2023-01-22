@@ -20,7 +20,7 @@ class CompanyFactory extends Factory
 
         return [
             'name' => strtolower(fake()->word()),
-            'avatar' => 'avatars/seed_user_avatar.png',
+            'avatar' => 'storage/avatars/seed_user_avatar.svg',
             'about' => '<p>'.implode('</p><p>', fake()->paragraphs(12)).'</p>',
         ];
     }

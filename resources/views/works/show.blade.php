@@ -6,8 +6,7 @@
     <div class="flex flex-wrap gap-x-6 items-center">
       <div class="flex gap-2 relative w-max flex-wrap items-center">
         <div class="w-7">
-          <img src="{{ $work->user->avatarUrl($work->user->avatar) }}" alt=""
-            class="w-full aspect-square rounded-md">
+          <img src="/{{ $work->user->avatar }}" alt="" class="w-full aspect-square rounded-md">
         </div>
         <p>{{ $work->user->name }}</p>
         <a href="/profile/{{ $work->user->slug }}"

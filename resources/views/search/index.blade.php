@@ -31,7 +31,7 @@
           {{ __('Voir tous les professeurs correspondant à votre recherche') }}
         </a>
       @else
-        <p>{{ __('Pas de professeurs posts correspondant à votre recherche') }}</p>
+        <p>{{ __('Pas de professeurs correspondant à votre recherche') }}</p>
       @endif
     </section>
 
