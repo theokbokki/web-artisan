@@ -42,7 +42,7 @@ class RegisteredUserController extends Controller
         ]);
 
         $image_name = Str::random(24);
-        Storage::disk('public')->put('/avatars/'. Str::slug($request->username).'/'.$image_name . '.png', file_get_contents('https://eu.ui-avatars.com/api/?background=random&name='. Str::slug($request->fullname)));
+        Storage::disk('public')->put('/avatars/'.Str::slug($request->username).'/'.$image_name.'.png', file_get_contents('https://eu.ui-avatars.com/api/?size=240&background=random&name='.Str::slug($request->fullname)));
 
         $user = User::create([
             'name' => $request->fullname,
@@ -50,13 +50,13 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'slug'=>Str::slug($request->fullname),
-            'avatar'=> 'avatars/'.Str::slug($request->username).'/'.$image_name . '.png',
+            'avatar'=> 'avatars/'.Str::slug($request->username).'/'.$image_name.'.png',
         ]);
 
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect()->route('profile.edit', ['profile_picture' => false]);
+        return redirect()->route('profile.show', compact('user'));
     }
 }

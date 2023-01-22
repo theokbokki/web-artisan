@@ -31,7 +31,9 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->route('profile.edit');
+        $user = auth()->user();
+
+        return redirect()->route('profile.show', compact('user'));
     }
 
     /**

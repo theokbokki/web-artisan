@@ -17,9 +17,17 @@
       </div>
     </div>
     <p class="mt-6 max-w-1.5xl">{{ $user->excerpt }}</p>
-    @if ($user->id == auth()->id())
-      <a href="/profile" class="button inline-block mt-6">Edit profile</a>
-    @endif
+    <div class="flex gap-4 mt-6 flex-wrap items-center">
+      @if ($user->id == auth()->id())
+        <a href="/profile" class="button inline-block">Edit profile</a>
+      @endif
+      @if ($user->id == auth()->id())
+        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+          @csrf
+          <button type="submit" class="link">Logout</button>
+        </form>
+      @endif
+    </div>
     <div class="space-y-4 mt-6">
       <p class="small-title">{{ __('À propos') }}</p>
       @if ($user->body)

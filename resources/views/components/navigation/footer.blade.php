@@ -90,7 +90,7 @@
     </div>
     <div class="flex gap-x-6 gap-y-4 flex-wrap items-center sm:w-[20%] w-full sm:order-1 mb-10">
       @auth
-        <a href="/profile">
+        <a href="/profile/{{ auth()->user()->slug }}">
           <img src="/{{ auth()->user()->avatar }}" alt="" class="w-9 h-9 object-cover rounded-md">
         </a>
       @endauth

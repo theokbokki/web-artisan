@@ -6,7 +6,7 @@
     <x-logo class="w-12 sm:w-14" />
     <div class="flex gap-4 items-center">
       @auth
-        <a href="/profile">
+        <a href="/profile/{{ auth()->user()->slug }}">
           <img src="/{{ auth()->user()->avatar }}" alt="" class="w-9 h-9 object-cover rounded-md">
         </a>
       @endauth
