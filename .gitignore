@@ -1,7 +1,14 @@
 /node_modules
 /public/build
 /public/hot
-/public/storage
+!/public/storage
+/public/storage/*
+!/public/storage/avatars
+/public/storage/avatars/*
+!/public/storage/avatars/seed_user_avatar.svg
+!/public/storage/thumbnails
+/public/storage/thumbnails/*
+!/public/storage/thumbnails/seed_post_thumbnail.png
 /storage/*.key
 /vendor
 .env
